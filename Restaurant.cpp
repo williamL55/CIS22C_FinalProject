@@ -1,6 +1,2 @@
-#ifndef RESTAURANT_CPP_INCLUDED
-#define RESTAURANT_CPP_INCLUDED
+#include "Report.h"
 
-
-
-#endif // RESTAURANT_CPP_INCLUDED
