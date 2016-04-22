@@ -4,6 +4,12 @@
 class MainMenu
 {
 public:
+    //constructor
+    MainMenu();
+
+    //destructor
+    ~MainMenu();
+
     //displays the first main menu
     void showMainMenu();
 };
