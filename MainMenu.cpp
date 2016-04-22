@@ -4,6 +4,16 @@
 
 using namespace std;
 
+MainMenu::MainMenu()
+{
+
+}
+
+MainMenu::~MainMenu()
+{
+
+}
+
 void MainMenu::showMainMenu()
 {
 	int choice = 0;
