@@ -3,7 +3,7 @@
 
 class Restaurant
 {
-
+    Restaurant();
 };
 
 #endif // _RESTAURANT_H
