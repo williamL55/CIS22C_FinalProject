@@ -31,6 +31,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="MainMenu.cpp" />
+		<Unit filename="MainMenu.h" />
+		<Unit filename="Report.cpp" />
+		<Unit filename="Report.h" />
+		<Unit filename="Restaurant.cpp" />
+		<Unit filename="Restaurant.h" />
+		<Unit filename="RestaurantDatabase.cpp" />
+		<Unit filename="RestaurantDatabase.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
