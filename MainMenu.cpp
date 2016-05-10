@@ -7,6 +7,9 @@ using namespace std;
 MainMenu::MainMenu()
 {
 
+    //will need to pass in database as an argument to Report() once it is added
+    //will also need a new constructor for this to happen
+    report = Report();
 }
 
 MainMenu::~MainMenu()
@@ -19,10 +22,14 @@ void MainMenu::showMainMenu()
 	int choice = 0;
 	do
 	{
-		system("CLS");//clear the screen of any old menus
+	    #ifdef WINDOWS
+            system("CLS");//clear the screen of any old menus
+        #else
+            system("clear");
+        #endif
 
 		//show the mainMenu and get the choice
-		cout << "\t\tRestaurants\n\t\t\tMain Menu\n\n";
+		cout << "\t\tRestaurants\n\t\tMain Menu\n\n";
 		cout << "\t    1. Add new data\n";
 		cout << "\t    2. Delete data\n";
 		cout << "\t    3. Search\n";
@@ -49,10 +56,12 @@ void MainMenu::showMainMenu()
 		else if (choice == 4)
 		{
 			//run list menu
+			report.listMainMenu();
 		}
 		else if (choice == 5)
 		{
-			//run writeFile();
+			//run report main menu;
+
 		}
 		else if (choice == 6)
 		{
@@ -60,7 +69,11 @@ void MainMenu::showMainMenu()
 		}
 		else if (choice == 7)
 		{
-			system("CLS");
+			#ifdef WINDOWS
+                system("CLS");//clear the screen of any old menus
+            #else
+                system("clear");
+            #endif
 			cout << "\n\n\t\t   Thank you for using the restaurant database!\n\n";
 			cout << "\t\t\t(Press return to continue)";
 			cin.ignore();
@@ -69,7 +82,11 @@ void MainMenu::showMainMenu()
 		}
 		else
 		{
-			system("CLS");
+			#ifdef WINDOWS
+            system("CLS");//clear the screen of any old menus
+            #else
+                system("clear");
+            #endif
 			cout << "\n\t    Please enter a valid selection.\n";
 			cin.clear();
 			cin.ignore(1000, '\n');

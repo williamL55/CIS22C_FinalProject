@@ -1,8 +1,12 @@
 #ifndef _MAINMENU_H
 #define _MAINMENU_H
 
+#include "Report.h"
+
 class MainMenu
 {
+private:
+    Report report;
 public:
     //constructor
     MainMenu();
