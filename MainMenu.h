@@ -2,11 +2,13 @@
 #define _MAINMENU_H
 
 #include "Report.h"
+#include "RestaurantDatabase.h"
 
 class MainMenu
 {
 private:
     Report report;
+    RestaurantDatabase* restaurantDatabase;
 public:
     //constructor
     MainMenu();

@@ -1,4 +1,5 @@
 #include "MainMenu.h"
+#include "RestaurantDatabase.h"
 #include <cstdlib>
 #include <iostream>
 
@@ -12,6 +13,8 @@ MainMenu::MainMenu()
     //this report call to the constructor will create a report object to be used by the main menu object
     //report will be used for search, list, and statistics
     report = Report();
+
+    restaurantDatabase = new RestaurantDatabase();
 }
 
 MainMenu::~MainMenu()
@@ -49,7 +52,8 @@ void MainMenu::showMainMenu()
 		}
 		else if (choice == 2)
 		{
-			//run delete data menu
+			//run removeRestaurant();
+			restaurantDatabase->removeRestaurant();
 		}
 		else if (choice == 3)
 		{

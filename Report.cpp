@@ -61,7 +61,9 @@ void Report::searchMainMenu()
 
 void Report::searchByName()
 {
-
+    string tempRestaurantName;
+    cout << "Enter the name of the restaurant to search for: ";
+    cin >> tempRestaurantName;
 }
 
 void Report::searchByCuisine()
