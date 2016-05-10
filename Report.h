@@ -14,6 +14,9 @@ public:
 
     /* Searching functions */
 
+    //we need a main menu to get user input for searching
+    void searchMainMenu();
+
     //searches restaurants by name
     //this is the primary key
     void searchName();
@@ -22,11 +25,21 @@ public:
     //this is the secondary key
     void searchCuisine();
 
-    //we need a main menu to get user input for searching
-    void searchMainMenu();
+    /* List functions */
 
     //we also need a main menu for the listings
     void listMainMenu();
+
+    //lists entire restaurant database unsorted
+    void listUnsorted();
+
+    //lists restaurant databaase sorted by name
+    //this is the primary key
+    void listSortedByName();
+
+    //lists restaurant database sorted by cuisine
+    //this is the secondary key
+    void listSortedByCuisine();
 
 };
 

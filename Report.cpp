@@ -44,15 +44,15 @@ void Report::listMainMenu()
 
 		if (choice == 1)
 		{
-			//run unsorted();
+			//run listUnsorted();
 		}
 		else if (choice == 2)
 		{
-			//run sortedByName();
+			//run listSortedByName();
 		}
 		else if (choice == 3)
 		{
-			//run sortedByCuisine();
+			//run listSortedByCuisine();
 		}
 		else if (choice == 4)
 		{
@@ -74,4 +74,19 @@ void Report::listMainMenu()
 			choice = 0;
 		}
 	} while (choice != 4);
+}
+
+void Report::listUnsorted()
+{
+    return;
+}
+
+void Report::listSortedByName()
+{
+    return;
+}
+
+void Report::listSortedByCuisine()
+{
+    return;
 }
