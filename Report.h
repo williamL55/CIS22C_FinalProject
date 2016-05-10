@@ -19,11 +19,11 @@ public:
 
     //searches restaurants by name
     //this is the primary key
-    void searchName();
+    void searchByName();
 
     //searches restaurants by cuisine type
     //this is the secondary key
-    void searchCuisine();
+    void searchByCuisine();
 
     /* List functions */
 

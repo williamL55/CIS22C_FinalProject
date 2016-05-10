@@ -9,6 +9,8 @@ MainMenu::MainMenu()
 
     //will need to pass in database as an argument to Report() once it is added
     //will also need a new constructor for this to happen
+    //this report call to the constructor will create a report object to be used in the main menu
+    //report will be used for search, list, and statistics
     report = Report();
 }
 
@@ -52,6 +54,7 @@ void MainMenu::showMainMenu()
 		else if (choice == 3)
 		{
 			//run search menu
+			report.searchMainMenu();
 		}
 		else if (choice == 4)
 		{
