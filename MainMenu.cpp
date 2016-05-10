@@ -9,7 +9,7 @@ MainMenu::MainMenu()
 
     //will need to pass in database as an argument to Report() once it is added
     //will also need a new constructor for this to happen
-    //this report call to the constructor will create a report object to be used in the main menu
+    //this report call to the constructor will create a report object to be used by the main menu object
     //report will be used for search, list, and statistics
     report = Report();
 }
@@ -53,17 +53,18 @@ void MainMenu::showMainMenu()
 		}
 		else if (choice == 3)
 		{
-			//run search menu
+			//run search main menu
 			report.searchMainMenu();
 		}
 		else if (choice == 4)
 		{
-			//run list menu
+			//run list main menu
 			report.listMainMenu();
 		}
 		else if (choice == 5)
 		{
-			//run report main menu;
+			//run statistics main menu;
+			report.statisticsMainMenu();
 
 		}
 		else if (choice == 6)
@@ -100,11 +101,7 @@ void MainMenu::showMainMenu()
 	} while (choice != 7);
 }
 
-
-
-
-
-//our main will be in this file
+//this is where our main will be
 int main()
 {
     //we will want to create a MainMenu object here to run the main menu

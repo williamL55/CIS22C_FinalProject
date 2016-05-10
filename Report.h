@@ -41,6 +41,27 @@ public:
     //this is the secondary key
     void listSortedByCuisine();
 
+    /* Statistics functions */
+
+    //we need a main menu for the statistics
+    void statisticsMainMenu();
+
+    //lists the number of restaurants per cuisine type
+    //ex: 2 mexican 3 chinese 5 thai etc
+    void restaurantsPerCuisine();
+
+    //lists restaurants with the best ratings
+    //for this, we should have some sort of parameter that defines
+    //how many restaurants to show, and what the best rating is
+    //should we show restaurants only at 5? all above 4.5?
+    //ask user for the lowest rating they will accept? - add parameter to function definition if yes
+    void restaurantsBestRating();
+
+    //lists the restaurants that are affordable
+    //the user will input the dollar amount they will be willing to pay for food
+    //show all restaurants that have that price range or less than that price range
+    void affordableRestaurants();
+
 };
 
 #endif // _REPORT_H
