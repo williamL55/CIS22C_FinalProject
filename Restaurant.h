@@ -3,6 +3,10 @@
 
 class Restaurant
 {
+private:
+    //list attributes for each restaurant here
+    //ex. name, cuisine, location, etc
+public:
     Restaurant();
 };
 

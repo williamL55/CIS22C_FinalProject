@@ -14,6 +14,7 @@ MainMenu::MainMenu()
     //report will be used for search, list, and statistics
     report = Report();
 
+    //create a restaurant database pointer to the database
     restaurantDatabase = new RestaurantDatabase();
 }
 
