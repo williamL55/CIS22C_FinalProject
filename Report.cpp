@@ -61,7 +61,15 @@ void Report::searchMainMenu()
 
 void Report::searchByName()
 {
+    //temp variable to hold the value to search for
+    //case sensitive
     string tempRestaurantName;
+
+    #ifdef WINDOWS
+        system("CLS");//clear the screen of any old menus
+    #else
+        system("clear");
+    #endif
     cout << "Enter the name of the restaurant to search for: ";
     cin >> tempRestaurantName;
 }
