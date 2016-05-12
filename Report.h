@@ -10,7 +10,6 @@
 class Report
 {
 public:
-    //we need to have at least 3 different types of Statistics to report
 
     /* Searching functions */
 

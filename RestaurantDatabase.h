@@ -12,6 +12,9 @@ public:
     //if no file exists, create a new file
     void writeFile();
 
+    //reads a file and creates the data structures from it
+    void readFile();
+
     //adds a restaurant to the database
     void addRestaurant(Restaurant restaurant);
 
