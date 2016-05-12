@@ -1,7 +1,14 @@
 #include "MainMenu.h"
 #include "RestaurantDatabase.h"
+#include "BST.h"
 #include <cstdlib>
 #include <iostream>
+
+#ifdef _WIN32
+#define CLEAR "cls"
+#else
+#define CLEAR "clear"
+#endif // _WIN32
 
 using namespace std;
 
@@ -16,6 +23,10 @@ MainMenu::MainMenu()
 
     //create a restaurant database pointer to the database
     restaurantDatabase = new RestaurantDatabase();
+
+    //create a pointer to the unique key BST
+    uniqueBSTDatabase = new BST<string>();
+
 }
 
 MainMenu::~MainMenu()
@@ -28,11 +39,7 @@ void MainMenu::showMainMenu()
 	int choice = 0;
 	do
 	{
-	    #ifdef WINDOWS
-            system("CLS");//clear the screen of any old menus
-        #else
-            system("clear");
-        #endif
+        system(CLEAR);
 
 		//show the mainMenu and get the choice
 		cout << "\t\tRestaurants\n\t\tMain Menu\n\n";
@@ -78,11 +85,7 @@ void MainMenu::showMainMenu()
 		}
 		else if (choice == 7)
 		{
-			#ifdef WINDOWS
-                system("CLS");//clear the screen of any old menus
-            #else
-                system("clear");
-            #endif
+			system(CLEAR);
 			cout << "\n\n\t\t   Thank you for using the restaurant database!\n\n";
 			cout << "\t\t\t(Press return to continue)";
 			cin.ignore();
@@ -91,11 +94,7 @@ void MainMenu::showMainMenu()
 		}
 		else
 		{
-			#ifdef WINDOWS
-            system("CLS");//clear the screen of any old menus
-            #else
-                system("clear");
-            #endif
+		    system(CLEAR);
 			cout << "\n\t    Please enter a valid selection.\n";
 			cin.clear();
 			cin.ignore(1000, '\n');

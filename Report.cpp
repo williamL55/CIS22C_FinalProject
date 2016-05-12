@@ -1,5 +1,12 @@
 #include "Report.h"
+#include <cstdlib>
 #include <iostream>
+
+#ifdef _WIN32
+#define CLEAR "cls"
+#else
+#define CLEAR "clear"
+#endif // _WIN32
 
 using namespace std;
 
@@ -11,12 +18,7 @@ void Report::searchMainMenu()
 
     do
 	{
-	    #ifdef WINDOWS
-            system("CLS");//clear the screen of any old menus
-        #else
-            system("clear");
-        #endif
-
+        system(CLEAR);
 
 		//show the mainMenu and get the choice
 		cout << "\t\tSearch\n\t\tMain Menu\n\n";
@@ -44,11 +46,7 @@ void Report::searchMainMenu()
 		}
 		else
 		{
-			#ifdef WINDOWS
-            system("CLS");//clear the screen of any old menus
-            #else
-                system("clear");
-            #endif
+			system(CLEAR);
 			cout << "\n\t    Please enter a valid selection.\n";
 			cin.clear();
 			cin.ignore(1000, '\n');
@@ -65,11 +63,7 @@ void Report::searchByName()
     //case sensitive
     string tempRestaurantName;
 
-    #ifdef WINDOWS
-        system("CLS");//clear the screen of any old menus
-    #else
-        system("clear");
-    #endif
+    system(CLEAR);
     cout << "Enter the name of the restaurant to search for: ";
     cin >> tempRestaurantName;
 }
@@ -87,11 +81,7 @@ void Report::listMainMenu()
 
     do
 	{
-	    #ifdef WINDOWS
-            system("CLS");//clear the screen of any old menus
-        #else
-            system("clear");
-        #endif
+	    system(CLEAR);
 
 
 		//show the mainMenu and get the choice
@@ -162,11 +152,7 @@ void Report::statisticsMainMenu()
 
     do
 	{
-	    #ifdef WINDOWS
-            system("CLS");//clear the screen of any old menus
-        #else
-            system("clear");
-        #endif
+	    system(CLEAR);
 
 
 		//show the mainMenu and get the choice
@@ -198,11 +184,7 @@ void Report::statisticsMainMenu()
 		}
 		else
 		{
-			#ifdef WINDOWS
-            system("CLS");//clear the screen of any old menus
-            #else
-                system("clear");
-            #endif
+			system(CLEAR);
 			cout << "\n\t    Please enter a valid selection.\n";
 			cin.clear();
 			cin.ignore(1000, '\n');
