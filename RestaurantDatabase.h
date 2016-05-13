@@ -4,7 +4,7 @@
 #include "Restaurant.h"
 #include "Report.h"
 
-class RestaurantDatabase : public Report
+class RestaurantDatabase
 {
 public:
     //writes all information to the file

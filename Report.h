@@ -6,8 +6,10 @@
     This includes the Search, List, and Statistics portions mentioned in the Menu Requirements
 */
 
+#include "Restaurant.h"
 
-class Report
+
+class Report : public Restaurant
 {
 public:
 

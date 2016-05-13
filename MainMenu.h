@@ -5,7 +5,7 @@
 #include "RestaurantDatabase.h"
 #include "BST.h"
 
-class MainMenu : public Report
+class MainMenu
 {
 private:
     Report report;

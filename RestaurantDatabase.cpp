@@ -21,6 +21,5 @@ void RestaurantDatabase::addRestaurant(Restaurant restaurant)
 
 void RestaurantDatabase::removeRestaurant()
 {
-    //call the search function from report to find matches for user input
-    searchByName();
+
 }
