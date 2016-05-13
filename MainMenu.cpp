@@ -1,6 +1,6 @@
 #include "MainMenu.h"
 #include "RestaurantDatabase.h"
-#include "BST.h"
+//#include "BST.h"
 #include <cstdlib>
 #include <iostream>
 
@@ -25,7 +25,7 @@ MainMenu::MainMenu()
     restaurantDatabase = new RestaurantDatabase();
 
     //create a pointer to the unique key BST
-    uniqueBSTDatabase = new BST<string>();
+   /// uniqueBSTDatabase = new BST<string>();
 
 }
 
