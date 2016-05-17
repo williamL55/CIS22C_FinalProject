@@ -8,6 +8,7 @@
      //ex. name, cuisine, location, etc
  public:
      Restaurant();
+     string getName();
  };
 
  #endif // _RESTAURANT_H
