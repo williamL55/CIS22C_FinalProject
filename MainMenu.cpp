@@ -27,6 +27,12 @@ MainMenu::MainMenu()
     //create a pointer to the unique key BST
    /// uniqueBSTDatabase = new BST<string>();
 
+   //create a pointer to the secondary key
+   /// secondaryBSTDatabase = new BST<string>();
+
+   //create a pointer to the hash table
+
+
 }
 
 MainMenu::~MainMenu()

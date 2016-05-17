@@ -9,8 +9,11 @@
 #include "Restaurant.h"
 
 
-class Report : public Restaurant
+class Report
 {
+private:
+
+
 public:
 
     /* Searching functions */
