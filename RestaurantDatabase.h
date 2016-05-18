@@ -8,9 +8,10 @@
 
 using namespace std;
 
-class RestaurantDatabase// : public BST
+class RestaurantDatabase
 {
 private:
+    //pointer to the uniqueBSTDatabase
     BST<string>* uniqueBSTDatabase;
 public:
     RestaurantDatabase();

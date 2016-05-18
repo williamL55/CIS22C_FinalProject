@@ -5,9 +5,9 @@ Restaurant::Restaurant()
 
 }
 
-void Restaurant::setName(string n)
+void Restaurant::setName(string name)
 {
-    name = n;
+    this->name = name;
 }
 
 string Restaurant::getName()
