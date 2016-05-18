@@ -10,6 +10,7 @@
      Restaurant();
      string getName();
      string getCuisine();
+     int getOpenhour();
  };
 
  #endif // _RESTAURANT_H
