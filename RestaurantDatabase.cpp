@@ -26,6 +26,9 @@ void RestaurantDatabase::addRestaurant()
     //add placeholder cin to hold the screen
     cin >> data;
 
+    //this is only an example of the usage for our BST
+    //insert currently ONLY fucntions for the name parameter
+    //until i or someone else updates all the BST functions to work with an operator overload
     Restaurant rest;
     rest.setName("string");
     uniqueBSTDatabase->insert(rest);
