@@ -80,7 +80,6 @@ class BST
 
         int getHeight(Nodeptr root);
 
-
     public:
         BST();
 
@@ -143,6 +142,8 @@ class BST
         int getSize();
 
         int getHeight();
+
+
 
 };
 
@@ -475,4 +476,10 @@ int BST<bstdata>::getHeight()
         height = getHeight(root);
     return height;
 }
+
+
 #endif
+
+
+
+
