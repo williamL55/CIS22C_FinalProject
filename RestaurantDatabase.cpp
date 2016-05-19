@@ -137,7 +137,7 @@ void RestaurantDatabase::addRestaurantMenu()
             {
                 cout << "\nWhat is the opening hour of the restaurant?\nPlease enter a number (0000-2400): ";
                 cin >> openingHour;
-                if (cin.fail() || openingHour < 0 || openingHour > 2400)
+                if (cin.fail() || openingHour < 0 || openingHour > 2400 || openingHour % 100 >= 60)
                 {
                     cin.clear();
                     cin.ignore(1000, '\n');
