@@ -20,14 +20,16 @@ MainMenu::MainMenu()
     //create a pointer to the unique key BST
     uniqueBSTDatabase = new BST<string>();
 
+    //create a pointer to the secondary key
+    secondaryBSTDatabase = new BST<string>();
+
     //will need to pass in database as an argument to Report() once it is added
     //will also need a new constructor for this to happen
     //this report call to the constructor will create a report object to be used by the main menu object
     //report will be used for search, list, and statistics
     report = Report(uniqueBSTDatabase);
 
-   //create a pointer to the secondary key
-   /// secondaryBSTDatabase = new BST<string>();
+
 
    //create a pointer to the hash table
 

@@ -13,6 +13,10 @@ class RestaurantDatabase
 private:
     //pointer to the uniqueBSTDatabase
     BST<string>* uniqueBSTDatabase;
+
+    //contains a pointer to the secondary key BST
+    BST<string>* secondaryBSTDatabase;
+
 public:
     RestaurantDatabase();
     //writes all information to the file

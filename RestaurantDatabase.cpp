@@ -4,6 +4,7 @@
 RestaurantDatabase::RestaurantDatabase()
 {
     uniqueBSTDatabase = new BST<string>;
+    secondaryBSTDatabase = new BST<string>;
 }
 
 //run this when we need to write to a file
@@ -32,7 +33,13 @@ void RestaurantDatabase::addRestaurant()
     Restaurant rest;
     rest.setName("string");
     uniqueBSTDatabase->insert(rest);
-    cout << "root: " << uniqueBSTDatabase->getRoot();
+    cout << "root: " << uniqueBSTDatabase->getRoot() << endl;
+
+    //example using the secondary BST
+    Restaurant rest2;
+    rest2.setName("secondary key rest2");
+    secondaryBSTDatabase->insert(rest2);
+    cout << "root: " << secondaryBSTDatabase->getRoot() << endl;
 
    // cin.get();
     return;
