@@ -26,7 +26,7 @@ string Restaurant::getLocation()
     return location;
 }
 
-int Restaurant::getOpenHour()
+int Restaurant::getOpeningHour()
 {
     return openingHour;
 }
@@ -61,7 +61,7 @@ void Restaurant::setLocation(string location)
     this->location = location;
 }
 
-void Restaurant::setOpenHour(int openingHour)
+void Restaurant::setOpeningHour(int openingHour)
 {
     this->openingHour = openingHour;
 }
@@ -88,7 +88,7 @@ ostream& operator<<(ostream& out, Restaurant& restaurant)
 	out << "Name: " << restaurant.getName() << endl;
 	out << "Cuisine: " << restaurant.getCuisine() << endl;
 	out << "Location: " << restaurant.getLocation() << endl;
-	out << "Opening Hour: " << restaurant.getOpenHour() << endl;
+	out << "Opening Hour: " << restaurant.getOpeningHour() << endl;
 	out << "Closing Hour: " << restaurant.getClosingHour() << endl;
 	out << "Cost Consideration: " << restaurant.getCost() << endl;
 	out << "Rating:" << restaurant.getRating() << endl;
