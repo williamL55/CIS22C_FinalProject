@@ -11,11 +11,6 @@ Restaurant::Restaurant()
     cost = 0.0;
 }
 
-void Restaurant::setName(string name)
-{
-    this->name = name;
-}
-
 string Restaurant::getName()
 {
     return name;
@@ -50,3 +45,40 @@ double Restaurant::getCost()
 {
     return cost;
 }
+
+void Restaurant::setName(string name)
+{
+    this->name = name;
+}
+
+void Restaurant::setCuisine(string cuisine)
+{
+    this->cuisine = cuisine;
+}
+
+void Restaurant::setLocation(string location)
+{
+    this->location = location;
+}
+
+void Restaurant::setOpenHour(int openingHour)
+{
+    this->openingHour = openingHour;
+}
+
+void Restaurant::setClosingHour(int closingHour)
+{
+    this->closingHour = closingHour;
+}
+
+void Restaurant::setRating(double rating)
+{
+    this->rating = rating;
+}
+
+void Restaurant::setCost(double cost)
+{
+    this->cost = cost;
+}
+
+

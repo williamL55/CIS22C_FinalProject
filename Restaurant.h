@@ -38,7 +38,7 @@ using namespace std;
      void setOpenHour(int openingHour);
      void setClosingHour(int closingHour);
      void setRating(double rating);
-     void setVost(double cost);
+     void setCost(double cost);
 
 };
 
