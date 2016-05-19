@@ -31,13 +31,14 @@ void RestaurantDatabase::readFile()
     return;
 }
 
-void RestaurantDatabase::addRestaurant()
+void RestaurantDatabase::addRestaurant(string n)
 {
     //this is only an example of the usage for our BST
     //insert currently ONLY fucntions for the name parameter
     //until i or someone else updates all the BST functions to work with an operator overload
     Restaurant rest;
-    rest.setName("string");
+    rest.setName(n);
+    //rest.setName("string");
     uniqueBSTDatabase->insert(rest);
     //cout << "root: " << uniqueBSTDatabase->getRoot() << endl;
 
@@ -109,9 +110,15 @@ void RestaurantDatabase::addRestaurantMenu()
 		}
     }
 
+    cout << "What is the name of the restaurant? ";
+    cin >> name;
+
     Restaurant rest;
+
+    //set all the attributes on the local restaurant before calling add later
     rest.setCost(cost);
     rest.setRating(rating);
+    rest.setName(name);
     system(CLEAR);
     cout << rest;
     cout << "\n\nDoes this look right?" << endl << endl;
@@ -124,7 +131,7 @@ void RestaurantDatabase::addRestaurantMenu()
 
 
     //we will pass addRestaurant all parameters for a restaurant
-    addRestaurant();
+    addRestaurant(name);
 
 }
 
