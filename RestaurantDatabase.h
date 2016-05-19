@@ -19,6 +19,7 @@ private:
 
 public:
     RestaurantDatabase();
+    RestaurantDatabase(BST<string>* uniqueBSTDatabase, BST<string>* secondaryBSTDatabase);
     //writes all information to the file
     //user is prompted for file directory and name
     //if no file exists, create a new file
@@ -28,6 +29,7 @@ public:
     void readFile();
 
     //adds a restaurant to the database
+    //need to add all restaurant members here in the function call
     void addRestaurant();
 
     //removes a restaurant from the database

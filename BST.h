@@ -1,12 +1,5 @@
-/*
-    Corey Russ
-    Lab 5
-    CIS 22c
-    BST.h
-*/
-
-#ifndef BST_H_
-#define BST_H_
+#ifndef _BST_H
+#define _BST_H
 
 #include <cstddef>
 #include <string>
@@ -101,6 +94,8 @@ class BST
 
         //post: a new value inserted into the BST
 
+        //MUST use exception when calling
+        //otherwise will crash when calling if tree is empty
         bstdata getRoot();
 
         //returns the value stored at the root of the BST
@@ -235,8 +230,7 @@ bstdata BST<bstdata>::getRoot()
        return root->rest.getName();
     else
     {
-        cout << "getRoot(): The tree is empty.";
-        exit(-1);
+        throw "The tree is empty";
     }
 }
 

@@ -76,6 +76,21 @@ void Report::searchByName()
     system(CLEAR);
     cout << "Enter the name of the restaurant to search for: ";
     cin >> tempRestaurantName;
+
+    try
+    {
+        cout << uniqueBSTDatabase->getRoot();
+        cout << "Press any key to continue." << endl;
+        cin.ignore(1000, '\n');
+        cin.get();
+    }
+    catch(...)
+    {
+        cout << "The list is empty." << endl;
+        cout << "Press a key to continue.";
+        cin.ignore(1000, '\n');
+        cin.get();
+    }
 }
 
 void Report::searchByCuisine()
