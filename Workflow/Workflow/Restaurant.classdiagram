@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="6bcc7134-5e75-49dd-aa2d-ef4b6f77ed2e" name="Restaurant" linkedPackageId="b8fe986b-e8d6-4349-853c-a5bfa2b1c4ac" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="cf35872c-cdb8-4dd2-9242-fe007c2fe077" name="BST" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c6f26c02-6179-4610-8e54-0bb219881abc" />
+        <ownedAttributesInternal>
+          <property Id="01706d18-3503-4013-86bf-c02d1e298ed7" name="struct Node" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ba382400-9c36-43da-83a7-46e551ffdac1" />
+          </property>
+          <property Id="63bbb572-5dc7-46ae-8720-8e5bff56d694" name="Node* root" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c94493ad-6577-4398-a89f-bc8395040eae" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="8b3ad3d9-acfc-4f4b-9de6-0befc430c844" name="insert_value" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="dd89e782-c6ad-49c4-99ed-4dce0dad69da" />
+          </operation>
+          <operation Id="27fc78fd-c0ec-4571-88d0-801fac31e87a" name="inOrderPrint" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="cae77587-24b2-4950-be3e-17c7a87b08b9" />
+          </operation>
+          <operation Id="6510ceb3-129d-49d3-b030-1318d6ad992e" name="preOrderPrint" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="73465952-ab2e-4c21-a655-48ef1ab381d5" />
+          </operation>
+          <operation Id="878bad7b-e1cd-47be-8d37-c7e8cff58f2d" name="postOrderPrint" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="cf4e9d2b-ecd3-4bab-b73b-2d73a67a5e94" />
+          </operation>
+          <operation Id="336d27a7-e480-43f7-a159-01b0ff66d545" name="containsValue" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="df0a8117-005a-4a61-88c6-bda8a80b9417" />
+          </operation>
+          <operation Id="1a5829dd-064f-4057-84ae-aadff65baf60" name="findMin" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e71ff2d2-e081-495e-85ba-b3ce4a18b563" />
+          </operation>
+          <operation Id="83caab4b-bd41-4159-af8d-763b6a633283" name="remove" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="94ecfb5b-6b03-413c-b558-6c77eba4caf1" />
+          </operation>
+          <operation Id="c3a68ea3-5c2c-4249-8314-74ace68def46" name="copyHelper" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="68d03518-26a2-4e8f-a0e3-853b79b089ce" />
+          </operation>
+          <operation Id="bb9c47d0-9082-40b3-bb86-52ca6377e22a" name="deleteTree" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e542bb3b-e415-4bc7-81ea-333190744556" />
+          </operation>
+          <operation Id="db23b928-9072-459b-8e28-2d92b31704d4" name="findMax" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f2887df0-305d-49bb-a7ec-2a3a8f270cdd" />
+          </operation>
+          <operation Id="44214cc9-aaca-4554-a462-84bab8a93c58" name="getSize" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="78e1edc5-0603-44f2-94f4-553016d0d899" />
+          </operation>
+          <operation Id="5c11ceb5-a1e4-46d1-ac81-2a45f98d6c8c" name="getHeight" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="efd9f27f-127f-4e8c-8392-dbdef5753df1" />
+          </operation>
+          <operation Id="e74ce924-f7f6-4607-ba5a-f123e3cc8377" name="BST" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="81382b59-0e6c-403c-8c6e-6577330f4be5" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9ac8bfdb-725b-49e4-a030-b632f2684b0c" name=") + 1 overload(" direction="In" isUnique="false">
+                  <elementDefinition Id="65a6c0c1-8a30-420d-9557-c15929728a68" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="3af74cc4-3664-46df-ab3c-ab3257d3154c" name="is_empty" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="bd10e5c8-3407-4d32-9bce-3ab7f776c2c7" />
+          </operation>
+          <operation Id="d2a504e8-33f9-45c9-bfe9-c3ca2dfe01d8" name="insert" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d655bce1-76ff-471a-adfa-7c241047a08c" />
+          </operation>
+          <operation Id="c79f8e42-bee2-4a7b-b509-c84238d8d7d1" name="getRoot" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="508cfee5-a926-4bf7-9246-316709eb02e0" />
+          </operation>
+          <operation Id="5f20f474-6191-465e-88d3-05b9a94a63d0" name="inOrderPrint" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5db8e37a-11cf-4143-b7c8-7eda88f4b9f2" />
+          </operation>
+          <operation Id="8fa53a37-2d02-495f-b5ad-93e4e6751cd2" name="preOrderPrint" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ccfaf277-5d59-4ee5-9348-d83951847c7d" />
+          </operation>
+          <operation Id="eba90e42-c79a-4363-986a-49f7613397a0" name="postOrderPrint" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2f938b39-2229-4f0c-9fa5-7971a717c7e5" />
+          </operation>
+          <operation Id="907b72b6-d04d-47f7-8d13-e168ac522ab2" name="search" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5859eb20-d24c-4554-be9b-150a1b5d9395" />
+          </operation>
+          <operation Id="af946b45-8d28-4e14-82c3-71cea98435cd" name="remove" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="cf3ffc4d-448c-432f-a913-5bb730465b51" />
+          </operation>
+          <operation Id="caa1110f-2496-419d-a63f-170ee2739be3" name="isEmpty" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a61b6a63-c293-4226-a61b-3f893ea23177" />
+          </operation>
+          <operation Id="1c20f008-9623-4203-af77-90de518384ed" name="getSize" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="97d16921-15e0-4917-97fa-70729170e72b" />
+          </operation>
+          <operation Id="5496066c-3114-4ec3-a01b-c2651c486a67" name="getHeight" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e47cf888-1008-473a-9ff2-2f97031a4e20" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="9cc769a2-2066-4192-9d22-de3a224c8714" name="MainMenu" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="fea28bc4-d939-4ee0-beb0-32a2e4ac67dc" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7c316950-0b95-406e-820e-f1bb4749b2af" name="RestaurantDatabase" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="12081ea0-1a45-4520-8972-e6d5244146a6" />
+        <targetEnds>
+          <association Id="d8427165-a4bc-454a-a85d-d6c43433a331" isDerived="false" sourceEndRoleName="RestaurantDatabase" targetEndRoleName="Restaurant" isLeaf="false" isAbstract="false">
+            <classMoniker Id="28588448-2486-47e4-9187-43c6e9421823" LastKnownName="Restaurant" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ed6b86b2-366d-43f2-9b0e-c316a90f7491" name="RestaurantDatabase" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c49ba0ba-f60a-427a-b28e-d3328dc61562" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7dee3f0b-210f-44f5-a76f-a58895042058" name="Restaurant" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ef277fe5-59cd-402a-bae7-ae1b7eaf964c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="38e6265b-3f03-40cc-8246-48247553ce59" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="201d2c63-3334-4e8a-b836-0d9b2d49b81f" name="Report" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="70f5e9fc-f0d0-4854-a29e-8a458053843b" />
+        <targetEnds>
+          <association Id="0d8c2ac7-b224-4153-830e-7166eac28c3d" isDerived="false" sourceEndRoleName="Report" targetEndRoleName="MainMenu" isLeaf="false" isAbstract="false">
+            <classMoniker Id="9cc769a2-2066-4192-9d22-de3a224c8714" LastKnownName="MainMenu" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1e6426f0-5f34-46d5-a61c-a7fb52ebb820" name="Report" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3dca33db-4992-4a48-b9f7-dddada786a90" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="824f6d7c-e7a7-44f3-9005-e1c927570a19" name="MainMenu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4f569a3b-432e-4a7c-b1d3-7c0bce8f8eb2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4d38e3b0-b2a1-40bf-9313-3399c59292d4" />
+          </association>
+          <association Id="ce79a6d1-7ac5-4631-b70a-84c243ccdeb4" isDerived="false" sourceEndRoleName="Report" targetEndRoleName="RestaurantDatabase" isLeaf="false" isAbstract="false">
+            <classMoniker Id="7c316950-0b95-406e-820e-f1bb4749b2af" LastKnownName="RestaurantDatabase" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4c6b37e2-b891-49c3-9452-5f816cb1cb36" name="Report" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d5bae91d-f7d4-4885-a0ea-533628e01f9d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c5ebd306-34fe-4732-8ae5-9ff73f58c59d" name="RestaurantDatabase" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8ac218c5-54b1-44d6-a67c-f854c8745d4f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e63b175c-9b5a-4ef8-bc09-44700e7fe2fb" />
+          </association>
+          <association Id="72ed34c5-aba8-46fc-a86e-f9c127e9ec90" isDerived="false" sourceEndRoleName="Report" targetEndRoleName="BST" isLeaf="false" isAbstract="false">
+            <classMoniker Id="cf35872c-cdb8-4dd2-9242-fe007c2fe077" LastKnownName="BST" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="acc8bc72-40f8-4018-bfa4-a873c4d0b9b8" name="Report" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c8eaaa3c-2a18-4d6a-8c22-206e6b244b0e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d5092956-e121-49a4-a9e2-ae2a16219700" name="BST" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0129bed1-b086-4b64-be5a-bfe182a8b160" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d46c1408-1b9f-46e8-b15d-c9198f14be02" />
+          </association>
+          <association Id="b7257ae8-2190-4e8b-8bbe-89d67d9cebd0" isDerived="false" sourceEndRoleName="Report" targetEndRoleName="Hash" isLeaf="false" isAbstract="false">
+            <classMoniker Id="636d6609-4891-4ffc-97c7-143aa882102b" LastKnownName="Hash" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c9475584-832f-4fcd-86a5-15d33512c027" name="Report" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="08535607-3a09-45ab-8059-a64f93534376" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dbafcf72-d818-4a96-9a9d-a212c0b5ab7a" name="Hash" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e3b44628-6ac3-4f25-b76c-9135b7b7e241" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4918ab90-21fb-4768-8701-bc9003abfeb5" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="28588448-2486-47e4-9187-43c6e9421823" name="Restaurant" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="daf070df-3634-4fc9-87e4-dcf0601ab4be" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="636d6609-4891-4ffc-97c7-143aa882102b" name="Hash" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="39ec22e0-e7fd-4cde-a2a5-991314e709cc" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="b8fe986b-e8d6-4349-853c-a5bfa2b1c4ac" name="Workflow">
+    <elementDefinition Id="b67139b9-b474-4416-9853-d7f22a226ee5" />
+    <profileInstances>
+      <packageHasProfileInstances Id="efc8a4a3-1b74-4636-9509-c76ced01de6e">
+        <profileInstance Id="94192fdd-3e38-47b1-8337-b3f205b66faa" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="7ff20839-3ca9-4b3e-a429-d712cc849b9b">
+        <profileInstance Id="5fc672fa-22e7-4239-831f-e64499922102" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>
