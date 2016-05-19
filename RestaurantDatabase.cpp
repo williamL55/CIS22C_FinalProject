@@ -122,6 +122,8 @@ void RestaurantDatabase::addRestaurantMenu()
         //if the restaurant is always open, set openingHour and closingHour to 0000 each
         cout << "Is this restaurant always open? (Y/N) ";
         cin >> alwaysOpen;
+        cin.clear();
+        cin.ignore(1000, '\n');
 
         if (alwaysOpen == 'y' || alwaysOpen == 'Y')
 		{
@@ -135,9 +137,26 @@ void RestaurantDatabase::addRestaurantMenu()
         {
             while (!done)
             {
+
                 cout << "\nWhat is the opening hour of the restaurant?\nPlease enter a number (0000-2400): ";
                 cin >> openingHour;
                 if (cin.fail() || openingHour < 0 || openingHour > 2400 || openingHour % 100 >= 60)
+                {
+                    cin.clear();
+                    cin.ignore(1000, '\n');
+                    cout << "Invalid response.\n\n";
+                }
+                else
+                {
+                    done = true;
+                }
+            }
+            done = false;
+            while (!done)
+            {
+                cout << "\nWhat is the closing hour of the restaurant?\nPlease enter a number (0000-2400): ";
+                cin >> closingHour;
+                if (cin.fail() || closingHour < 0 || closingHour > 2400 || closingHour % 100 >= 60)
                 {
                     cin.clear();
                     cin.ignore(1000, '\n');
@@ -161,6 +180,8 @@ void RestaurantDatabase::addRestaurantMenu()
 
     //done = false;
 
+    cin.clear();
+    cin.ignore(1000, '\n');
     cout << "What is the cuisine of the restaurant? ";
     getline(cin, cuisine);
     cout << "What is the location of the restaurant? ";
