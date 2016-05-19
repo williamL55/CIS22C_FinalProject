@@ -49,7 +49,7 @@ void RestaurantDatabase::addRestaurant(string n)
     //cout << "root: " << secondaryBSTDatabase->getRoot() << endl;
 
     system(CLEAR);
-    cout << "\n\n\n\t\tAdd successful!\n\t\tPress any key to continue." << endl;
+    cout << "\n\n\n\t\tRestaurant added successfully!\n\t\tPress any key to continue." << endl;
     cin.ignore(1000, '\n');
     cin.get();
     return;
@@ -86,7 +86,7 @@ void RestaurantDatabase::addRestaurantMenu()
 		{
 			cin.clear();
 			cin.ignore(1000, '\n');
-			cout << "Invalid response.\n";
+			cout << "Invalid response.\n\n";
 		}
 		else
 		{
@@ -102,7 +102,7 @@ void RestaurantDatabase::addRestaurantMenu()
 		{
 			cin.clear();
 			cin.ignore(1000, '\n');
-			cout << "Invalid response.\n";
+			cout << "Invalid response.\n\n";
 		}
 		else
 		{
