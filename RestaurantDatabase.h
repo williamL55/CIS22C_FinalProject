@@ -33,6 +33,10 @@ public:
     //removes a restaurant from the database
     //searches for a restaurant by name by calling searchByName() from Report.h
     void removeRestaurant();
+
+    //menu for adding a restaurant
+    //provides user with list of items to enter
+    void addRestaurantMenu();
 };
 
 #endif // RESTAURANTDATABASE_H

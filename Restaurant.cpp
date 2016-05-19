@@ -82,3 +82,19 @@ void Restaurant::setCost(double cost)
 }
 
 
+ostream& operator<<(ostream& out, Restaurant& restaurant)
+{
+	out << fixed << setprecision(1);			// makes doubles round to one digit
+	out << "Name: " << restaurant.getName() << endl;
+	out << "Cuisine: " << restaurant.getCuisine() << endl;
+	out << "Location: " << restaurant.getLocation() << endl;
+	out << "Opening Hour: " << restaurant.getOpenHour() << endl;
+	out << "Closing Hour: " << restaurant.getClosingHour() << endl;
+	out << "Cost Consideration: " << restaurant.getCost() << endl;
+	out << "Rating:" << restaurant.getRating() << endl;
+	return out;
+}
+
+
+
+

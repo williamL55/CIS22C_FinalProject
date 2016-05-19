@@ -2,6 +2,8 @@
 #define _RESTAURANT_H
 
 #include <string>
+#include <iomanip>
+#include <ostream>
 
 using namespace std;
 
@@ -39,6 +41,8 @@ using namespace std;
      void setClosingHour(int closingHour);
      void setRating(double rating);
      void setCost(double cost);
+
+     friend ostream& operator<<(ostream& out, Restaurant& restaurant);
 
 };
 

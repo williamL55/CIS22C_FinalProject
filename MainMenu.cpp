@@ -65,7 +65,7 @@ void MainMenu::showMainMenu()
 		if (choice == 1)
 		{
 			//run add new data menu
-			restaurantDatabase->addRestaurant();
+			restaurantDatabase->addRestaurantMenu();
 		}
 		else if (choice == 2)
 		{

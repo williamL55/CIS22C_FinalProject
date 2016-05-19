@@ -56,3 +56,68 @@ void RestaurantDatabase::removeRestaurant()
     //cin.get();
     return;
 }
+
+void RestaurantDatabase::addRestaurantMenu()
+{
+    bool done = false;
+
+    string name;
+    string cuisine;
+    string location;
+    int openingHour;
+    int closingHour;
+    double rating;
+    double cost;
+
+    while (!done)
+    {
+        cout << "What is the cost consideration of the restaurant?\nPlease enter a number 0-5: ";
+        cin >> cost;
+        if (cin.fail() || cost < 0 || cost > 5)
+		{
+			cin.clear();
+			cin.ignore(1000, '\n');
+			cout << "Invalid response.\n";
+		}
+		else
+		{
+			done = true;
+		}
+    }
+    done = false;
+    while (!done)
+    {
+        cout << "What is the rating of the restaurant? Please enter a number 0-5: ";
+        cin >> rating;
+        if (cin.fail() || rating < 0 || rating > 5)
+		{
+			cin.clear();
+			cin.ignore(1000, '\n');
+			cout << "Invalid response.\n";
+		}
+		else
+		{
+			done = true;
+		}
+    }
+
+    Restaurant rest;
+    rest.setCost(cost);
+    rest.setRating(rating);
+    cout << "\n\nDoes this look right?" << endl << endl;
+    cout << rest;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
