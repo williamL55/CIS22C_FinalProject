@@ -158,12 +158,22 @@ void Report::listMainMenu()
 
 void Report::listUnsorted()
 {
-//possibly something like this for printing the hash unsorted
-//     for(int i = 0; i < TREESIZE; i++)
-//     {
+//    possibly something like this for printing the hash unsorted
+//    try
+//    {
+//        for(int i = 0; i < TREESIZE; i++)
+//        {
 //        if (hash @ index i is not empty
 //          hash_print(i);
-//     }
+//        }
+//    }
+//    catch(...)
+//    {
+//        cout << "The tree is empty." << endl;
+//        cout << "Press a key to continue.";
+//        cin.ignore(1000, '\n');
+//        cin.get();
+//    }
     return;
 }
 
@@ -178,10 +188,20 @@ void Report::listSortedByName()
     cin.get();
     return;
 
-//possibly something like this for printing hash sorted by name
-//    for(i = 0; i < HASHSIZE; i++)
-//        hash(uniqueBSTDatabase->getRoot());
-//        cout << hash(i);
+//    possibly something like this for printing hash sorted by name
+//    try
+//    {
+//         for(i = 0; i < HASHSIZE; i++)
+//              hash(uniqueBSTDatabase->getRoot());
+//              cout << hash(i);
+//    }
+//    catch(...)
+//    {
+//        cout << "The tree is empty." << endl;
+//        cout << "Press a key to continue.";
+//        cin.ignore(1000, '\n');
+//        cin.get();
+//    }
 
 
 
@@ -190,11 +210,21 @@ void Report::listSortedByName()
 
 void Report::listSortedByCuisine()
 {
-//possibly something like this for printing hash sorted by name
-//same as the sorted by name but using the second tree
-//    for(i = 0; i < HASHSIZE; i++)
-//        hash(secondaryBSTDatabase->getRoot());
-//        cout << hash(i);
+//    possibly something like this for printing hash sorted by name
+//    same as the sorted by name but using the second tree
+//    try
+//    {
+//        for(i = 0; i < HASHSIZE; i++)
+//            hash(secondaryBSTDatabase->getRoot());
+//            cout << hash(i);
+//    }
+//    catch(...)
+//    {
+//        cout << "The tree is empty." << endl;
+//        cout << "Press a key to continue.";
+//        cin.ignore(1000, '\n');
+//        cin.get();
+//    }
     return;
 }
 
