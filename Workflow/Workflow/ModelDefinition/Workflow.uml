@@ -37,14 +37,7 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="dd56eaf6-639e-4995-a7c8-b842e399fe3b"
-                LastKnownName="struct"
-                LastKnownLocation="Workflow.uml" />
-            </type_NamedElement>
-          </property>
+            isComposite="false" />
           <property
             Id="c94493ad-6577-4398-a89f-bc8395040eae"
             name="root"
@@ -56,14 +49,7 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="5c6728d2-bc41-40e6-b8ca-3a98ce7a3a7e"
-                LastKnownName="Node*"
-                LastKnownLocation="Workflow.uml" />
-            </type_NamedElement>
-          </property>
+            isComposite="false" />
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -112,15 +98,6 @@
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="e71ff2d2-e081-495e-85ba-b3ce4a18b563"
-            name="findMin"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
             Id="94ecfb5b-6b03-413c-b558-6c77eba4caf1"
             name="remove"
             visibility="Private"
@@ -130,26 +107,8 @@
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="68d03518-26a2-4e8f-a0e3-853b79b089ce"
-            name="copyHelper"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
             Id="e542bb3b-e415-4bc7-81ea-333190744556"
             name="deleteTree"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="f2887df0-305d-49bb-a7ec-2a3a8f270cdd"
-            name="findMax"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -341,14 +300,7 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="df75fa4d-fb89-4759-a035-c5b86b15e67b"
-                LastKnownName="BST&lt;string&gt;*"
-                LastKnownLocation="Workflow.uml" />
-            </type_NamedElement>
-          </property>
+            isComposite="false" />
           <property
             Id="83657a5a-2a73-4477-9858-6065e09ea8bc"
             name="secondaryBSTDatabase"
@@ -360,14 +312,7 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="df75fa4d-fb89-4759-a035-c5b86b15e67b"
-                LastKnownName="BST&lt;string&gt;*"
-                LastKnownLocation="Workflow.uml" />
-            </type_NamedElement>
-          </property>
+            isComposite="false" />
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -609,14 +554,7 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="38884660-8dfc-4529-a283-8c96e9e7f92c"
-                LastKnownName="string"
-                LastKnownLocation="Workflow.uml" />
-            </type_NamedElement>
-          </property>
+            isComposite="false" />
           <property
             Id="544fda43-2683-4769-b725-811ea8e317be"
             name="name"
@@ -628,14 +566,7 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="38884660-8dfc-4529-a283-8c96e9e7f92c"
-                LastKnownName="string"
-                LastKnownLocation="Workflow.uml" />
-            </type_NamedElement>
-          </property>
+            isComposite="false" />
           <property
             Id="3d70a4b6-f638-4683-9fe2-5e018c6be89b"
             name="location"
@@ -647,14 +578,7 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="38884660-8dfc-4529-a283-8c96e9e7f92c"
-                LastKnownName="string"
-                LastKnownLocation="Workflow.uml" />
-            </type_NamedElement>
-          </property>
+            isComposite="false" />
           <property
             Id="0dfccbb8-28c2-4b12-ab91-9a7cbb4679aa"
             name="openingHour"
@@ -666,14 +590,7 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="2511894f-185d-4fe1-b437-edbef332203c"
-                LastKnownName="int"
-                LastKnownLocation="Workflow.uml" />
-            </type_NamedElement>
-          </property>
+            isComposite="false" />
           <property
             Id="cc597e7a-3954-4efe-9fb7-00e558d8e391"
             name="closingHour"
@@ -685,14 +602,7 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="2511894f-185d-4fe1-b437-edbef332203c"
-                LastKnownName="int"
-                LastKnownLocation="Workflow.uml" />
-            </type_NamedElement>
-          </property>
+            isComposite="false" />
           <property
             Id="d5f1e595-3d31-41de-a956-40f266df5c58"
             name="phoneNumber"
@@ -704,14 +614,7 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="782fbf16-2b1c-4cac-aa00-2aeda0511566"
-                LastKnownName="double"
-                LastKnownLocation="Workflow.uml" />
-            </type_NamedElement>
-          </property>
+            isComposite="false" />
           <property
             Id="1a283f7f-8566-4ab3-a7c0-f54a29c868a4"
             name="rating"
@@ -723,14 +626,7 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="782fbf16-2b1c-4cac-aa00-2aeda0511566"
-                LastKnownName="double"
-                LastKnownLocation="Workflow.uml" />
-            </type_NamedElement>
-          </property>
+            isComposite="false" />
           <property
             Id="463f9462-df40-442c-83e3-49dc073c7c63"
             name="cost"
@@ -742,14 +638,7 @@
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <undefinedTypeMoniker
-                Id="782fbf16-2b1c-4cac-aa00-2aeda0511566"
-                LastKnownName="double"
-                LastKnownLocation="Workflow.uml" />
-            </type_NamedElement>
-          </property>
+            isComposite="false" />
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -762,7 +651,7 @@
             isQuery="false" />
           <operation
             Id="cbd5a640-a847-4f50-83ae-b1ae603a37a2"
-            name="getName : string"
+            name="getName"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -770,7 +659,7 @@
             isQuery="false" />
           <operation
             Id="3c5c40be-527c-4ee4-9d7a-27bccb45a8d8"
-            name="getCuisine : string"
+            name="getCuisine"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -778,7 +667,7 @@
             isQuery="false" />
           <operation
             Id="5878b779-fcbd-4e95-a1b8-deb1318e73e8"
-            name="getLocation : string"
+            name="getLocation"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -786,7 +675,7 @@
             isQuery="false" />
           <operation
             Id="eb15abec-ff76-416a-a36d-751f44af1b09"
-            name="getOpeningHour : int"
+            name="getOpeningHour"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -794,7 +683,7 @@
             isQuery="false" />
           <operation
             Id="06ccf6be-72a6-41eb-97f8-98daec865812"
-            name="getClosingHour : int"
+            name="getClosingHour"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -802,7 +691,7 @@
             isQuery="false" />
           <operation
             Id="5efa12ae-87e7-4529-b190-ab80ecf5c045"
-            name="getPhoneNumber : double"
+            name="getPhoneNumber"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -810,7 +699,7 @@
             isQuery="false" />
           <operation
             Id="3d24d0c6-36d3-471d-9595-3c3e066bd07c"
-            name="getRating : double"
+            name="getRating"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -818,7 +707,7 @@
             isQuery="false" />
           <operation
             Id="3199300f-18db-4762-9035-4408cd3282bf"
-            name="getCost : double"
+            name="getCost"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -831,24 +720,7 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="e73a25c7-202e-4cc6-865c-f2de294512d7"
-                  name="cuisine"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="38884660-8dfc-4529-a283-8c96e9e7f92c"
-                      LastKnownName="string"
-                      LastKnownLocation="Workflow.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
+            isQuery="false" />
           <operation
             Id="de756d9e-ad6e-4bf6-be67-2a4a600662a5"
             name="setName"
@@ -856,24 +728,7 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="722a3f59-f136-44fd-a17c-21e82b357d9c"
-                  name="name"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="38884660-8dfc-4529-a283-8c96e9e7f92c"
-                      LastKnownName="string"
-                      LastKnownLocation="Workflow.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
+            isQuery="false" />
           <operation
             Id="e8fb62f3-bc8e-4171-a0f9-f4121446f32b"
             name="setLocation"
@@ -881,24 +736,7 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="f3b3c46a-86b1-4d78-bae4-cfadf0ba8600"
-                  name="location"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="38884660-8dfc-4529-a283-8c96e9e7f92c"
-                      LastKnownName="string"
-                      LastKnownLocation="Workflow.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
+            isQuery="false" />
           <operation
             Id="073364e6-04fe-4e4a-b42d-38388f6a8999"
             name="setOpeningHour"
@@ -906,24 +744,7 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="84102f26-117d-4c9a-9c99-6707f0e1bdbe"
-                  name="openingHour"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="2511894f-185d-4fe1-b437-edbef332203c"
-                      LastKnownName="int"
-                      LastKnownLocation="Workflow.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
+            isQuery="false" />
           <operation
             Id="9f22677a-15a9-47ff-a3d9-4d4fbc5b0c32"
             name="setClosingHour"
@@ -931,24 +752,7 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="d38f504c-4e70-480b-aeb7-bf6037df13a6"
-                  name="closingHour"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="2511894f-185d-4fe1-b437-edbef332203c"
-                      LastKnownName="int"
-                      LastKnownLocation="Workflow.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
+            isQuery="false" />
           <operation
             Id="1d5efb84-89cb-4c41-a967-07b47e29c12a"
             name="setRating"
@@ -956,24 +760,7 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="458a19c3-3e76-4292-8679-2f60221b275f"
-                  name="rating"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="782fbf16-2b1c-4cac-aa00-2aeda0511566"
-                      LastKnownName="double"
-                      LastKnownLocation="Workflow.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
+            isQuery="false" />
           <operation
             Id="dc0b3932-195a-4de5-825c-f3918b1e3093"
             name="setCost"
@@ -981,52 +768,10 @@
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="d96beb37-d464-478d-b2eb-eaa1ef6b6acc"
-                  name="cost"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="782fbf16-2b1c-4cac-aa00-2aeda0511566"
-                      LastKnownName="double"
-                      LastKnownLocation="Workflow.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
+            isQuery="false" />
           <operation
             Id="508fa074-5bca-4d6f-802e-9ab4d9b6591f"
             name="setPhoneNumber"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="e1f814b7-76e5-4074-a3d9-594cf11b954e"
-                  name="phoneNumber"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="782fbf16-2b1c-4cac-aa00-2aeda0511566"
-                      LastKnownName="double"
-                      LastKnownLocation="Workflow.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="023052f7-5fd6-415d-93d7-cf4fa8c0868a"
-            name="Operation1"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
