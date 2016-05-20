@@ -33,109 +33,33 @@ class BST
                     /**Private helper functions*/
 
         void insert_value(Nodeptr root, bstdata nameOrCuisine, int phoneNumber);
-
-        //private helper function for insert
-
-        //recursively inserts a value into the BST
-
         void inOrderPrint(Nodeptr root);
-
-        //private helper function for inOrderPrint
-
-        //recursively prints tree values in order from smallest to largest
-
         void preOrderPrint(Nodeptr root, ofstream &fout);
-
-        //private helper function for preOrderPrint
-
-        //recursively prints tree values in preorder
-
-
         void postOrderPrint(Nodeptr root, ofstream &fout);
-
-        //private helper function for postOrderPrint
-
-        //recursively prints tree values according in postorder
-
         bool containsValue(Nodeptr root, bstdata value);
-
-        bstdata findMin(Nodeptr root);
-
         Nodeptr remove(Nodeptr root, bstdata value);
-
         void copyHelper(const Nodeptr origRoot, Nodeptr &root);
-
         void deleteTree(Nodeptr root);
-
-        bstdata findMax(Nodeptr root);
-
         int getSize(Nodeptr root);
-
         int getHeight(Nodeptr root);
-
     public:
         BST();
-
-        //Instantiates a new BST
-
-        //post: a new BST object
-
         BST(const BST &BST);
-
         ~BST();
-
         bool is_empty();
-
-        //determines whether the BST is empty
-
         void insert(bstdata nameOrCuisine, int phoneNumber);
-
-        //inserts a new value into the BST
-
-        //post: a new value inserted into the BST
 
         //MUST use exception when calling
         //otherwise will crash when calling if tree is empty
         bstdata getRoot();
 
-        //returns the value stored at the root of the BST
-
-        //pre: the BST is not empty
-
         void inOrderPrint();
-
-        //calls the inOrderPrint function to print out the values
-
-        //stored in the BST
-
-
         void preOrderPrint(ofstream &fout);
-
-        //calls the reOrderPrint function to print out the values
-
-        //stored in the BST
-
-
         void postOrderPrint(ofstream &fout);
-
-        //calls the postOrderPrint function to print out the values
-
-        //stored in the BST
-
-        //more functions to be added here!
-
         bool search(bstdata value);
-
-        bstdata minimum();
-
         void remove(bstdata value);
-
-        bstdata maximum();
-
         bool isEmpty();
-
         int getSize();
-
         int getHeight();
 
 
@@ -319,46 +243,6 @@ bool BST<bstdata>::search(bstdata value)
     else if(root)
         return containsValue(root, value);
     else return false;
-}
-
-template <class bstdata>
-bstdata BST<bstdata>::minimum()
-{
-    if (root == NULL)
-    {
-        cout << "Minimum: Tree is empty" << endl;
-        //will need to include cstdlib for exit below
-            exit(-1);
-    }
-    else return findMin(root);
-}
-
-template <class bstdata>
-bstdata BST<bstdata>::findMin(Nodeptr root)
-{
-    while(root->left)
-        root = root->left;
-    return root->data;
-}
-
-template <class bstdata>
-bstdata BST<bstdata>::maximum()
-{
-    if (root == NULL)
-    {
-        cout << "Maximum: Tree is empty" << endl;
-        //will need to include cstdlib for exit below
-            exit(-1);
-    }
-    else return findMax(root);
-}
-
-template <class bstdata>
-bstdata BST<bstdata>::findMax(Nodeptr root)
-{
-    while(root->right)
-        root = root->right;
-    return root->data;
 }
 
 template <class bstdata>

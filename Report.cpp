@@ -173,10 +173,11 @@ void Report::listSortedByName()
     return;
 
     //something like this for printing the hash ordered by name
-//     for(int i = 0; i < TREESIZE; i++)
+
+//     for(int i = 0; i < HASHSIZE; i++)
 //     {
-//        hash_get_index(uniqueBSTDatabase->getRoot());
-//        hash_print(i);
+//        if (hash @ index i is not empty
+//          hash_print(i);
 //     }
 
 
