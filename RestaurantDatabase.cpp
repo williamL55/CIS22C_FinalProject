@@ -31,7 +31,7 @@ void RestaurantDatabase::readFile()
     return;
 }
 
-void RestaurantDatabase::addRestaurant(string name, string cuisine, string location, int openingHour, int closingHour, double cost, double rating, int phoneNumber)
+void RestaurantDatabase::addRestaurant(string name, string cuisine, string location, int openingHour, int closingHour, double cost, double rating, double phoneNumber)
 {
     //this is only an example of the usage for our BST
     //insert currently ONLY fucntions for the name parameter
@@ -77,7 +77,7 @@ void RestaurantDatabase::addRestaurantMenu()
     string location;
     int openingHour;
     int closingHour;
-    int phoneNumber;
+    double phoneNumber;
     double rating;
     double cost;
     char alwaysOpen;
@@ -120,6 +120,7 @@ void RestaurantDatabase::addRestaurantMenu()
 			done = true;
 		}
     }
+    done = false;
     while (!done)
     {
         cout << "\nWhat is the phone number of the restaurant?\nPlease enter a 10 digit number ";
@@ -141,9 +142,6 @@ void RestaurantDatabase::addRestaurantMenu()
         //if the restaurant is always open, set openingHour and closingHour to 0000 each
         cout << "Is this restaurant always open? (Y/N) ";
         cin >> alwaysOpen;
-        //cin.clear();
-        //cin.ignore(1000, '\n');
-
         if (alwaysOpen == 'y' || alwaysOpen == 'Y')
 		{
 		    openingHour = 0;
@@ -159,6 +157,8 @@ void RestaurantDatabase::addRestaurantMenu()
 
                 cout << "\nWhat is the opening hour of the restaurant?\nPlease enter a number (0000-2400): ";
                 cin >> openingHour;
+                cin.clear();
+                cin.ignore(1000, '\n');
                 if (cin.fail() || openingHour < 0 || openingHour > 2400 || openingHour % 100 >= 60)
                 {
                     cin.clear();
@@ -175,6 +175,8 @@ void RestaurantDatabase::addRestaurantMenu()
             {
                 cout << "\nWhat is the closing hour of the restaurant?\nPlease enter a number (0000-2400): ";
                 cin >> closingHour;
+                cin.clear();
+                cin.ignore(1000, '\n');
                 if (cin.fail() || closingHour < 0 || closingHour > 2400 || closingHour % 100 >= 60)
                 {
                     cin.clear();
@@ -202,7 +204,7 @@ void RestaurantDatabase::addRestaurantMenu()
 
     Restaurant rest;
 
-    //set all the attributes on the local restaurant before calling add later
+    //set all the attributes on the local restaurant
     rest.setCost(cost);
     rest.setRating(rating);
     rest.setName(name);

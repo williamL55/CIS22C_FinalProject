@@ -46,7 +46,7 @@ double Restaurant::getCost()
     return cost;
 }
 
-int Restaurant::getPhoneNumber()
+double Restaurant::getPhoneNumber()
 {
     return phoneNumber;
 }
@@ -86,7 +86,7 @@ void Restaurant::setCost(double cost)
     this->cost = cost;
 }
 
-void Restaurant::setPhoneNumber(int phoneNumber)
+void Restaurant::setPhoneNumber(double phoneNumber)
 {
     this->phoneNumber = phoneNumber;
 }
@@ -102,6 +102,7 @@ ostream& operator<<(ostream& out, Restaurant& restaurant)
 	out << "Closing Hour: " << restaurant.getClosingHour() << endl;
 	out << "Cost Consideration: " << restaurant.getCost() << endl;
 	out << "Rating:" << restaurant.getRating() << endl;
+	out << "Phone Number: " << restaurant.getPhoneNumber() << endl;
 	return out;
 }
 

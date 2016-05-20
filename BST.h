@@ -38,7 +38,7 @@ class BST
 
         //recursively inserts a value into the BST
 
-        void inOrderPrint(Nodeptr root, ofstream &fout);
+        void inOrderPrint(Nodeptr root);
 
         //private helper function for inOrderPrint
 
@@ -102,7 +102,7 @@ class BST
 
         //pre: the BST is not empty
 
-        void inOrderPrint(ofstream &fout);
+        void inOrderPrint();
 
         //calls the inOrderPrint function to print out the values
 
@@ -235,21 +235,22 @@ bstdata BST<bstdata>::getRoot()
 
 
 template <class bstdata>
-void BST<bstdata>::inOrderPrint(Nodeptr root, ofstream &fout)
+void BST<bstdata>::inOrderPrint(Nodeptr root)
 {
     if(root)
     {
-        inOrderPrint(root->left, fout);
-        fout << root->data << " ";
-        inOrderPrint(root->right, fout);
+        inOrderPrint(root->left);
+        //fout << root->data << " ";
+        cout << root->nameOrCuisine;
+        inOrderPrint(root->right);
     }
 }
 
 template <class bstdata>
-void BST<bstdata>::inOrderPrint(ofstream &fout)
+void BST<bstdata>::inOrderPrint()
 {
-    inOrderPrint(root, fout);
-    fout << endl;
+    inOrderPrint(root);
+    cout << endl;
 }
 
 template <class bstdata>

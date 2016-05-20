@@ -128,6 +128,7 @@ void Report::listMainMenu()
 		else if (choice == 2)
 		{
 			//run listSortedByName();
+			listSortedByName();
 		}
 		else if (choice == 3)
 		{
@@ -162,7 +163,23 @@ void Report::listUnsorted()
 
 void Report::listSortedByName()
 {
+    system(CLEAR);
+    cout << "Listing unique key sorted by name: " << endl;
+    uniqueBSTDatabase->inOrderPrint();
+    cin.clear();
+    cin.ignore(1000, '\n');
+    cout << "\n\t    Press return to continue.";
+    cin.get();
     return;
+
+    //something like this for printing the hash ordered by name
+//     for(int i = 0; i < TREESIZE; i++)
+//     {
+//        hash_get_index(uniqueBSTDatabase->getRoot());
+//        hash_print(i);
+//     }
+
+
 }
 
 void Report::listSortedByCuisine()
