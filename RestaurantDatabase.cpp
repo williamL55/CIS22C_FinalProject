@@ -31,22 +31,25 @@ void RestaurantDatabase::readFile()
     return;
 }
 
-void RestaurantDatabase::addRestaurant(string name, string cuisine, string location, int openingHour, int closingHour, double cost, double rating)
+void RestaurantDatabase::addRestaurant(string name, string cuisine, string location, int openingHour, int closingHour, double cost, double rating, int phoneNumber)
 {
     //this is only an example of the usage for our BST
     //insert currently ONLY fucntions for the name parameter
     //until i or someone else updates all the BST functions to work with an operator overload
     Restaurant rest;
+    rest.setCost(cost);
+    rest.setRating(rating);
     rest.setName(name);
+    rest.setClosingHour(closingHour);
+    rest.setOpeningHour(openingHour);
+    rest.setLocation(location);
+    rest.setCuisine(cuisine);
 
-    uniqueBSTDatabase->insert(rest);
-    //cout << "root: " << uniqueBSTDatabase->getRoot() << endl;
+    //insert the restaurant to the hash database
+    //hash->insert(rest);
 
-    //example using the secondary BST
-    Restaurant rest2;
-    rest2.setName("secondary key rest2");
-    secondaryBSTDatabase->insert(rest2);
-    //cout << "root: " << secondaryBSTDatabase->getRoot() << endl;
+    uniqueBSTDatabase->insert(name, phoneNumber);
+    secondaryBSTDatabase->insert(cuisine, phoneNumber);
 
     system(CLEAR);
     cout << "\n\n\n\t\tRestaurant added successfully!\n\t\tPress any key to continue." << endl;
@@ -68,11 +71,13 @@ void RestaurantDatabase::addRestaurantMenu()
 {
     bool done = false;
 
+    //declare temp variables
     string name;
     string cuisine;
     string location;
     int openingHour;
     int closingHour;
+    int phoneNumber;
     double rating;
     double cost;
     char alwaysOpen;
@@ -115,15 +120,29 @@ void RestaurantDatabase::addRestaurantMenu()
 			done = true;
 		}
     }
-
+    while (!done)
+    {
+        cout << "\nWhat is the phone number of the restaurant?\nPlease enter a 10 digit number ";
+        cin >> phoneNumber;
+        if (cin.fail() || phoneNumber < 0 || phoneNumber > 9999999999)
+		{
+			cin.clear();
+			cin.ignore(1000, '\n');
+			cout << "Invalid response.\n\n";
+		}
+		else
+		{
+			done = true;
+		}
+    }
     done = false;
     while (!done)
     {
         //if the restaurant is always open, set openingHour and closingHour to 0000 each
         cout << "Is this restaurant always open? (Y/N) ";
         cin >> alwaysOpen;
-        cin.clear();
-        cin.ignore(1000, '\n');
+        //cin.clear();
+        //cin.ignore(1000, '\n');
 
         if (alwaysOpen == 'y' || alwaysOpen == 'Y')
 		{
@@ -176,18 +195,10 @@ void RestaurantDatabase::addRestaurantMenu()
 
 		}
     }
-
-
-    //done = false;
-
-    cin.clear();
-    cin.ignore(1000, '\n');
     cout << "What is the cuisine of the restaurant? ";
     getline(cin, cuisine);
     cout << "What is the location of the restaurant? ";
     getline(cin, location);
-
-
 
     Restaurant rest;
 
@@ -199,6 +210,7 @@ void RestaurantDatabase::addRestaurantMenu()
     rest.setOpeningHour(openingHour);
     rest.setLocation(location);
     rest.setCuisine(cuisine);
+    rest.setPhoneNumber(phoneNumber);
 
     system(CLEAR);
     cout << rest;
@@ -208,12 +220,9 @@ void RestaurantDatabase::addRestaurantMenu()
     cout << "(y/n): ";
 
     cin.ignore(1000, '\n');
-    //cin.get();
-
 
     //we will pass addRestaurant all parameters for a restaurant
-    addRestaurant(name, cuisine, location, openingHour, closingHour, rating, cost);
-
+    addRestaurant(name, cuisine, location, openingHour, closingHour, rating, cost, phoneNumber);
 }
 
 

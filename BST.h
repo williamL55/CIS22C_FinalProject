@@ -18,11 +18,11 @@ class BST
         {
                 Node* left;
                 Node* right;
-               // bstdata data;
-                Restaurant rest;
+                bstdata nameOrCuisine;
+                int phoneNumber;
 
-                Node(): left(NULL), right(NULL){}
-                Node(Restaurant newRest): left(NULL), right(NULL), rest(newRest){}
+                Node(): left(NULL), right(NULL), nameOrCuisine(""), phoneNumber(0){}
+                Node(bstdata nameOrCuisine,int phoneNumber): left(NULL), right(NULL), nameOrCuisine(nameOrCuisine), phoneNumber(phoneNumber){}
         };
 
         typedef struct Node* Nodeptr;
@@ -32,7 +32,7 @@ class BST
 
                     /**Private helper functions*/
 
-        void insert_value(Nodeptr root, Restaurant rest);
+        void insert_value(Nodeptr root, bstdata nameOrCuisine, int phoneNumber);
 
         //private helper function for insert
 
@@ -88,7 +88,7 @@ class BST
 
         //determines whether the BST is empty
 
-        void insert(Restaurant rest);
+        void insert(bstdata nameOrCuisine, int phoneNumber);
 
         //inserts a new value into the BST
 
@@ -186,40 +186,39 @@ void BST<bstdata>::copyHelper(const Nodeptr origRoot, Nodeptr &root)
 }
 
 template <class bstdata>
-void BST<bstdata>::insert(Restaurant rest)
+void BST<bstdata>::insert(bstdata nameOrCuisine, int phoneNumber)
 {
     if (root == NULL)
-
     {
-        root = new Node(rest); //if the tree is empty insert the value at the root
+        root = new Node(nameOrCuisine, phoneNumber); //if the tree is empty insert the value at the root
 
     }
     else
-        insert_value(root, rest); //otherwise call the helper function, passing it the root
+        insert_value(root, nameOrCuisine, phoneNumber); //otherwise call the helper function, passing it the root
 
 }
 
 template <class bstdata>
-void BST<bstdata>::insert_value(Nodeptr root, Restaurant rest)
+void BST<bstdata>::insert_value(Nodeptr root, bstdata nameOrCuisine, int phoneNumber)
 {
 
     //change the root->rest.getName() later to
     // operator== overload
-    if(rest.getName() == root->rest.getName())
+    if(nameOrCuisine == root->nameOrCuisine)
         return;
-    else if(rest.getName() < root->rest.getName())
+    else if(nameOrCuisine < root->nameOrCuisine)
     {
         if(root->left == NULL)
-            root->left = new Node(rest);
+            root->left = new Node(nameOrCuisine, phoneNumber);
         else
-            insert_value(root->left, rest);
+            insert_value(root->left, nameOrCuisine, phoneNumber);
     }
     else
     {
         if(root->right == NULL)
-            root->right = new Node(rest);
+            root->right = new Node(nameOrCuisine, phoneNumber);
         else
-            insert_value(root->right, rest);
+            insert_value(root->right, nameOrCuisine, phoneNumber);
     }
 }
 
@@ -227,7 +226,7 @@ template <class bstdata>
 bstdata BST<bstdata>::getRoot()
 {
     if(root)
-       return root->rest.getName();
+       return root->nameOrCuisine;
     else
     {
         throw "The tree is empty";

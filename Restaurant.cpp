@@ -46,6 +46,11 @@ double Restaurant::getCost()
     return cost;
 }
 
+int Restaurant::getPhoneNumber()
+{
+    return phoneNumber;
+}
+
 void Restaurant::setName(string name)
 {
     this->name = name;
@@ -79,6 +84,11 @@ void Restaurant::setRating(double rating)
 void Restaurant::setCost(double cost)
 {
     this->cost = cost;
+}
+
+void Restaurant::setPhoneNumber(int phoneNumber)
+{
+    this->phoneNumber = phoneNumber;
 }
 
 

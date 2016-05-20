@@ -33,7 +33,7 @@ MainMenu::MainMenu()
     //will also need a new constructor for this to happen
     //this report call to the constructor will create a report object to be used by the main menu object
     //report will be used for search, list, and statistics
-    report = Report(uniqueBSTDatabase);
+    report = Report(uniqueBSTDatabase, secondaryBSTDatabase);
 
 
 

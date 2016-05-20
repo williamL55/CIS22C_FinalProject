@@ -15,9 +15,10 @@ Report::Report()
 
 }
 
-Report::Report(BST<string>* database)
+Report::Report(BST<string>* uniqueBSTDatabase, BST<string>* secondaryBSTDatabase)
 {
-    uniqueBSTDatabase = database;
+    this->uniqueBSTDatabase = uniqueBSTDatabase;
+    this->secondaryBSTDatabase = secondaryBSTDatabase;
 }
 
     /* SEARCH */
@@ -70,7 +71,7 @@ void Report::searchMainMenu()
 void Report::searchByName()
 {
     //temp variable to hold the value to search for
-    //case sensitive
+    //obviously case sensitive
     string tempRestaurantName;
 
     system(CLEAR);
@@ -80,6 +81,7 @@ void Report::searchByName()
     try
     {
         cout << uniqueBSTDatabase->getRoot();
+        cout << secondaryBSTDatabase->getRoot();
         cout << "Press any key to continue." << endl;
         cin.ignore(1000, '\n');
         cin.get();
