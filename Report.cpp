@@ -88,7 +88,7 @@ void Report::searchByName()
     }
     catch(...)
     {
-        cout << "The list is empty." << endl;
+        cout << "The tree is empty." << endl;
         cout << "Press a key to continue.";
         cin.ignore(1000, '\n');
         cin.get();
