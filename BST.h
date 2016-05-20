@@ -38,13 +38,11 @@ class BST
         void postOrderPrint(Nodeptr root, ofstream &fout);
         bool containsValue(Nodeptr root, bstdata value);
         Nodeptr remove(Nodeptr root, bstdata value);
-        void copyHelper(const Nodeptr origRoot, Nodeptr &root);
         void deleteTree(Nodeptr root);
         int getSize(Nodeptr root);
         int getHeight(Nodeptr root);
     public:
         BST();
-        BST(const BST &BST);
         ~BST();
         bool is_empty();
         void insert(bstdata nameOrCuisine, int phoneNumber);
@@ -73,15 +71,6 @@ BST<bstdata>::BST()
 }
 
 template <class bstdata>
-BST<bstdata>::BST(const BST &BST)
-{
-    if(!BST.root)
-        root = NULL;
-    else copyHelper(BST.root, root);
-
-}
-
-template <class bstdata>
 BST<bstdata>::~BST()
 {
     deleteTree(root);
@@ -95,17 +84,6 @@ void BST<bstdata>::deleteTree(Nodeptr root)
         deleteTree(root->left);
         deleteTree(root->right);
         delete root;
-    }
-}
-
-template <class bstdata>
-void BST<bstdata>::copyHelper(const Nodeptr origRoot, Nodeptr &root)
-{
-    if(origRoot)
-    {
-        root = new Node(origRoot->data);
-        copyHelper(origRoot->left, root->left);
-        copyHelper(origRoot->right, root->right);
     }
 }
 

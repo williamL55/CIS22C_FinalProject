@@ -158,6 +158,12 @@ void Report::listMainMenu()
 
 void Report::listUnsorted()
 {
+//possibly something like this for printing the hash unsorted
+//     for(int i = 0; i < TREESIZE; i++)
+//     {
+//        if (hash @ index i is not empty
+//          hash_print(i);
+//     }
     return;
 }
 
@@ -172,19 +178,23 @@ void Report::listSortedByName()
     cin.get();
     return;
 
-    //something like this for printing the hash ordered by name
+//possibly something like this for printing hash sorted by name
+//    for(i = 0; i < HASHSIZE; i++)
+//        hash(uniqueBSTDatabase->getRoot());
+//        cout << hash(i);
 
-//     for(int i = 0; i < HASHSIZE; i++)
-//     {
-//        if (hash @ index i is not empty
-//          hash_print(i);
-//     }
+
 
 
 }
 
 void Report::listSortedByCuisine()
 {
+//possibly something like this for printing hash sorted by name
+//same as the sorted by name but using the second tree
+//    for(i = 0; i < HASHSIZE; i++)
+//        hash(secondaryBSTDatabase->getRoot());
+//        cout << hash(i);
     return;
 }
 
