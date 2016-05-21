@@ -62,15 +62,35 @@ void RestaurantDatabase::readFile()
 		}
 
 		//create temp variables to store data
-		//string name, cuisine, location;
-		//int openingHour, closingHour;
-		//double cost, rating, phoneNumber;
+		string name, cuisine, location;
+		int openingHour, closingHour;
+		double cost, rating, phoneNumber;
 
 		//read the file in a for loop, inputting a complete restaurant object
-		//to the hash, and the name/phonenumber for uniqueBSTDatabase
-		//and cuisine/phonenumber for secondaryBSTDatabase
-		//just call addRestaurant
+		//to all 3 databases
+		int i = 0;
+		while(i < hashTable->getTableSize() && !fin.eof())
+        {
+            //read in all contents
+            getline(fin, name);
+            getline(fin, cuisine);
+            getline(fin, location);
+            fin >> openingHour;
+            fin.ignore(1000, '\n');
+            fin >> closingHour;
+            fin.ignore(1000, '\n');
+            fin >> cost;
+            fin.ignore(1000, '\n');
+            fin >> rating;
+            fin.ignore(1000, '\n');
+            fin >> phoneNumber;
 
+            //add the restaurant
+            addRestaurant(name, cuisine, location, openingHour, closingHour, cost, rating, phoneNumber);
+
+            //increment iterator
+            i++;
+        }
     }
     //if database file is unreadable
     catch (string e)
@@ -92,9 +112,7 @@ void RestaurantDatabase::addRestaurant(string name, string cuisine, string locat
     rest.setLocation(location);
     rest.setCuisine(cuisine);
 
-    //insert the restaurant to the hash database
-    //hash->insert(rest);
-
+    //add the new restaurant to all 3 databases
     uniqueBSTDatabase->insert(name, phoneNumber);
     secondaryBSTDatabase->insert(cuisine, phoneNumber);
     hashTable->addItem(rest);
@@ -134,9 +152,9 @@ void RestaurantDatabase::addRestaurantMenu()
     getline(cin, name);
     while (!done)
     {
-        cout << "What is the cost consideration of the restaurant?\nPlease enter a number 0-5: ";
+        cout << "What is the cost consideration of the restaurant?\nPlease enter a number 0-4: ";
         cin >> cost;
-        if (cin.fail() || cost < 0 || cost > 5)
+        if (cin.fail() || cost < 0 || cost > 4)
 		{
 			cin.clear();
 			cin.ignore(1000, '\n');

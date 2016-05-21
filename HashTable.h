@@ -43,6 +43,9 @@ public:
     //returns the index under which the author is stored
     //returns -1 if the author is not found
 
+    //need a way to get table size for looping
+    int getTableSize();
+
 private:
 
     struct Node

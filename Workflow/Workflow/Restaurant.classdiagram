@@ -423,6 +423,9 @@
           <operation Id="05c3ca89-ca84-488b-bf9c-1b14ff0f9baf" name="findRestaurant" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="12c5d4ee-3864-454a-bfdf-0d4c5e45efb6" />
           </operation>
+          <operation Id="d66eceaa-5af8-47d3-bf6f-202515e9b92e" name="getTableSize" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8bab5912-e35d-4a0d-b5e1-ef3b717d40b5" />
+          </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>

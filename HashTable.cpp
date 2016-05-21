@@ -158,6 +158,9 @@ void HashTable::printTable()
 //    }
 //}
 
-
+int HashTable::getTableSize()
+{
+    return TABLE_SIZE;
+}
 
 
