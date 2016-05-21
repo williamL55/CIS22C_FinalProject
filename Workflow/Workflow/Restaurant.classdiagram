@@ -426,6 +426,9 @@
           <operation Id="d66eceaa-5af8-47d3-bf6f-202515e9b92e" name="getTableSize" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="8bab5912-e35d-4a0d-b5e1-ef3b717d40b5" />
           </operation>
+          <operation Id="05f98441-d4e3-433a-bd3c-1c552e0c09e3" name="printTableToFile" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8e67a2cb-1282-4be4-8019-929829ebd007" />
+          </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
