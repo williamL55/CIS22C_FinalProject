@@ -3,7 +3,6 @@
 
 #include "Report.h"
 #include "RestaurantDatabase.h"
-#include "HashTable.h"
 
 class MainMenu
 {
