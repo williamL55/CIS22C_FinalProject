@@ -143,11 +143,7 @@ void Report::listMainMenu()
 		}
 		else
 		{
-			#ifdef WINDOWS
-            system("CLS");//clear the screen of any old menus
-            #else
-                system("clear");
-            #endif
+		    system(CLEAR);
 			cout << "\n\t    Please enter a valid selection.\n";
 			cin.clear();
 			cin.ignore(1000, '\n');

@@ -5,6 +5,7 @@
 #include <string>
 #include <iostream>
 #include <cstdlib>
+#include <fstream>
 using namespace std;
 
 class HashTable {
@@ -15,33 +16,35 @@ public:
     ~HashTable();
     //Destructor
 
-    int hash(string key);
     //returns the hash value for the given key
     //the hash value is the sum of
     //the ASCII values of each character % the table size
+    int hash(string key);
 
-    void addItem(Restaurant rest);
     //inserts a new item into the table
-    // calls the hash function on the key title to determine the correct bucket
+    //calls the hash function on the key title to determine the correct bucket
+    void addItem(Restaurant rest);
 
-    void removeItem(string key);
     //removes the item with the given key
+    void removeItem(string key);
 
-    int numItemsAtIndex(int index);
     //Helper function to printTable
     //Counts the number of items in each bucket
+    int numItemsAtIndex(int index);
 
-    void printTable();
     //prints the first item of each bucket
     //includes the number of items stored at that bucket
+    void printTable();
 
-    void printBucket(int index);
+    void printTableToFile(ofstream &fout);
+
     //Prints all items stored at a single bucket
+    void printBucket(int index);
 
-    int findAuthor(string title);
     //Searches for an author in the table using the key
     //returns the index under which the author is stored
     //returns -1 if the author is not found
+    int findAuthor(string title);
 
     //need a way to get table size for looping
     int getTableSize();

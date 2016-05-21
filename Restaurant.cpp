@@ -107,7 +107,3 @@ ostream& operator<<(ostream& out, Restaurant& restaurant)
 	out << "Phone Number: " << restaurant.getPhoneNumber() << endl;
 	return out;
 }
-
-
-
-

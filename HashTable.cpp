@@ -78,6 +78,46 @@ void HashTable::printTable()
     cout << "\n------------------------------------" << endl << endl;
 }
 
+void HashTable::printTableToFile(ofstream &fout)
+{
+    for(int i = 0; i < TABLE_SIZE; i++)
+    {
+        if(Table[i]->rest.getName() != "default name")
+        {
+            fout << fixed << setprecision(0);
+            fout << Table[i]->rest.getName() << endl;
+            fout << Table[i]->rest.getCuisine() << endl;
+            fout << Table[i]->rest.getLocation() << endl;
+            fout << Table[i]->rest.getOpeningHour() << endl;
+            fout << Table[i]->rest.getClosingHour() << endl;
+            fout << Table[i]->rest.getCost() << endl;
+            fout << fixed << setprecision(1);
+            fout << Table[i]->rest.getRating() << endl;
+            fout << fixed << setprecision(0);
+            fout << Table[i]->rest.getPhoneNumber() << endl;
+            if(Table[i]->next)
+            {
+                Nodeptr temp = Table[i];
+                while(temp->next)
+                {
+                    temp = temp->next;
+                    fout << fixed << setprecision(0);
+                    fout << temp->rest.getName() << endl;
+                    fout << temp->rest.getCuisine() << endl;
+                    fout << temp->rest.getLocation() << endl;
+                    fout << temp->rest.getOpeningHour() << endl;
+                    fout << temp->rest.getClosingHour() << endl;
+                    fout << temp->rest.getCost() << endl;
+                    fout << fixed << setprecision(1);
+                    fout << temp->rest.getRating() << endl;
+                    fout << fixed << setprecision(0);
+                    fout << temp->rest.getPhoneNumber() << endl;
+                }
+            }
+        }
+    }
+}
+
 //int HashTable::findAuthor(string title)
 //{
 //    int index = hash(title);

@@ -34,18 +34,24 @@ string RestaurantDatabase::getDatabaseFile()
 //this is supposed to be run automatically when the program ends, so we will add it to our destructor
 void RestaurantDatabase::writeFile()
 {
-    //ofstream fout;
-
-    //change the file here to the
-    //fout.open("output.txt");
-
     //output the restaurants to a file
     //output all of the data for each restaurant
+    try
+    {
+        ofstream fout;
+        fout.open(getDatabaseFile().c_str());
 
-    //fout.close();
-
-
-
+        if(fout.fail())
+        {
+            "Failed to open " + databaseFile + " for writing.\n";
+        }
+        hashTable->printTableToFile(fout);
+        fout.close();
+    }
+    catch(string e)
+    {
+        cout << e;
+    }
     return;
 }
 
@@ -86,12 +92,16 @@ void RestaurantDatabase::readFile()
             fin >> phoneNumber;
             fin.ignore(1000, '\n');
 
-            //add the restaurant
-            addRestaurant(name, cuisine, location, openingHour, closingHour, cost, rating, phoneNumber);
+            //add the restaurant if it is not a default object
+            //must check if name is an empty line here
+            //otherwise it will add an invalid restaurant
+            if(name != "default name" && name != "")
+                addRestaurant(name, cuisine, location, openingHour, closingHour, cost, rating, phoneNumber);
 
             //increment iterator
             i++;
         }
+        cout << i;
         //close the input file
         fin.close();
     }

@@ -1,15 +1,7 @@
-Philz Coffee
-Coffee & Tea
-20686 Stevens Creek Blvd Cupertino, CA 95014
-0600
-1830
-1
-4.5
-4084469000
 Vitality Bowls
 Juice Bar
 19700 Vallco Pkwy Ste 160 Cupertino, CA 95014
-0800
+800
 2000
 2
 4.5
@@ -20,5 +12,13 @@ Coffee & Tea
 1030
 2100
 1
-4
+4.0
 4088732038
+Philz Coffee
+Coffee & Tea
+20686 Stevens Creek Blvd Cupertino, CA 95014
+600
+1830
+1
+4.5
+4084469000
