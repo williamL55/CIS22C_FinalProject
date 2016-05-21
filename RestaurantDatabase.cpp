@@ -1,5 +1,4 @@
 #include "RestaurantDatabase.h"
-#include "BST.h"
 #include <fstream>
 
 #ifdef _WIN32
@@ -13,10 +12,11 @@ RestaurantDatabase::RestaurantDatabase()
 
 }
 
-RestaurantDatabase::RestaurantDatabase(BST<string>* uniqueBSTDatabase, BST<string>* secondaryBSTDatabase)
+RestaurantDatabase::RestaurantDatabase(BST<string>* uniqueBSTDatabase, BST<string>* secondaryBSTDatabase, HashTable* hashTable)
 {
     this->uniqueBSTDatabase = uniqueBSTDatabase;
     this->secondaryBSTDatabase = secondaryBSTDatabase;
+    this->hashTable = hashTable;
 }
 
 void RestaurantDatabase::setDatabaseFile(string file)

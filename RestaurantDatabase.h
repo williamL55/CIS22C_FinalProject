@@ -1,5 +1,5 @@
-#ifndef _RESTAURANTDATABASE_H
-#define _RESTAURANTDATABASE_H
+#ifndef _RESTAURANTDATABASE_H_
+#define _RESTAURANTDATABASE_H_
 
 #include "Restaurant.h"
 #include "Report.h"
@@ -17,12 +17,15 @@ private:
     //contains a pointer to the secondary key BST
     BST<string>* secondaryBSTDatabase;
 
+    //contains a pointer to the hash table
+    HashTable* hashTable;
+
     //used for holding the name of the database file
     string databaseFile;
 
 public:
     RestaurantDatabase();
-    RestaurantDatabase(BST<string>* uniqueBSTDatabase, BST<string>* secondaryBSTDatabase);
+    RestaurantDatabase(BST<string>* uniqueBSTDatabase, BST<string>* secondaryBSTDatabase, HashTable* hashTable);
 
     //writes all information to the file
     //user is prompted for file directory and name

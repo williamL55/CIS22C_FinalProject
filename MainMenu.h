@@ -1,8 +1,9 @@
-#ifndef _MAINMENU_H
-#define _MAINMENU_H
+#ifndef _MAINMENU_H_
+#define _MAINMENU_H_
 
 #include "Report.h"
 #include "RestaurantDatabase.h"
+#include "HashTable.h"
 
 class MainMenu
 {
@@ -15,6 +16,9 @@ private:
 
     //contains a pointer to the secondary key BST
     BST<string>* secondaryBSTDatabase;
+
+    //contains a pointer to the hash
+    HashTable* hashTable;
 
 public:
     //constructor

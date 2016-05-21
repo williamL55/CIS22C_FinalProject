@@ -15,10 +15,11 @@ Report::Report()
 
 }
 
-Report::Report(BST<string>* uniqueBSTDatabase, BST<string>* secondaryBSTDatabase)
+Report::Report(BST<string>* uniqueBSTDatabase, BST<string>* secondaryBSTDatabase, HashTable* hashTable)
 {
     this->uniqueBSTDatabase = uniqueBSTDatabase;
     this->secondaryBSTDatabase = secondaryBSTDatabase;
+    this->hashTable = hashTable;
 }
 
     /* SEARCH */
@@ -158,6 +159,8 @@ void Report::listMainMenu()
 
 void Report::listUnsorted()
 {
+
+
 //    possibly something like this for printing the hash unsorted
 //    try
 //    {

@@ -1,5 +1,5 @@
-#ifndef _REPORT_H
-#define _REPORT_H
+#ifndef _REPORT_H_
+#define _REPORT_H_
 
 /*
     This class will be for our reporting
@@ -7,6 +7,7 @@
 */
 
 #include "BST.h"
+#include "HashTable.h"
 #include <string>
 
 class Report
@@ -14,10 +15,11 @@ class Report
 private:
     BST<string>* uniqueBSTDatabase;
     BST<string>* secondaryBSTDatabase;
+    HashTable* hashTable;
 
 public:
     Report();
-    Report(BST<string>* uniqueBSTdatabase, BST<string>* secondaryBSTDatabase);
+    Report(BST<string>* uniqueBSTdatabase, BST<string>* secondaryBSTDatabase, HashTable* hashTable);
 
     /* Searching functions */
 

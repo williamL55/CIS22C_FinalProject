@@ -5,6 +5,7 @@ Restaurant::Restaurant()
     name = "default name";
     cuisine = "default cuisine";
     location = "default location";
+    phoneNumber = 0;
     openingHour = 0;
     closingHour = 0;
     rating = 0.0;

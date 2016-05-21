@@ -1,5 +1,5 @@
-#ifndef _RESTAURANT_H
-#define _RESTAURANT_H
+#ifndef _RESTAURANT_H_
+#define _RESTAURANT_H_
 
 #include <string>
 #include <iomanip>
