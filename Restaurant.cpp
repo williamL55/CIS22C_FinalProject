@@ -101,9 +101,9 @@ ostream& operator<<(ostream& out, Restaurant& restaurant)
 	out << "Location: " << restaurant.getLocation() << endl;
 	out << "Opening Hour: " << restaurant.getOpeningHour() << endl;
 	out << "Closing Hour: " << restaurant.getClosingHour() << endl;
-	out << "Cost Consideration: " << restaurant.getCost() << endl;
-	out << "Rating:" << restaurant.getRating() << endl;
+	out << "Rating: " << restaurant.getRating() << endl;
 	out << fixed << setprecision(0);
+	out << "Cost Consideration: " << restaurant.getCost() << endl;
 	out << "Phone Number: " << restaurant.getPhoneNumber() << endl;
 	return out;
 }

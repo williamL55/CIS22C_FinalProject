@@ -84,6 +84,7 @@ void RestaurantDatabase::readFile()
             fin >> rating;
             fin.ignore(1000, '\n');
             fin >> phoneNumber;
+            fin.ignore(1000, '\n');
 
             //add the restaurant
             addRestaurant(name, cuisine, location, openingHour, closingHour, cost, rating, phoneNumber);
@@ -91,6 +92,8 @@ void RestaurantDatabase::readFile()
             //increment iterator
             i++;
         }
+        //close the input file
+        fin.close();
     }
     //if database file is unreadable
     catch (string e)
@@ -111,6 +114,7 @@ void RestaurantDatabase::addRestaurant(string name, string cuisine, string locat
     rest.setOpeningHour(openingHour);
     rest.setLocation(location);
     rest.setCuisine(cuisine);
+    rest.setPhoneNumber(phoneNumber);
 
     //add the new restaurant to all 3 databases
     uniqueBSTDatabase->insert(name, phoneNumber);
