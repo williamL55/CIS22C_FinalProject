@@ -10,8 +10,7 @@
 
 RestaurantDatabase::RestaurantDatabase()
 {
-    //uniqueBSTDatabase = new BST<string>;
-    //secondaryBSTDatabase = new BST<string>;
+
 }
 
 RestaurantDatabase::RestaurantDatabase(BST<string>* uniqueBSTDatabase, BST<string>* secondaryBSTDatabase)
@@ -29,6 +28,13 @@ void RestaurantDatabase::writeFile()
 
     //change the file here to the
     //fout.open("output.txt");
+
+    //output the restaurants to a file
+    //output all of the data for each restaurant
+
+    //fout.close();
+
+
 
     return;
 }
