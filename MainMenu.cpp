@@ -118,16 +118,16 @@ void MainMenu::fileLoadMenu()
 		cin >> response;
 		if (response == "y" || response == "Y")
 		{
-			cout << "Where do you want to save/load the database from? ";
+			cout << "\nWhere do you want to save/load the database from? ";
 			cin >> response;
 			restaurantDatabase->setDatabaseFile(response);
 
-			cout << "The database will be saved/loaded to " << response << endl << endl;
+			cout << "\nThe database will be saved/loaded to " << response << endl << endl;
 			databaseFileDone = true;
 		}
 		else if (response == "n" || response == "N")
 		{
-			cout << "Default location will be used. (./database.txt)\n";
+			cout << "\nDefault location will be used. (./database.txt)\n";
 			databaseFileDone = true;
 		}
 		else
@@ -141,9 +141,9 @@ void MainMenu::fileLoadMenu()
 	if (ifile)
 	{
 		restaurantDatabase->readFile();
-		cout << "Existing database was read from " << restaurantDatabase->getDatabaseFile() << ".";
+		cout << "Existing database was read from " << restaurantDatabase->getDatabaseFile() << "." << endl;
 	}
-	cout << " (Press return to continue)";
+	cout << "\n\n\t\t(Press return to continue)";
 	cin.ignore(1000, '\n');
     cin.clear();
 	cin.get();

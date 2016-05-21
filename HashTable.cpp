@@ -61,11 +61,21 @@ void HashTable::printTable()
     {
         if(Table[i]->rest.getName() != "default name")
         {
-            cout << "------------------------------------" << endl << endl;
-            cout << Table[i]->rest;
+            cout << "BUCKET NUMBER: " << i;
+            cout << "\n------------------------------------" << endl << endl;
+            cout << Table[i]->rest << endl;
+            if(Table[i]->next)
+            {
+                Nodeptr temp = Table[i];
+                while(temp->next)
+                {
+                    cout << temp->next->rest << endl;
+                    temp = temp->next;
+                }
+            }
         }
     }
-    cout << "------------------------------------" << endl << endl;
+    cout << "\n------------------------------------" << endl << endl;
 }
 
 //int HashTable::findAuthor(string title)

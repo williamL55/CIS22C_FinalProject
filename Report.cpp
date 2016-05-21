@@ -161,7 +161,7 @@ void Report::listMainMenu()
 void Report::listUnsorted()
 {
     system(CLEAR);
-    cout << "Listing unsorted restaurant database: " << endl << endl;
+    cout << "Listing unsorted restaurant database: " << endl;
     hashTable->printTable();
     cin.clear();
     cin.ignore(1000, '\n');
