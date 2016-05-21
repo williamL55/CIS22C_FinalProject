@@ -59,15 +59,11 @@ void HashTable::printTable()
 {
     for(int i = 0; i < TABLE_SIZE; i++)
     {
-//        cout << "------------------------------------" << endl << endl;
-//        cout << "Index " << i << ":" << endl;
-//        cout << "Restaurant Name: " << Table[i]->rest.getName() << endl;
-//        cout << "Cuisine: " << Table[i]->rest.getCuisine() << endl;
-//        cout << "Location: " << Table[i]->rest.getLocation() << endl;
-//        cout << "Location: " << Table[i]->rest.getLocation() << endl;
-//        cout << fixed << setprecision(0);
-//        cout << "Number of values at this index: " << numItemsAtIndex(i) << endl;
-        cout << Table[i]->rest;
+        if(Table[i]->rest.getName() != "default name")
+        {
+            cout << "------------------------------------" << endl << endl;
+            cout << Table[i]->rest;
+        }
     }
     cout << "------------------------------------" << endl << endl;
 }

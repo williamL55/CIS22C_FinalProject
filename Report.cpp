@@ -125,6 +125,7 @@ void Report::listMainMenu()
 		if (choice == 1)
 		{
 			//run listUnsorted();
+			listUnsorted();
 		}
 		else if (choice == 2)
 		{
@@ -159,24 +160,13 @@ void Report::listMainMenu()
 
 void Report::listUnsorted()
 {
-
-
-//    possibly something like this for printing the hash unsorted
-//    try
-//    {
-//        for(int i = 0; i < TREESIZE; i++)
-//        {
-//        if (hash @ index i is not empty
-//          hash_print(i);
-//        }
-//    }
-//    catch(...)
-//    {
-//        cout << "The tree is empty." << endl;
-//        cout << "Press a key to continue.";
-//        cin.ignore(1000, '\n');
-//        cin.get();
-//    }
+    system(CLEAR);
+    cout << "Listing unsorted restaurant database: " << endl << endl;
+    hashTable->printTable();
+    cin.clear();
+    cin.ignore(1000, '\n');
+    cout << "\n\t    Press return to continue.";
+    cin.get();
     return;
 }
 

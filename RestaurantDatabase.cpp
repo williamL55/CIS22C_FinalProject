@@ -97,6 +97,7 @@ void RestaurantDatabase::addRestaurant(string name, string cuisine, string locat
 
     uniqueBSTDatabase->insert(name, phoneNumber);
     secondaryBSTDatabase->insert(cuisine, phoneNumber);
+    hashTable->addItem(rest);
 
 }
 
