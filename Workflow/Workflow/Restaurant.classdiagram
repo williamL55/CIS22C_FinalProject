@@ -95,6 +95,9 @@
           <property Id="40033b9e-a33d-4f88-8fed-7b4aae180c07" name="secondaryBSTDatabase" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="1873367c-7991-4a9e-9d81-41926ba91929" />
           </property>
+          <property Id="80de5003-07ef-4ed0-a34f-6a19ca07d9ab" name="hashTable" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e4d1fb3e-f313-410c-9cb3-e9a635fe5137" />
+          </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation Id="87613aac-143e-454e-b8dd-a5dc036b4fa4" name="MainMenu" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -133,6 +136,9 @@
           </property>
           <property Id="da4ff34b-3a9e-4dfc-b327-b48461473a3c" name="secondaryBSTDatabase" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="83657a5a-2a73-4477-9858-6065e09ea8bc" />
+          </property>
+          <property Id="a988db63-baa1-45e6-8cba-ef154d81ee4e" name="hashTable" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b6f59369-1f86-447a-8ccf-7b3c989fba4d" />
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
@@ -242,6 +248,9 @@
           </property>
           <property Id="8d3541a9-f4fa-4b30-b95a-8ebc297a3fa0" name="secondaryBSTDatabase" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="2a7b99a0-ca8d-45b1-975e-418674247cc7" />
+          </property>
+          <property Id="9822c489-6e78-44ad-aac1-598a5553c302" name="hashTable" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8796bd9e-aa4b-4069-9fdd-7d746df9b228" />
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>

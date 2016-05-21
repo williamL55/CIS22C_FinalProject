@@ -288,6 +288,18 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false" />
+          <property
+            Id="e4d1fb3e-f313-410c-9cb3-e9a635fe5137"
+            name="hashTable"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
@@ -373,6 +385,18 @@
           <property
             Id="83657a5a-2a73-4477-9858-6065e09ea8bc"
             name="secondaryBSTDatabase"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b6f59369-1f86-447a-8ccf-7b3c989fba4d"
+            name="hashTable"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -634,6 +658,18 @@
           <property
             Id="2a7b99a0-ca8d-45b1-975e-418674247cc7"
             name="secondaryBSTDatabase"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="8796bd9e-aa4b-4069-9fdd-7d746df9b228"
+            name="hashTable"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
