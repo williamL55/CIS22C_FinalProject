@@ -1,9 +1,6 @@
 #ifndef _BST_H_
 #define _BST_H_
 
-#include <cstddef>
-#include <string>
-#include <cstdlib>
 #include <iostream>
 #include <fstream>
 #include "Restaurant.h"

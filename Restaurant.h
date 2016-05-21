@@ -25,6 +25,7 @@ using namespace std;
      Restaurant();
 
      /* getters */
+
      string getName();
      string getCuisine();
      string getLocation();

@@ -3,10 +3,6 @@
 
 #include "Restaurant.h"
 #include "Report.h"
-#include <string>
-
-
-using namespace std;
 
 class RestaurantDatabase
 {
@@ -37,8 +33,10 @@ public:
     //reads a file and creates the data structures from it
     void readFile();
 
+    //sets the database file name to what the user inputs
     void setDatabaseFile(string file);
 
+    //gets the current database file name
     string getDatabaseFile();
 
     //adds a restaurant to the database

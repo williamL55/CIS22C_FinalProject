@@ -2,11 +2,9 @@
 #ifndef _HASHTABLE_H_
 #define _HASHTABLE_H_
 #include "Restaurant.h"
-#include <string>
 #include <iostream>
 #include <cstdlib>
 #include <fstream>
-using namespace std;
 
 class HashTable {
 

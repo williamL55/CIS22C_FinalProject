@@ -73,7 +73,7 @@ void RestaurantDatabase::readFile()
 		double cost, rating, phoneNumber;
 
 		//read the file in a for loop, inputting a complete restaurant object
-		//to all 3 databases
+		//to all 3 databases by calling addRestaurant
 		int i = 0;
 		while(i < hashTable->getTableSize() && !fin.eof())
         {
@@ -114,8 +114,7 @@ void RestaurantDatabase::readFile()
 
 void RestaurantDatabase::addRestaurant(string name, string cuisine, string location, int openingHour, int closingHour, double cost, double rating, double phoneNumber)
 {
-    //this is only an example of the usage for our BST
-    //insert currently ONLY functions for the name parameter
+    //create a temp restaurant to pass to the databases
     Restaurant rest;
     rest.setCost(cost);
     rest.setRating(rating);
