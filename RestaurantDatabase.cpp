@@ -1,5 +1,6 @@
 #include "RestaurantDatabase.h"
 #include "BST.h"
+#include <fstream>
 
 #ifdef _WIN32
 #define CLEAR "cls"
@@ -21,8 +22,14 @@ RestaurantDatabase::RestaurantDatabase(BST<string>* uniqueBSTDatabase, BST<strin
 
 //run this when we need to write to a file
 //this will output ALL of the data structures to a file
+//this is supposed to be run automatically when the program ends, so we will add it to our destructor
 void RestaurantDatabase::writeFile()
 {
+    //ofstream fout;
+
+    //change the file here to the
+    //fout.open("output.txt");
+
     return;
 }
 

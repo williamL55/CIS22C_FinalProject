@@ -44,7 +44,7 @@ MainMenu::MainMenu()
 
 MainMenu::~MainMenu()
 {
-
+    restaurantDatabase->writeFile();
 }
 
 void MainMenu::showMainMenu()

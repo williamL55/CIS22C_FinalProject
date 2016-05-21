@@ -82,6 +82,28 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="9cc769a2-2066-4192-9d22-de3a224c8714" name="MainMenu" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="fea28bc4-d939-4ee0-beb0-32a2e4ac67dc" />
+        <ownedAttributesInternal>
+          <property Id="e15c1d11-3919-4db8-b123-2f382737a6ae" name="report" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e0a0610f-e534-4baf-bfca-9e58b60dc206" />
+          </property>
+          <property Id="61dae7e0-fe6c-4c8b-bb66-886a203d0a3d" name="restaurantDatabase" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="317e1095-e9c7-403f-9b3d-9d86465b9dda" />
+          </property>
+          <property Id="3da82f8e-8280-4155-8044-fec98a08d5a2" name="uniqueBSTDatabase" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b776d83a-4fb3-4bab-a730-9cafeacd4b79" />
+          </property>
+          <property Id="40033b9e-a33d-4f88-8fed-7b4aae180c07" name="secondaryBSTDatabase" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1873367c-7991-4a9e-9d81-41926ba91929" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="87613aac-143e-454e-b8dd-a5dc036b4fa4" name="MainMenu" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d2753f6f-809c-4dc1-b88b-4bf4599a76e3" />
+          </operation>
+          <operation Id="8d24fdab-8261-40a9-9bf5-621fa1a17340" name="showMainMenu" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5fef5e0c-dbfa-414f-9575-f59bd1295072" />
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -136,6 +158,12 @@
           <operation Id="5bef0015-3845-4f57-a063-2fac134bdcb9" name="addRestaurant" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="b5c21637-e490-455d-af3f-a176b96e2e02" />
           </operation>
+          <operation Id="fbddbb1f-7b39-4317-aeb4-68160191aa4d" name="removeRestaurant" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e24e7d56-2607-4e68-9f8f-3ce4cadc05ef" />
+          </operation>
+          <operation Id="f4db858b-8cef-46bf-b9fa-b6d038642dcc" name="addRestaurant" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8a63139a-4243-4a4f-bf3b-04fe27be8bc3" />
+          </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -143,38 +171,6 @@
       <class Id="201d2c63-3334-4e8a-b836-0d9b2d49b81f" name="Report" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="70f5e9fc-f0d0-4854-a29e-8a458053843b" />
         <targetEnds>
-          <association Id="0d8c2ac7-b224-4153-830e-7166eac28c3d" isDerived="false" sourceEndRoleName="Report" targetEndRoleName="MainMenu" isLeaf="false" isAbstract="false">
-            <classMoniker Id="9cc769a2-2066-4192-9d22-de3a224c8714" LastKnownName="MainMenu" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="1e6426f0-5f34-46d5-a61c-a7fb52ebb820" name="Report" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="3dca33db-4992-4a48-b9f7-dddada786a90" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="824f6d7c-e7a7-44f3-9005-e1c927570a19" name="MainMenu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="4f569a3b-432e-4a7c-b1d3-7c0bce8f8eb2" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="4d38e3b0-b2a1-40bf-9313-3399c59292d4" />
-          </association>
-          <association Id="ce79a6d1-7ac5-4631-b70a-84c243ccdeb4" isDerived="false" sourceEndRoleName="Report" targetEndRoleName="RestaurantDatabase" isLeaf="false" isAbstract="false">
-            <classMoniker Id="7c316950-0b95-406e-820e-f1bb4749b2af" LastKnownName="RestaurantDatabase" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="4c6b37e2-b891-49c3-9452-5f816cb1cb36" name="Report" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="d5bae91d-f7d4-4885-a0ea-533628e01f9d" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="c5ebd306-34fe-4732-8ae5-9ff73f58c59d" name="RestaurantDatabase" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="8ac218c5-54b1-44d6-a67c-f854c8745d4f" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="e63b175c-9b5a-4ef8-bc09-44700e7fe2fb" />
-          </association>
           <association Id="72ed34c5-aba8-46fc-a86e-f9c127e9ec90" isDerived="false" sourceEndRoleName="Report" targetEndRoleName="BST" isLeaf="false" isAbstract="false">
             <classMoniker Id="cf35872c-cdb8-4dd2-9242-fe007c2fe077" LastKnownName="BST" />
             <relationshipOwnedElementsInternal>
@@ -207,7 +203,95 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="4918ab90-21fb-4768-8701-bc9003abfeb5" />
           </association>
+          <association Id="6ea71677-b0e1-49e1-b86f-57962fde617a" isDerived="false" sourceEndRoleName="Report" targetEndRoleName="MainMenu" isLeaf="false" isAbstract="false">
+            <classMoniker Id="9cc769a2-2066-4192-9d22-de3a224c8714" LastKnownName="MainMenu" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="299a65af-95a5-4b2f-a273-1f3dea6986a0" name="Report" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bb017aa7-be94-43f2-9429-a305bf69706d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="10fbcdd1-76ba-4fc7-8f72-0b8141572bf8" name="MainMenu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3d52089e-59a5-492a-acbc-2777d62d31a1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8f61073f-6b60-4f02-a903-24fd2d0af79e" />
+          </association>
+          <association Id="b4516302-d931-4100-8fc9-f7d10320e458" isDerived="false" sourceEndRoleName="Report" targetEndRoleName="RestaurantDatabase" isLeaf="false" isAbstract="false">
+            <classMoniker Id="7c316950-0b95-406e-820e-f1bb4749b2af" LastKnownName="RestaurantDatabase" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cbcccf3f-099a-4d75-98f4-a6910a811dcb" name="Report" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7fec0b19-f437-4c4d-a6c9-351e0c7c7088" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="321945fa-a507-49c5-8cad-d868593697df" name="RestaurantDatabase" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a5fd7894-47bb-49a9-98d5-e5c3785d9bee" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d597c711-8e2c-4b69-9365-5fa092fbc467" />
+          </association>
         </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="5f5a33d9-1752-4192-b94b-164f2f169e52" name="uniqueBSTDatabase" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c0592508-5cff-47fb-a5cb-2ff1356dba61" />
+          </property>
+          <property Id="8d3541a9-f4fa-4b30-b95a-8ebc297a3fa0" name="secondaryBSTDatabase" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2a7b99a0-ca8d-45b1-975e-418674247cc7" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="967ea154-1ed8-4ddd-a8ec-359848772ee5" name="report" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="371a78aa-d1b4-44c8-9f89-b05943ba6816" />
+          </operation>
+          <operation Id="be749f86-82d7-4133-95a5-92117dc4b902" name="Report" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="742b2af1-c3d7-4128-9a1f-2c751e90cbce" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="44b3b4b5-65fa-4cff-8fe0-a989d5f7963b" name="+1 overload" direction="In" isUnique="false">
+                  <elementDefinition Id="3967d3d2-1dca-41e5-9490-f01739f4afc5" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="605b9c7a-1d1e-4785-b4bb-81a5e356584b" name="searchMainMenu" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1cb50af8-4c8e-425c-849b-de1d86bc8334" />
+          </operation>
+          <operation Id="fc48960e-e8eb-4d80-9e04-b34ba76559e2" name="searchByName" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="90ee8843-b760-4987-9ca1-02fbdeeca288" />
+          </operation>
+          <operation Id="a6e855e2-ac52-4cf9-82fe-fd4d5352b043" name="searchByCuisine" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ec991d85-c164-4ceb-9467-4c15a0d7ea77" />
+          </operation>
+          <operation Id="e6560ec3-9ddc-4f4b-8af6-4ffa9fe7f20f" name="listMainMenu" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8bc078d4-570d-4037-9c4d-871c0ec119f2" />
+          </operation>
+          <operation Id="0500407e-66ea-4a0f-94fc-f7b3342872f7" name="listUnsorted" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3bb8be76-7b5a-4ddf-89d8-5614bce9305b" />
+          </operation>
+          <operation Id="e72b1136-12af-481b-b8a9-a9abef587f58" name="listSortedByName" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4aaf8ca4-9948-4552-b765-4cd478c5bd4e" />
+          </operation>
+          <operation Id="87f86060-4fe1-4ffa-b224-d2f4c7efc84c" name="listSortedByCuisine" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d511d4bb-ee1e-4d17-92e0-fdc616cbd238" />
+          </operation>
+          <operation Id="53cd575c-4e0b-477c-ae83-af3a2be88713" name="statisticsMainMenu" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f66fbd89-d9e8-4f85-a16f-e7487b2323b6" />
+          </operation>
+          <operation Id="383fa758-86dc-444c-89fc-0e236e25207d" name="restaurantsPerCuisine" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c326fcdb-a06f-40cb-9e0c-32908ad95b0a" />
+          </operation>
+          <operation Id="09a071e0-e646-4024-af75-8d5f5a053969" name="RestaurantsBestRating" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="843f295e-4c4c-4a80-b61c-622c34ae7b94" />
+          </operation>
+          <operation Id="d6c73090-d3ac-4068-9907-55da3064f68a" name="affordableRestaurants" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="984ec90b-df6c-4f1e-b7c8-b6ca45d8d1ce" />
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
@@ -291,12 +375,46 @@
           <operation Id="cf58499f-b7f4-4a32-a8eb-ec14a9ee6bdf" name="setPhoneNumber" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="508fa074-5bca-4d6f-802e-9ab4d9b6591f" />
           </operation>
+          <operation Id="8c55d219-9db3-48a8-803e-fb04836734be" name="operator&lt;&lt;" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3bb5eb64-b4ac-4777-8b17-ae6ad5882da5" />
+          </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
       <class Id="636d6609-4891-4ffc-97c7-143aa882102b" name="Hash" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="39ec22e0-e7fd-4cde-a2a5-991314e709cc" />
+        <ownedAttributesInternal>
+          <property Id="f28d67bb-7364-4ed5-b116-dff100fd884c" name="Node" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4f5b2c0d-3cf5-4194-90ed-7de111eade06" />
+          </property>
+          <property Id="71c4eb7e-08de-48f5-bb09-4f3b61197656" name="TABLE_SIZE" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e252c16b-d96d-4619-a01d-590fc3ac238b" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="e123464e-7f31-41f1-a4ac-741044bb36a0" name="hash" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1092d02f-6987-4493-9773-7f349423ff6d" />
+          </operation>
+          <operation Id="7541b410-393f-40b3-b11b-ed528c3f1353" name="addItem" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="46d810dc-6de1-45db-9fd3-178ab76df508" />
+          </operation>
+          <operation Id="e562ec98-0595-4ada-9125-28a9c54191b3" name="removeItem" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="029eaa1e-9849-4ab0-a75f-f9a9afdbf805" />
+          </operation>
+          <operation Id="1318bb3e-aaf4-4354-92dc-03b4d448f98d" name="numItemsAtIndex" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1898aba3-ed28-4bb3-a424-8043207908fb" />
+          </operation>
+          <operation Id="22e10847-1275-4b11-b7af-41f28795dfba" name="printTable" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1822c5a9-b634-4c1b-90e8-f645f0f94b62" />
+          </operation>
+          <operation Id="88ae86d5-297f-41c2-b868-4aa768592353" name="printBucket" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="613c1c4b-8be2-48e0-9bc3-f58a2a24fb67" />
+          </operation>
+          <operation Id="05c3ca89-ca84-488b-bf9c-1b14ff0f9baf" name="findRestaurant" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="12c5d4ee-3864-454a-bfdf-0d4c5e45efb6" />
+          </operation>
+        </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
   </packagedElements>
