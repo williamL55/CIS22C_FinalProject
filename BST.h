@@ -107,7 +107,10 @@ void BST<bstdata>::insert_value(Nodeptr root, bstdata nameOrCuisine, int phoneNu
     //change the root->rest.getName() later to
     // operator== overload
     if(nameOrCuisine == root->nameOrCuisine)
-        return;
+    {
+        if(phoneNumber == root->phoneNumber)
+            return;
+    }
     else if(nameOrCuisine < root->nameOrCuisine)
     {
         if(root->left == NULL)

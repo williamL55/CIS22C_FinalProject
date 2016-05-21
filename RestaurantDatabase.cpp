@@ -19,6 +19,16 @@ RestaurantDatabase::RestaurantDatabase(BST<string>* uniqueBSTDatabase, BST<strin
     this->secondaryBSTDatabase = secondaryBSTDatabase;
 }
 
+void RestaurantDatabase::setDatabaseFile(string file)
+{
+    databaseFile = file;
+}
+
+string RestaurantDatabase::getDatabaseFile()
+{
+    return databaseFile;
+}
+
 //run this when we need to write to a file
 //this will output ALL of the data structures to a file
 //this is supposed to be run automatically when the program ends, so we will add it to our destructor
@@ -41,14 +51,38 @@ void RestaurantDatabase::writeFile()
 
 void RestaurantDatabase::readFile()
 {
-    return;
+    try
+    {
+        ifstream fin;
+        fin.open(databaseFile.c_str());
+        // if unable to open database file, throw error
+		if (fin.fail())
+		{
+			throw "Failed to open " + databaseFile + " for reading.\n";
+		}
+
+		//create temp variables to store data
+		//string name, cuisine, location;
+		//int openingHour, closingHour;
+		//double cost, rating, phoneNumber;
+
+		//read the file in a for loop, inputting a complete restaurant object
+		//to the hash, and the name/phonenumber for uniqueBSTDatabase
+		//and cuisine/phonenumber for secondaryBSTDatabase
+		//just call addRestaurant
+
+    }
+    //if database file is unreadable
+    catch (string e)
+    {
+        cout << e;
+    }
 }
 
 void RestaurantDatabase::addRestaurant(string name, string cuisine, string location, int openingHour, int closingHour, double cost, double rating, double phoneNumber)
 {
     //this is only an example of the usage for our BST
-    //insert currently ONLY fucntions for the name parameter
-    //until i or someone else updates all the BST functions to work with an operator overload
+    //insert currently ONLY functions for the name parameter
     Restaurant rest;
     rest.setCost(cost);
     rest.setRating(rating);
@@ -64,11 +98,6 @@ void RestaurantDatabase::addRestaurant(string name, string cuisine, string locat
     uniqueBSTDatabase->insert(name, phoneNumber);
     secondaryBSTDatabase->insert(cuisine, phoneNumber);
 
-    system(CLEAR);
-    cout << "\n\n\n\t\tRestaurant added successfully!\n\t\tPress any key to continue." << endl;
-    cin.ignore(1000, '\n');
-    //cin.get();
-    return;
 }
 
 void RestaurantDatabase::removeRestaurant()
@@ -237,6 +266,11 @@ void RestaurantDatabase::addRestaurantMenu()
 
     //we will pass addRestaurant all parameters for a restaurant
     addRestaurant(name, cuisine, location, openingHour, closingHour, rating, cost, phoneNumber);
+
+    system(CLEAR);
+    cout << "\n\n\n\t\tRestaurant added successfully!\n\t\tPress any key to continue." << endl;
+    cin.ignore(1000, '\n');
+    return;
 }
 
 

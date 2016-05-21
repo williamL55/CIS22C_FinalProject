@@ -25,6 +25,9 @@ public:
 
     //displays the first main menu
     void showMainMenu();
+
+    //shows menu asking for input file location
+    void fileLoadMenu();
 };
 
 #endif // MAINMENU_H

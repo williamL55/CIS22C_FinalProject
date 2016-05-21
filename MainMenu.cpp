@@ -119,10 +119,54 @@ void MainMenu::showMainMenu()
 	} while (choice != 7);
 }
 
+void MainMenu::fileLoadMenu()
+{
+    // asks the user if they want to use a specific database file, then sets the database file to what they chose
+	bool databaseFileDone = false;
+	string response;
+	while (!databaseFileDone)
+	{
+		cout << "Do you want to specify where the database will be saved/loaded? (Y/N) ";
+		cin >> response;
+		if (response == "y" || response == "Y")
+		{
+			cout << "Where do you want to save/load the database from? ";
+			cin >> response;
+			restaurantDatabase->setDatabaseFile(response);
+
+			cout << "The database will be saved/loaded to " << response << endl << endl;
+			databaseFileDone = true;
+		}
+		else if (response == "n" || response == "N")
+		{
+			cout << "Default location will be used. (./database.txt)\n";
+			databaseFileDone = true;
+		}
+		else
+		{
+			cout << "That is not a valid response.\n";
+		}
+	}
+
+    // if the database file already exists, read from existing file
+	ifstream ifile(restaurantDatabase->getDatabaseFile().c_str());
+	if (ifile)
+	{
+		restaurantDatabase->readFile();
+		cout << "Existing database was read from " << restaurantDatabase->getDatabaseFile() << ".";
+	}
+	cout << " (Press return to continue)";
+	cin.ignore(1000, '\n');
+    cin.clear();
+	cin.get();
+	ifile.close();
+}
+
 //this is where our main will be
 int main()
 {
     //we will want to create a MainMenu object here to run the main menu
     MainMenu menu;
+    menu.fileLoadMenu();
     menu.showMainMenu();
 }

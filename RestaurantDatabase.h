@@ -17,6 +17,9 @@ private:
     //contains a pointer to the secondary key BST
     BST<string>* secondaryBSTDatabase;
 
+    //used for holding the name of the database file
+    string databaseFile;
+
 public:
     RestaurantDatabase();
     RestaurantDatabase(BST<string>* uniqueBSTDatabase, BST<string>* secondaryBSTDatabase);
@@ -30,6 +33,10 @@ public:
 
     //reads a file and creates the data structures from it
     void readFile();
+
+    void setDatabaseFile(string file);
+
+    string getDatabaseFile();
 
     //adds a restaurant to the database
     //need to add all restaurant members here in the function call
