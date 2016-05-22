@@ -28,7 +28,8 @@ private:
 
                 /**Private helper functions*/
 
-    void insert_value(Nodeptr root, Restaurant rest);
+    void insert_name_value(Nodeptr root, Restaurant rest);
+    void insert_cuisine_value(Nodeptr root, Restaurant rest);
     void inOrderPrint(Nodeptr root);
     bool containsValue(Nodeptr root, bstdata value);
     Nodeptr remove(Nodeptr root, bstdata value);
@@ -40,7 +41,8 @@ public:
     BST();
     ~BST();
     bool is_empty();
-    void insert(Restaurant rest);
+    void insertName(Restaurant rest);
+    void insertCuisine(Restaurant rest);
     void inOrderPrint();
     bool search(bstdata value);
     void remove(bstdata value);
@@ -72,7 +74,7 @@ void BST<bstdata>::deleteTree(Nodeptr root)
 }
 
 template <class bstdata>
-void BST<bstdata>::insert(Restaurant rest)
+void BST<bstdata>::insertName(Restaurant rest)
 {
     if (root == NULL)
     {
@@ -80,13 +82,13 @@ void BST<bstdata>::insert(Restaurant rest)
 
     }
     else
-        insert_value(root, rest); //otherwise call the helper function, passing it the root
+        insert_name_value(root, rest); //otherwise call the helper function, passing it the root
 
 }
 
 
 template <class bstdata>
-void BST<bstdata>::insert_value(Nodeptr root, Restaurant rest)
+void BST<bstdata>::insert_name_value(Nodeptr root, Restaurant rest)
 {
     if(rest.getName() == root->rest.getName())
     {
@@ -98,14 +100,52 @@ void BST<bstdata>::insert_value(Nodeptr root, Restaurant rest)
         if(root->left == NULL)
             root->left = new Node(rest);
         else
-            insert_value(root->left, rest);
+            insert_name_value(root->left, rest);
     }
     else
     {
         if(root->right == NULL)
             root->right = new Node(rest);
         else
-            insert_value(root->right, rest);
+            insert_name_value(root->right, rest);
+    }
+}
+
+template <class bstdata>
+void BST<bstdata>::insertCuisine(Restaurant rest)
+{
+    if (root == NULL)
+    {
+        root = new Node(rest); //if the tree is empty insert the value at the root
+
+    }
+    else
+        insert_cuisine_value(root, rest); //otherwise call the helper function, passing it the root
+
+}
+
+
+template <class bstdata>
+void BST<bstdata>::insert_cuisine_value(Nodeptr root, Restaurant rest)
+{
+    if(rest.getCuisine() == root->rest.getCuisine() && rest.getPhoneNumber() == root->rest.getPhoneNumber())
+    {
+        //if(rest.getPhoneNumber() == root->rest.getPhoneNumber())
+            return;
+    }
+    else if(rest.getCuisine() < root->rest.getCuisine())
+    {
+        if(root->left == NULL)
+            root->left = new Node(rest);
+        else
+            insert_cuisine_value(root->left, rest);
+    }
+    else
+    {
+        if(root->right == NULL)
+            root->right = new Node(rest);
+        else
+            insert_cuisine_value(root->right, rest);
     }
 }
 

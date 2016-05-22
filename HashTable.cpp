@@ -19,6 +19,23 @@ void HashTable::addItem(Restaurant rest)
 {
     Nodeptr N = new Node(rest);
     int index = hash(rest.getName());
+
+    //check for duplicate restaurant
+    //dont add the restaurant if all parameters are equal
+    if
+    (
+       Table[index]->rest.getName() == rest.getName()
+       && Table[index]->rest.getCuisine() == rest.getCuisine()
+       && Table[index]->rest.getLocation() == rest.getLocation()
+       && Table[index]->rest.getOpeningHour() == rest.getOpeningHour()
+       && Table[index]->rest.getClosingHour() == rest.getClosingHour()
+       && Table[index]->rest.getPhoneNumber() == rest.getPhoneNumber()
+       && Table[index]->rest.getRating() == rest.getRating()
+       && Table[index]->rest.getCost() == rest.getCost()
+    )
+    {
+        return;
+    }
     if(Table[index]->rest.getName() == "default name")
         Table[index] = N;
     else
