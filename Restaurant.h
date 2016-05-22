@@ -7,7 +7,7 @@
 
 using namespace std;
 
- class Restaurant
+class Restaurant
 {
  private:
      //list attributes for each restaurant here

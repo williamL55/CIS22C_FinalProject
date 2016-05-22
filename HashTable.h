@@ -6,7 +6,8 @@
 #include <cstdlib>
 #include <fstream>
 
-class HashTable {
+class HashTable
+{
 
 public:
     HashTable();

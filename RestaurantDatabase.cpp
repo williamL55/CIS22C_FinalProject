@@ -126,8 +126,8 @@ void RestaurantDatabase::addRestaurant(string name, string cuisine, string locat
     rest.setPhoneNumber(phoneNumber);
 
     //add the new restaurant to all 3 databases
-    uniqueBSTDatabase->insert(name, phoneNumber);
-    secondaryBSTDatabase->insert(cuisine, phoneNumber);
+    uniqueBSTDatabase->insertName(rest);
+    secondaryBSTDatabase->insertCuisine(rest);
     hashTable->addItem(rest);
 
 }

@@ -81,8 +81,6 @@ void Report::searchByName()
 
     try
     {
-        cout << uniqueBSTDatabase->getRoot();
-        cout << secondaryBSTDatabase->getRoot();
         cout << "Press any key to continue." << endl;
         cin.ignore(1000, '\n');
         cin.get();
@@ -135,6 +133,7 @@ void Report::listMainMenu()
 		else if (choice == 3)
 		{
 			//run listSortedByCuisine();
+			listSortedByCuisine();
 		}
 		else if (choice == 4)
 		{
@@ -169,51 +168,24 @@ void Report::listUnsorted()
 void Report::listSortedByName()
 {
     system(CLEAR);
-    cout << "Listing unique key sorted by name: " << endl;
+    cout << "Listing restaurants in the database sorted by name: " << endl;
     uniqueBSTDatabase->inOrderPrint();
     cin.clear();
     cin.ignore(1000, '\n');
     cout << "\n\t    Press return to continue.";
     cin.get();
     return;
-
-//    possibly something like this for printing hash sorted by name
-//    try
-//    {
-//         for(i = 0; i < HASHSIZE; i++)
-//              hash(uniqueBSTDatabase->getRoot());
-//              cout << hash(i);
-//    }
-//    catch(...)
-//    {
-//        cout << "The tree is empty." << endl;
-//        cout << "Press a key to continue.";
-//        cin.ignore(1000, '\n');
-//        cin.get();
-//    }
-
-
-
-
 }
 
 void Report::listSortedByCuisine()
 {
-//    possibly something like this for printing hash sorted by name
-//    same as the sorted by name but using the second tree
-//    try
-//    {
-//        for(i = 0; i < HASHSIZE; i++)
-//            hash(secondaryBSTDatabase->getRoot());
-//            cout << hash(i);
-//    }
-//    catch(...)
-//    {
-//        cout << "The tree is empty." << endl;
-//        cout << "Press a key to continue.";
-//        cin.ignore(1000, '\n');
-//        cin.get();
-//    }
+    system(CLEAR);
+    cout << "Listing restaurants in the database sorted by cuisine: " << endl;
+    secondaryBSTDatabase->inOrderPrint();
+    cin.clear();
+    cin.ignore(1000, '\n');
+    cout << "\n\t    Press return to continue.";
+    cin.get();
     return;
 }
 
