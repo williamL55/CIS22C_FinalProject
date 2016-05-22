@@ -19,12 +19,6 @@
           <operation Id="27fc78fd-c0ec-4571-88d0-801fac31e87a" name="inOrderPrint" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="cae77587-24b2-4950-be3e-17c7a87b08b9" />
           </operation>
-          <operation Id="6510ceb3-129d-49d3-b030-1318d6ad992e" name="preOrderPrint" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="73465952-ab2e-4c21-a655-48ef1ab381d5" />
-          </operation>
-          <operation Id="878bad7b-e1cd-47be-8d37-c7e8cff58f2d" name="postOrderPrint" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="cf4e9d2b-ecd3-4bab-b73b-2d73a67a5e94" />
-          </operation>
           <operation Id="336d27a7-e480-43f7-a159-01b0ff66d545" name="containsValue" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="df0a8117-005a-4a61-88c6-bda8a80b9417" />
           </operation>
@@ -33,9 +27,6 @@
           </operation>
           <operation Id="bb9c47d0-9082-40b3-bb86-52ca6377e22a" name="deleteTree" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="e542bb3b-e415-4bc7-81ea-333190744556" />
-          </operation>
-          <operation Id="44214cc9-aaca-4554-a462-84bab8a93c58" name="getSize" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="78e1edc5-0603-44f2-94f4-553016d0d899" />
           </operation>
           <operation Id="5c11ceb5-a1e4-46d1-ac81-2a45f98d6c8c" name="getHeight" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="efd9f27f-127f-4e8c-8392-dbdef5753df1" />
@@ -49,17 +40,8 @@
           <operation Id="d2a504e8-33f9-45c9-bfe9-c3ca2dfe01d8" name="insert" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="d655bce1-76ff-471a-adfa-7c241047a08c" />
           </operation>
-          <operation Id="c79f8e42-bee2-4a7b-b509-c84238d8d7d1" name="getRoot" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="508cfee5-a926-4bf7-9246-316709eb02e0" />
-          </operation>
           <operation Id="5f20f474-6191-465e-88d3-05b9a94a63d0" name="inOrderPrint" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="5db8e37a-11cf-4143-b7c8-7eda88f4b9f2" />
-          </operation>
-          <operation Id="8fa53a37-2d02-495f-b5ad-93e4e6751cd2" name="preOrderPrint" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="ccfaf277-5d59-4ee5-9348-d83951847c7d" />
-          </operation>
-          <operation Id="eba90e42-c79a-4363-986a-49f7613397a0" name="postOrderPrint" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="2f938b39-2229-4f0c-9fa5-7971a717c7e5" />
           </operation>
           <operation Id="907b72b6-d04d-47f7-8d13-e168ac522ab2" name="search" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="5859eb20-d24c-4554-be9b-150a1b5d9395" />
@@ -70,11 +52,11 @@
           <operation Id="caa1110f-2496-419d-a63f-170ee2739be3" name="isEmpty" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="a61b6a63-c293-4226-a61b-3f893ea23177" />
           </operation>
-          <operation Id="1c20f008-9623-4203-af77-90de518384ed" name="getSize" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="97d16921-15e0-4917-97fa-70729170e72b" />
-          </operation>
           <operation Id="5496066c-3114-4ec3-a01b-c2651c486a67" name="getHeight" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="e47cf888-1008-473a-9ff2-2f97031a4e20" />
+          </operation>
+          <operation Id="cda56cd4-d051-4385-b834-17cff4c76559" name="findMin" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c8aec60b-8e47-40bf-a622-d5e07c02084c" />
           </operation>
         </ownedOperationsInternal>
       </class>

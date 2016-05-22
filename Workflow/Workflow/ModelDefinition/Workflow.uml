@@ -71,24 +71,6 @@
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="73465952-ab2e-4c21-a655-48ef1ab381d5"
-            name="preOrderPrint"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="cf4e9d2b-ecd3-4bab-b73b-2d73a67a5e94"
-            name="postOrderPrint"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
             Id="df0a8117-005a-4a61-88c6-bda8a80b9417"
             name="containsValue"
             visibility="Private"
@@ -109,15 +91,6 @@
           <operation
             Id="e542bb3b-e415-4bc7-81ea-333190744556"
             name="deleteTree"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="78e1edc5-0603-44f2-94f4-553016d0d899"
-            name="getSize"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -158,32 +131,8 @@
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="508cfee5-a926-4bf7-9246-316709eb02e0"
-            name="getRoot"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
             Id="5db8e37a-11cf-4143-b7c8-7eda88f4b9f2"
             name="inOrderPrint"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="ccfaf277-5d59-4ee5-9348-d83951847c7d"
-            name="preOrderPrint"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="2f938b39-2229-4f0c-9fa5-7971a717c7e5"
-            name="postOrderPrint"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -214,16 +163,17 @@
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="97d16921-15e0-4917-97fa-70729170e72b"
-            name="getSize"
+            Id="e47cf888-1008-473a-9ff2-2f97031a4e20"
+            name="getHeight"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="e47cf888-1008-473a-9ff2-2f97031a4e20"
-            name="getHeight"
+            Id="c8aec60b-8e47-40bf-a622-d5e07c02084c"
+            name="findMin"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"

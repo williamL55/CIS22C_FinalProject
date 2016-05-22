@@ -45,7 +45,7 @@ void MainMenu::showMainMenu()
 		//show the mainMenu and get the choice
 		cout << "\t\tRestaurants\n\t\tMain Menu\n\n";
 		cout << "\t    1. Add a restaurant to the database\n";
-		cout << "\t    2. Delete a restaurant from the database\n";
+		cout << "\t    2. Remove a restaurant from the database\n";
 		cout << "\t    3. Search for a restaurant\n";
 		cout << "\t    4. List all restaurants\n";
 		cout << "\t    5. Statistics about the restaurants\n";
