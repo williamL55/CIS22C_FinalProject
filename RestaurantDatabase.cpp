@@ -101,7 +101,6 @@ void RestaurantDatabase::readFile()
             //increment iterator
             i++;
         }
-        cout << i;
         //close the input file
         fin.close();
     }
