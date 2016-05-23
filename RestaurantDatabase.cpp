@@ -17,6 +17,7 @@ RestaurantDatabase::RestaurantDatabase(BST<string>* uniqueBSTDatabase, BST<strin
     this->uniqueBSTDatabase = uniqueBSTDatabase;
     this->secondaryBSTDatabase = secondaryBSTDatabase;
     this->hashTable = hashTable;
+    databaseFile = "database.txt";
 }
 
 void RestaurantDatabase::setDatabaseFile(string file)

@@ -101,6 +101,9 @@ void HashTable::printTableToFile(ofstream &fout)
     {
         if(Table[i]->rest.getName() != "default name")
         {
+            //cant use operator overload here because the overload
+            //prints extra chars
+            //ex Name: and Cuisine:
             fout << fixed << setprecision(0);
             fout << Table[i]->rest.getName() << endl;
             fout << Table[i]->rest.getCuisine() << endl;
