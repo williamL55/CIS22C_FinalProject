@@ -154,7 +154,7 @@ void RestaurantDatabase::addRestaurantMenu()
     double phoneNumber;
     double rating;
     double cost;
-    char alwaysOpen;
+    string alwaysOpen;
 
     system(CLEAR);
 
@@ -216,7 +216,7 @@ void RestaurantDatabase::addRestaurantMenu()
         //if the restaurant is always open, set openingHour and closingHour to 0000 each
         cout << "Is this restaurant always open? (Y/N) ";
         cin >> alwaysOpen;
-        if (alwaysOpen == 'y' || alwaysOpen == 'Y')
+        if (alwaysOpen == "Y" || alwaysOpen == "y")
 		{
 		    openingHour = 0;
 		    closingHour = 0;
@@ -224,7 +224,7 @@ void RestaurantDatabase::addRestaurantMenu()
 			cin.clear();
 			cin.ignore(1000, '\n');
 		}
-		else if(alwaysOpen == 'n' || alwaysOpen == 'N')
+		else if(alwaysOpen == "n" || alwaysOpen == "N")
         {
             while (!done)
             {
@@ -266,7 +266,7 @@ void RestaurantDatabase::addRestaurantMenu()
 		else
 		{
 		    cin.clear();
-			cin.ignore(1000, '\n');
+		    cin.ignore(1000, '\n');
 			cout << "Invalid response.\n\n";
 		}
     }
@@ -288,21 +288,39 @@ void RestaurantDatabase::addRestaurantMenu()
     rest.setPhoneNumber(phoneNumber);
 
     system(CLEAR);
-    cout << rest;
-    cout << "\n\nDoes this look right?" << endl << endl;
 
-    //add check for input here later
-    cout << "(y/n): ";
 
-    cin.ignore(1000, '\n');
 
-    //we will pass addRestaurant all parameters for a restaurant
-    addRestaurant(name, cuisine, location, openingHour, closingHour, rating, cost, phoneNumber);
+    done = false;
+	string response;
+	while (!done)
+	{
 
-    system(CLEAR);
-    cout << "\n\n\n\t\tRestaurant added successfully!\n\t\tPress any key to continue." << endl;
-    cin.ignore(1000, '\n');
-    return;
+		cout << rest;
+        cout << "\n\nDoes this look right?" << endl << endl;
+        cout << "(y/n): ";
+        cin >> response;
+		if (response == "y" || response == "Y")
+		{
+			system(CLEAR);
+			//we will pass addRestaurant all parameters for a restaurant
+            addRestaurant(name, cuisine, location, openingHour, closingHour, rating, cost, phoneNumber);
+            cout << "\n\n\n\t\tRestaurant added successfully!\n\t\tPress any key to continue." << endl;
+            cin.ignore(1000, '\n');
+            cin.get();
+            done = true;
+            return;
+		}
+		else if (response == "n" || response == "N")
+		{
+		    system(CLEAR);
+			cout << "\n\n\n\t\tPress any key to return to the main menu.\n\t\t";
+			cin.ignore(1000, '\n');
+            cin.get();
+			done = true;
+			return;
+		}
+	}
 }
 
 
