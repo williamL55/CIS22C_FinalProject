@@ -92,15 +92,19 @@ void Restaurant::setPhoneNumber(double phoneNumber)
     this->phoneNumber = phoneNumber;
 }
 
-
 ostream& operator<<(ostream& out, Restaurant& restaurant)
 {
 	out << fixed << setprecision(1);			// makes doubles round to one digit
 	out << "Name: " << restaurant.getName() << endl;
 	out << "Cuisine: " << restaurant.getCuisine() << endl;
 	out << "Location: " << restaurant.getLocation() << endl;
-	out << "Opening Hour: " << restaurant.getOpeningHour() << endl;
-	out << "Closing Hour: " << restaurant.getClosingHour() << endl;
+	if(restaurant.getOpeningHour() == 0 &&  restaurant.getClosingHour() == 0)
+        out << "Hours: Restaurant is always open." <<  endl;
+    else
+    {
+        out << "Opening Hour: " << restaurant.getOpeningHour() << endl;
+        out << "Closing Hour: " << restaurant.getClosingHour() << endl;
+    }
 	out << "Rating: " << restaurant.getRating() << endl;
 	out << fixed << setprecision(0);
 	out << "Cost Consideration: " << restaurant.getCost() << endl;
