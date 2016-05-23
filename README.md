@@ -29,7 +29,7 @@ http://deanzacollegecis.jenniferparrish.net/cis22c/course-project
 - [ ] Draw a Data Structure Diagram to show the hash table of buckets and the two BSTs (make sure to show how data are shared).  Update this diagram depending on the variation of the project you have (i.e. number of students in your team).
 - [ ] Data Diagrams
 - [ ] Structure Charts
-- [ ] UML
+- [x] UML
 - [ ] Provide relevant test cases for the final presentation
 
 Remember to do your peer evaluations on time. Check the schedule on her website.
