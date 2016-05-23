@@ -154,7 +154,9 @@ void BST<bstdata>::inOrderPrint(Nodeptr root)
 {
     if(root)
     {
+
         inOrderPrint(root->left);
+        cout << "\n------------------------------------" << endl << endl;
         cout << root->rest;
         inOrderPrint(root->right);
     }

@@ -170,6 +170,7 @@ void Report::listSortedByName()
     system(CLEAR);
     cout << "Listing restaurants in the database sorted by name: " << endl;
     uniqueBSTDatabase->inOrderPrint();
+    cout << "\n------------------------------------" << endl << endl;
     cin.clear();
     cin.ignore(1000, '\n');
     cout << "\n\t    Press return to continue.";

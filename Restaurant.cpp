@@ -102,9 +102,12 @@ ostream& operator<<(ostream& out, Restaurant& restaurant)
         out << "Hours: Restaurant is always open." <<  endl;
     else
     {
-        out << "Opening Hour: " << restaurant.getOpeningHour() << endl;
-        out << "Closing Hour: " << restaurant.getClosingHour() << endl;
+        out << "Opening Hour: ";
+        out << fixed << setprecision(0) << setfill('0') << setw(4) << restaurant.getOpeningHour() << endl;
+        out << "Closing Hour: ";
+        out << fixed << setprecision(0) << setfill('0') << setw(4) << restaurant.getClosingHour() << endl;
     }
+    out << fixed << setprecision(1);
 	out << "Rating: " << restaurant.getRating() << endl;
 	out << fixed << setprecision(0);
 	out << "Cost Consideration: " << restaurant.getCost() << endl;

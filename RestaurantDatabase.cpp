@@ -199,7 +199,7 @@ void RestaurantDatabase::addRestaurantMenu()
     {
         cout << "\nWhat is the phone number of the restaurant?\nPlease enter a 10 digit number ";
         cin >> phoneNumber;
-        if (cin.fail() || phoneNumber < 0 || phoneNumber > 9999999999)
+        if (cin.fail() || phoneNumber <= 0 || phoneNumber > 9999999999 || phoneNumber < 1000000000 )
 		{
 			cin.clear();
 			cin.ignore(1000, '\n');
