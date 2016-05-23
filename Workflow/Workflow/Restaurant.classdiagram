@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="6bcc7134-5e75-49dd-aa2d-ef4b6f77ed2e" name="Restaurant" linkedPackageId="b8fe986b-e8d6-4349-853c-a5bfa2b1c4ac" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="6bcc7134-5e75-49dd-aa2d-ef4b6f77ed2e" name="Restaurant" linkedPackageId="b8fe986b-e8d6-4349-853c-a5bfa2b1c4ac" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="cf35872c-cdb8-4dd2-9242-fe007c2fe077" name="BST" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -28,9 +28,6 @@
           <operation Id="bb9c47d0-9082-40b3-bb86-52ca6377e22a" name="deleteTree" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="e542bb3b-e415-4bc7-81ea-333190744556" />
           </operation>
-          <operation Id="5c11ceb5-a1e4-46d1-ac81-2a45f98d6c8c" name="getHeight" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="efd9f27f-127f-4e8c-8392-dbdef5753df1" />
-          </operation>
           <operation Id="e74ce924-f7f6-4607-ba5a-f123e3cc8377" name="BST" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="81382b59-0e6c-403c-8c6e-6577330f4be5" />
           </operation>
@@ -51,9 +48,6 @@
           </operation>
           <operation Id="caa1110f-2496-419d-a63f-170ee2739be3" name="isEmpty" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="a61b6a63-c293-4226-a61b-3f893ea23177" />
-          </operation>
-          <operation Id="5496066c-3114-4ec3-a01b-c2651c486a67" name="getHeight" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="e47cf888-1008-473a-9ff2-2f97031a4e20" />
           </operation>
           <operation Id="cda56cd4-d051-4385-b834-17cff4c76559" name="findMin" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="c8aec60b-8e47-40bf-a622-d5e07c02084c" />
@@ -87,6 +81,9 @@
           </operation>
           <operation Id="8d24fdab-8261-40a9-9bf5-621fa1a17340" name="showMainMenu" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="5fef5e0c-dbfa-414f-9575-f59bd1295072" />
+          </operation>
+          <operation Id="1a205b8a-fcea-40ce-8c25-bafebee5ae56" name="fileLoadMenu" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="39612366-2ab5-486e-8d5d-6b96f55b9589" />
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -368,6 +365,9 @@
           </operation>
           <operation Id="8c55d219-9db3-48a8-803e-fb04836734be" name="operator&lt;&lt;" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="3bb5eb64-b4ac-4777-8b17-ae6ad5882da5" />
+          </operation>
+          <operation Id="a9686a08-012b-4697-99ce-b6b9f78952db" name="friend operator&lt;&lt;" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f3af1aae-8be8-4552-afc4-b0d0eef739e9" />
           </operation>
         </ownedOperationsInternal>
       </class>

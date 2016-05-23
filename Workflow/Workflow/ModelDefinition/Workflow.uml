@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="b67139b9-b474-4416-9853-d7f22a226ee5"
   name="Workflow" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -98,15 +98,6 @@
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="efd9f27f-127f-4e8c-8392-dbdef5753df1"
-            name="getHeight"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
             Id="81382b59-0e6c-403c-8c6e-6577330f4be5"
             name="BST"
             isLeaf="false"
@@ -157,14 +148,6 @@
           <operation
             Id="a61b6a63-c293-4226-a61b-3f893ea23177"
             name="isEmpty"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
-            Id="e47cf888-1008-473a-9ff2-2f97031a4e20"
-            name="getHeight"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -263,6 +246,14 @@
           <operation
             Id="5fef5e0c-dbfa-414f-9575-f59bd1295072"
             name="showMainMenu"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="39612366-2ab5-486e-8d5d-6b96f55b9589"
+            name="fileLoadMenu"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -993,6 +984,14 @@
           <operation
             Id="3bb5eb64-b4ac-4777-8b17-ae6ad5882da5"
             name="operator&lt;&lt;"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f3af1aae-8be8-4552-afc4-b0d0eef739e9"
+            name="friend operator&lt;&lt;"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
