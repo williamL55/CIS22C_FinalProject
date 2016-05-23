@@ -40,10 +40,10 @@ public:
     //Prints all items stored at a single bucket
     void printBucket(int index);
 
-    //Searches for an author in the table using the key
-    //returns the index under which the author is stored
-    //returns -1 if the author is not found
-    int findAuthor(string title);
+    //Searches for a restaurant in the table using the key entered by the user
+    //returns the index under which the restaurant is stored
+    //returns -1 if the restaurant is not found
+    int findRestaurant(Restaurant rest);
 
     //need a way to get table size for looping
     int getTableSize();
