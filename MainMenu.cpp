@@ -84,6 +84,12 @@ void MainMenu::showMainMenu()
 		else if (choice == 6)
 		{
 			//run writeFile();
+			restaurantDatabase->writeFile();
+			system(CLEAR);
+			cout << "\n\n\t   The restaurant database has been written to " << restaurantDatabase->getDatabaseFile() << "." << endl;
+			cout << "\t\t\t(Press return to continue)";
+			cin.ignore();
+			cin.get();
 		}
 		else if (choice == 7)
 		{
