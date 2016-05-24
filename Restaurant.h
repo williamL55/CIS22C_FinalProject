@@ -21,6 +21,7 @@ class Restaurant
      double rating;
      double cost;
      ///kkk
+     ///lll
  public:
      //default constructor
      Restaurant();
