@@ -183,6 +183,7 @@ void Report::listSortedByCuisine()
     system(CLEAR);
     cout << "Listing restaurants in the database sorted by cuisine: " << endl;
     secondaryBSTDatabase->inOrderPrint();
+    cout << "\n------------------------------------" << endl << endl;
     cin.clear();
     cin.ignore(1000, '\n');
     cout << "\n\t    Press return to continue.";

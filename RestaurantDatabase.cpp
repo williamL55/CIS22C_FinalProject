@@ -144,7 +144,7 @@ void RestaurantDatabase::removeRestaurant()
 void RestaurantDatabase::addRestaurantMenu()
 {
     bool done = false;
-
+    bool restAdded = false;
     //declare temp variables
     string name;
     string cuisine;
@@ -156,170 +156,237 @@ void RestaurantDatabase::addRestaurantMenu()
     double cost;
     string alwaysOpen;
 
+
     system(CLEAR);
 
-    //get info for the restaurant
-    cin.clear();
-    cin.ignore(1000, '\n');
-    cout << "What is the name of the restaurant? ";
-    getline(cin, name);
-    while (!done)
-    {
-        cout << "What is the cost consideration of the restaurant?\nPlease enter a number 0-4: ";
-        cin >> cost;
-        if (cin.fail() || cost < 0 || cost > 4)
-		{
-			cin.clear();
-			cin.ignore(1000, '\n');
-			cout << "Invalid response.\n\n";
-		}
-		else
-		{
-			done = true;
-		}
-    }
-    done = false;
-    while (!done)
-    {
-        cout << "\nWhat is the rating of the restaurant?\nPlease enter a number 0-5: ";
-        cin >> rating;
-        if (cin.fail() || rating < 0 || rating > 5)
-		{
-			cin.clear();
-			cin.ignore(1000, '\n');
-			cout << "Invalid response.\n\n";
-		}
-		else
-		{
-			done = true;
-		}
-    }
-    done = false;
-    while (!done)
-    {
-        cout << "\nWhat is the phone number of the restaurant?\nPlease enter a 10 digit number ";
-        cin >> phoneNumber;
-        if (cin.fail() || phoneNumber <= 0 || phoneNumber > 9999999999 || phoneNumber < 1000000000 )
-		{
-			cin.clear();
-			cin.ignore(1000, '\n');
-			cout << "Invalid response.\n\n";
-		}
-		else
-		{
-			done = true;
-		}
-    }
-    done = false;
-    while (!done)
-    {
-        //if the restaurant is always open, set openingHour and closingHour to 0000 each
-        cout << "Is this restaurant always open? (Y/N) ";
-        cin >> alwaysOpen;
-        if (alwaysOpen == "Y" || alwaysOpen == "y")
-		{
-		    openingHour = 0;
-		    closingHour = 0;
-			done = true;
-			cin.clear();
-			cin.ignore(1000, '\n');
-		}
-		else if(alwaysOpen == "n" || alwaysOpen == "N")
+    while (!restAdded)
+	{
+        //get info for the restaurant
+        cin.clear();
+        cin.ignore(1000, '\n');
+        done = false;
+        while (!done)
         {
-            while (!done)
+            cout << "What is the name of the restaurant? ";
+            getline(cin, name);
+            if(name == "")
             {
-
-                cout << "\nWhat is the opening hour of the restaurant?\nPlease enter a number (0000-2400): ";
-                cin >> openingHour;
                 cin.clear();
-                cin.ignore(1000, '\n');
-                if (cin.fail() || openingHour < 0 || openingHour > 2400 || openingHour % 100 >= 60)
-                {
-                    cin.clear();
-                    cin.ignore(1000, '\n');
-                    cout << "Invalid response.\n\n";
-                }
-                else
-                {
-                    done = true;
-                }
+                cout << "Invalid response.\n\n";
             }
-            done = false;
-            while (!done)
+            else
             {
-                cout << "\nWhat is the closing hour of the restaurant?\nPlease enter a number (0000-2400): ";
-                cin >> closingHour;
-                cin.clear();
-                cin.ignore(1000, '\n');
-                if (cin.fail() || closingHour < 0 || closingHour > 2400 || closingHour % 100 >= 60)
-                {
-                    cin.clear();
-                    cin.ignore(1000, '\n');
-                    cout << "Invalid response.\n\n";
-                }
-                else
-                {
-                    done = true;
-                }
+                done = true;
             }
         }
-		else
-		{
-		    cin.clear();
-		    cin.ignore(1000, '\n');
-			cout << "Invalid response.\n\n";
-		}
-    }
-    cout << "What is the cuisine of the restaurant? ";
-    getline(cin, cuisine);
-    cout << "What is the location of the restaurant? ";
-    getline(cin, location);
+        done = false;
+        while (!done)
+        {
+            cout << "What is the cost consideration of the restaurant?\nPlease enter a number 0-4: ";
+            cin >> cost;
+            if (cin.fail() || cost < 0 || cost > 4)
+            {
+                cin.clear();
+                cin.ignore(1000, '\n');
+                cout << "Invalid response.\n\n";
+            }
+            else
+            {
+                done = true;
+            }
+        }
+        done = false;
+        while (!done)
+        {
+            cout << "\nWhat is the rating of the restaurant?\nPlease enter a number 0-5: ";
+            cin >> rating;
+            if (cin.fail() || rating < 0 || rating > 5)
+            {
+                cin.clear();
+                cin.ignore(1000, '\n');
+                cout << "Invalid response.\n\n";
+            }
+            else
+            {
+                done = true;
+            }
+        }
+        done = false;
+        while (!done)
+        {
+            cout << "\nWhat is the phone number of the restaurant?\nPlease enter a 10 digit number ";
+            cin >> phoneNumber;
+            if (cin.fail() || phoneNumber <= 0 || phoneNumber > 9999999999 || phoneNumber < 1000000000 )
+            {
+                cin.clear();
+                cin.ignore(1000, '\n');
+                cout << "Invalid response.\n\n";
+            }
+            else
+            {
+                done = true;
+            }
+        }
+        done = false;
+        while (!done)
+        {
+            //if the restaurant is always open, set openingHour and closingHour to 0000 each
+            cout << "Is this restaurant always open? (Y/N) ";
+            cin >> alwaysOpen;
+            if (alwaysOpen == "Y" || alwaysOpen == "y")
+            {
+                openingHour = 0;
+                closingHour = 0;
+                done = true;
+                cin.clear();
+                cin.ignore(1000, '\n');
+            }
+            else if(alwaysOpen == "n" || alwaysOpen == "N")
+            {
+                while (!done)
+                {
 
-    Restaurant rest;
+                    cout << "\nWhat is the opening hour of the restaurant?\nPlease enter a number (0000-2400): ";
+                    cin >> openingHour;
+                    cin.clear();
+                    cin.ignore(1000, '\n');
+                    if (cin.fail() || openingHour < 0 || openingHour > 2400 || openingHour % 100 >= 60)
+                    {
+                        cin.clear();
+                        cin.ignore(1000, '\n');
+                        cout << "Invalid response.\n\n";
+                    }
+                    else
+                    {
+                        done = true;
+                    }
+                }
+                done = false;
+                while (!done)
+                {
+                    cout << "\nWhat is the closing hour of the restaurant?\nPlease enter a number (0000-2400): ";
+                    cin >> closingHour;
+                    cin.clear();
+                    cin.ignore(1000, '\n');
+                    if (cin.fail() || closingHour < 0 || closingHour > 2400 || closingHour % 100 >= 60)
+                    {
+                        cin.clear();
+                        cin.ignore(1000, '\n');
+                        cout << "Invalid response.\n\n";
+                    }
+                    else
+                    {
+                        done = true;
+                    }
+                }
+            }
+            else
+            {
+                cin.clear();
+                cin.ignore(1000, '\n');
+                cout << "Invalid response.\n\n";
+            }
+        }
+        cout << "What is the cuisine of the restaurant? ";
+        getline(cin, cuisine);
+        cout << "What is the location of the restaurant? ";
+        getline(cin, location);
 
-    //set all the attributes on the local restaurant
-    rest.setCost(cost);
-    rest.setRating(rating);
-    rest.setName(name);
-    rest.setClosingHour(closingHour);
-    rest.setOpeningHour(openingHour);
-    rest.setLocation(location);
-    rest.setCuisine(cuisine);
-    rest.setPhoneNumber(phoneNumber);
+        Restaurant rest;
 
-    system(CLEAR);
+        //set all the attributes on the local restaurant
+        rest.setCost(cost);
+        rest.setRating(rating);
+        rest.setName(name);
+        rest.setClosingHour(closingHour);
+        rest.setOpeningHour(openingHour);
+        rest.setLocation(location);
+        rest.setCuisine(cuisine);
+        rest.setPhoneNumber(phoneNumber);
+
+        system(CLEAR);
 
 
 
-    done = false;
-	string response;
-	while (!done)
-	{
+        done = false;
+        string response;
+        while (!done)
+        {
 
-		cout << rest;
-        cout << "\n\nDoes this look right?" << endl << endl;
-        cout << "(y/n): ";
-        cin >> response;
-		if (response == "y" || response == "Y")
-		{
-			system(CLEAR);
-			//we will pass addRestaurant all parameters for a restaurant
-            addRestaurant(name, cuisine, location, openingHour, closingHour, rating, cost, phoneNumber);
-            cout << "\n\n\n\t\tRestaurant added successfully!\n\t\tPress any key to continue." << endl;
-            cin.ignore(1000, '\n');
-            cin.get();
-            done = true;
-            return;
-		}
-		else if (response == "n" || response == "N")
-		{
-		    system(CLEAR);
-			cout << "\n\n\n\t\tPress any key to return to the main menu.\n\t\t";
-			cin.ignore(1000, '\n');
-            cin.get();
-			done = true;
-			return;
-		}
+            cout << rest;
+            cout << "\n\nDoes this look right?" << endl << endl;
+            cout << "(y/n): ";
+            cin >> response;
+            if (response == "y" || response == "Y")
+            {
+                system(CLEAR);
+                //we will pass addRestaurant all parameters for a restaurant
+                addRestaurant(name, cuisine, location, openingHour, closingHour, rating, cost, phoneNumber);
+                cout << "\n\n\n\t\tRestaurant added successfully!\n\t\tPress any key to continue." << endl;
+                cin.ignore(1000, '\n');
+                cin.get();
+                system(CLEAR);
+
+                while (!done)
+                {
+                    cout << "Would you like to enter another restaurant? ";
+                    cin >> response;
+                    if (response == "y" || response == "Y")
+                    {
+                        system(CLEAR);
+                        restAdded = false;
+                        done = true;
+                    }
+                    else if (response == "n" || response == "N")
+                    {
+                        system(CLEAR);
+                        restAdded = true;
+                        done = true;
+                        return;
+                    }
+                    else
+                    {
+                        cin.clear();
+                        cin.ignore(1000, '\n');
+                        cout << "Invalid response.\n\n";
+                    }
+                }
+            }
+            else if (response == "n" || response == "N")
+            {
+                system(CLEAR);
+                cout << "Would you like to try adding the restaurant again? ";
+                cin >> response;
+                while (!done)
+                {
+                    if (response == "y" || response == "Y")
+                    {
+                        system(CLEAR);
+                        restAdded = false;
+                        done = true;
+                    }
+                    else if (response == "n" || response == "N")
+                    {
+                        system(CLEAR);
+                        restAdded = true;
+                        done = true;
+                        return;
+                    }
+                    else
+                    {
+                        cin.clear();
+                        cin.ignore(1000, '\n');
+                        cout << "Invalid response.\n\n";
+                    }
+                }
+            }
+            else
+            {
+                cin.clear();
+                cin.ignore(1000, '\n');
+                cout << "Invalid response.\n\n";
+            }
+        }
 	}
 }
 
