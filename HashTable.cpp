@@ -12,7 +12,18 @@ HashTable::HashTable()
 
 HashTable::~HashTable()
 {
-
+    for(int i = 0; i <TABLE_SIZE; i++)
+    {
+        Nodeptr temp = Table[i]->next;
+        Nodeptr tempHelper;
+        delete Table[i];
+        while(temp)
+        {
+            tempHelper = temp;
+            temp = temp->next;
+            delete tempHelper;
+        }
+    }
 }
 
 void HashTable::addItem(Restaurant rest)
