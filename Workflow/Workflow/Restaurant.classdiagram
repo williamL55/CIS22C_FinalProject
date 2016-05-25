@@ -31,10 +31,7 @@
           <operation Id="e74ce924-f7f6-4607-ba5a-f123e3cc8377" name="BST" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="81382b59-0e6c-403c-8c6e-6577330f4be5" />
           </operation>
-          <operation Id="3af74cc4-3664-46df-ab3c-ab3257d3154c" name="is_empty" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="bd10e5c8-3407-4d32-9bce-3ab7f776c2c7" />
-          </operation>
-          <operation Id="d2a504e8-33f9-45c9-bfe9-c3ca2dfe01d8" name="insert" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="d2a504e8-33f9-45c9-bfe9-c3ca2dfe01d8" name="insertName" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="d655bce1-76ff-471a-adfa-7c241047a08c" />
           </operation>
           <operation Id="5f20f474-6191-465e-88d3-05b9a94a63d0" name="inOrderPrint" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -46,11 +43,20 @@
           <operation Id="af946b45-8d28-4e14-82c3-71cea98435cd" name="remove" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="cf3ffc4d-448c-432f-a913-5bb730465b51" />
           </operation>
-          <operation Id="caa1110f-2496-419d-a63f-170ee2739be3" name="isEmpty" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="a61b6a63-c293-4226-a61b-3f893ea23177" />
-          </operation>
           <operation Id="cda56cd4-d051-4385-b834-17cff4c76559" name="findMin" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="c8aec60b-8e47-40bf-a622-d5e07c02084c" />
+          </operation>
+          <operation Id="aab044a7-0399-4988-a6c3-3c1adaf493a9" name="insertCuisine" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="25d20d2d-b484-48ee-adc6-f3decd2252b9" />
+          </operation>
+          <operation Id="0522544b-f170-4acd-bc29-a7c2e557167e" name="insert_name_value" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f3cefb6d-82a0-4b03-a12f-da94afbc21f1" />
+          </operation>
+          <operation Id="4a43d513-76a3-4b54-aaf7-ec5e965e3bdf" name="insert_cuisine_value" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="30be7e96-eb46-4d1d-9d4e-3eb303ab9852" />
+          </operation>
+          <operation Id="a640aaf5-e55c-4f54-a189-3eee9c874509" name="~BST" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="52a3f4be-7126-44c6-bfdb-c69f37e8d91c" />
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -84,6 +90,9 @@
           </operation>
           <operation Id="1a205b8a-fcea-40ce-8c25-bafebee5ae56" name="fileLoadMenu" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="39612366-2ab5-486e-8d5d-6b96f55b9589" />
+          </operation>
+          <operation Id="6fa4c1c8-a1c9-4359-b4cc-1b00a00d544e" name="~MainMenu" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8705bb3b-b864-4df6-8bf3-dcf4141a3d2c" />
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -148,6 +157,9 @@
           </operation>
           <operation Id="f4db858b-8cef-46bf-b9fa-b6d038642dcc" name="addRestaurant" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="8a63139a-4243-4a4f-bf3b-04fe27be8bc3" />
+          </operation>
+          <operation Id="7be719dc-60ef-46f7-bd33-ffcb464fcd3e" name="~RestaurantDatabase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d7a0a6a8-c6fa-486a-b440-e5da117d2497" />
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -278,6 +290,9 @@
           </operation>
           <operation Id="d6c73090-d3ac-4068-9907-55da3064f68a" name="affordableRestaurants" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="984ec90b-df6c-4f1e-b7c8-b6ca45d8d1ce" />
+          </operation>
+          <operation Id="ed480abe-ff2f-45f4-9a59-c222d5b11377" name="~Report" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e273409f-83f9-448e-9d06-8e7165c1d018" />
           </operation>
         </ownedOperationsInternal>
       </class>
@@ -410,6 +425,9 @@
           </operation>
           <operation Id="05f98441-d4e3-433a-bd3c-1c552e0c09e3" name="printTableToFile" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="8e67a2cb-1282-4be4-8019-929829ebd007" />
+          </operation>
+          <operation Id="cdaa60a4-d21d-4735-8386-b9c6ee036077" name="Hash" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0c88e641-f6c7-4c4e-ae3c-73a4a4b4d4c6" />
           </operation>
         </ownedOperationsInternal>
       </class>
