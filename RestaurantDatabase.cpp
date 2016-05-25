@@ -127,7 +127,15 @@ void RestaurantDatabase::removeRestaurant()
 {
     system(CLEAR);
 
-//    uniqueBSTDatabase->remove(rest);
+//first search for the restaurant to delete in the BST
+//then if it exists, delete from all 3 structures
+
+//simply present a list of all restaurants with a number
+//and use that number entered by the user to identify the restaurant to delete
+
+//uniqueBSTDatabase->remove()
+//secondaryBSTDatabase->remove()
+//hashTable->removeItem()
 
 
     cout << "\n\t\tPress any key to continue." << endl;
