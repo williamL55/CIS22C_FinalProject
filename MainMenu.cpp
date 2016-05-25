@@ -63,7 +63,7 @@ void MainMenu::showMainMenu()
 		else if (choice == 2)
 		{
 			//run removeRestaurant();
-			restaurantDatabase->removeRestaurant();
+			restaurantDatabase->removeRestaurantMenu();
 		}
 		else if (choice == 3)
 		{

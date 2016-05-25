@@ -51,6 +51,9 @@ public:
     //searches for a restaurant by name by calling searchByName() from Report.h
     void removeRestaurant();
 
+    //menu for removing a restaurant
+    void removeRestaurantMenu();
+
     //menu for adding a restaurant
     //provides user with list of items to enter
     void addRestaurantMenu();

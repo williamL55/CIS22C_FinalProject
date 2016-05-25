@@ -123,6 +123,15 @@ void RestaurantDatabase::addRestaurant(Restaurant rest)
     hashTable->addItem(rest);
 }
 
+void RestaurantDatabase::removeRestaurantMenu()
+{
+    system(CLEAR);
+    hashTable->printTable();
+    cout << "\n\n\n\t\tPress any key to continue." << endl;
+    cin.ignore(1000, '\n');
+    cin.get();
+}
+
 void RestaurantDatabase::removeRestaurant()
 {
     system(CLEAR);
