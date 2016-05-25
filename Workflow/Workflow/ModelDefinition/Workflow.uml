@@ -106,16 +106,8 @@
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="bd10e5c8-3407-4d32-9bce-3ab7f776c2c7"
-            name="is_empty"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
             Id="d655bce1-76ff-471a-adfa-7c241047a08c"
-            name="insert"
+            name="insertName"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -146,17 +138,43 @@
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="a61b6a63-c293-4226-a61b-3f893ea23177"
-            name="isEmpty"
+            Id="c8aec60b-8e47-40bf-a622-d5e07c02084c"
+            name="findMin"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="c8aec60b-8e47-40bf-a622-d5e07c02084c"
-            name="findMin"
+            Id="25d20d2d-b484-48ee-adc6-f3decd2252b9"
+            name="insertCuisine"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f3cefb6d-82a0-4b03-a12f-da94afbc21f1"
+            name="insert_name_value"
             visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="30be7e96-eb46-4d1d-9d4e-3eb303ab9852"
+            name="insert_cuisine_value"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="52a3f4be-7126-44c6-bfdb-c69f37e8d91c"
+            name="~BST"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -254,6 +272,14 @@
           <operation
             Id="39612366-2ab5-486e-8d5d-6b96f55b9589"
             name="fileLoadMenu"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="8705bb3b-b864-4df6-8bf3-dcf4141a3d2c"
+            name="~MainMenu"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -410,6 +436,14 @@
           <operation
             Id="8a63139a-4243-4a4f-bf3b-04fe27be8bc3"
             name="addRestaurant"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="d7a0a6a8-c6fa-486a-b440-e5da117d2497"
+            name="~RestaurantDatabase"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -731,6 +765,14 @@
           <operation
             Id="984ec90b-df6c-4f1e-b7c8-b6ca45d8d1ce"
             name="affordableRestaurants"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="e273409f-83f9-448e-9d06-8e7165c1d018"
+            name="~Report"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -1106,6 +1148,14 @@
           <operation
             Id="8e67a2cb-1282-4be4-8019-929829ebd007"
             name="printTableToFile"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="0c88e641-f6c7-4c4e-ae3c-73a4a4b4d4c6"
+            name="Hash"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"

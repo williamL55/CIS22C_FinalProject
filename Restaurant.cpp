@@ -114,3 +114,15 @@ ostream& operator<<(ostream& out, Restaurant& restaurant)
 	out << "Phone Number: " << restaurant.getPhoneNumber() << endl;
 	return out;
 }
+
+void Restaurant::setAll(string name, string cuisine, string location, int openingHour, int closingHour, double cost, double rating, double phoneNumber)
+{
+    this-> name = name;
+    this->cuisine = cuisine;
+    this->location = location;
+    this-> openingHour = openingHour;
+    this->closingHour = closingHour;
+    this->cost = cost;
+    this->rating = rating;
+    this->phoneNumber = phoneNumber;
+}

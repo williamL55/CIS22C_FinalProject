@@ -41,11 +41,18 @@ public:
 
     //adds a restaurant to the database
     //need to add all restaurant members here in the function call
-    void addRestaurant(string name, string cuisine, string location, int openingHour, int closingHour, double cost, double rating, double phoneNumber);
+    //void addRestaurant(string name, string cuisine, string location, int openingHour, int closingHour, double cost, double rating, double phoneNumber);
+
+    void addRestaurant(Restaurant rest);
+
+
 
     //removes a restaurant from the database
     //searches for a restaurant by name by calling searchByName() from Report.h
     void removeRestaurant();
+
+    //menu for removing a restaurant
+    void removeRestaurantMenu();
 
     //menu for adding a restaurant
     //provides user with list of items to enter

@@ -76,7 +76,8 @@ void RestaurantDatabase::readFile()
 		//read the file in a for loop, inputting a complete restaurant object
 		//to all 3 databases by calling addRestaurant
 		int i = 0;
-		while(i < hashTable->getTableSize() && !fin.eof())
+		int tSize = hashTable->getTableSize();
+		while(i < tSize && !fin.eof())
         {
             //read in all contents
             getline(fin, name);
@@ -96,8 +97,10 @@ void RestaurantDatabase::readFile()
             //add the restaurant if it is not a default object
             //must check if name is an empty line here
             //otherwise it will add an invalid restaurant
+            Restaurant rest;
+            rest.setAll(name, cuisine, location, openingHour, closingHour, cost, rating, phoneNumber);
             if(name != "default name" && name != "")
-                addRestaurant(name, cuisine, location, openingHour, closingHour, cost, rating, phoneNumber);
+                addRestaurant(rest);
 
             //increment iterator
             i++;
@@ -112,29 +115,38 @@ void RestaurantDatabase::readFile()
     }
 }
 
-void RestaurantDatabase::addRestaurant(string name, string cuisine, string location, int openingHour, int closingHour, double cost, double rating, double phoneNumber)
+void RestaurantDatabase::addRestaurant(Restaurant rest)
 {
-    //create a temp restaurant to pass to the databases
-    Restaurant rest;
-    rest.setCost(cost);
-    rest.setRating(rating);
-    rest.setName(name);
-    rest.setClosingHour(closingHour);
-    rest.setOpeningHour(openingHour);
-    rest.setLocation(location);
-    rest.setCuisine(cuisine);
-    rest.setPhoneNumber(phoneNumber);
-
     //add the new restaurant to all 3 databases
     uniqueBSTDatabase->insertName(rest);
     secondaryBSTDatabase->insertCuisine(rest);
     hashTable->addItem(rest);
+}
 
+void RestaurantDatabase::removeRestaurantMenu()
+{
+    system(CLEAR);
+    hashTable->printTable();
+    cout << "\n\n\n\t\tPress any key to continue." << endl;
+    cin.ignore(1000, '\n');
+    cin.get();
 }
 
 void RestaurantDatabase::removeRestaurant()
 {
     system(CLEAR);
+
+//first search for the restaurant to delete in the BST
+//then if it exists, delete from all 3 structures
+
+//simply present a list of all restaurants with a number
+//and use that number entered by the user to identify the restaurant to delete
+
+//uniqueBSTDatabase->remove()
+//secondaryBSTDatabase->remove()
+//hashTable->removeItem()
+
+
     cout << "\n\t\tPress any key to continue." << endl;
     cin.ignore(1000, '\n');
     cin.get();
@@ -295,14 +307,7 @@ void RestaurantDatabase::addRestaurantMenu()
         Restaurant rest;
 
         //set all the attributes on the local restaurant
-        rest.setCost(cost);
-        rest.setRating(rating);
-        rest.setName(name);
-        rest.setClosingHour(closingHour);
-        rest.setOpeningHour(openingHour);
-        rest.setLocation(location);
-        rest.setCuisine(cuisine);
-        rest.setPhoneNumber(phoneNumber);
+        rest.setAll(name, cuisine, location, openingHour, closingHour, cost, rating, phoneNumber);
 
         system(CLEAR);
 
@@ -321,7 +326,7 @@ void RestaurantDatabase::addRestaurantMenu()
             {
                 system(CLEAR);
                 //we will pass addRestaurant all parameters for a restaurant
-                addRestaurant(name, cuisine, location, openingHour, closingHour, rating, cost, phoneNumber);
+                addRestaurant(rest);
                 cout << "\n\n\n\t\tRestaurant added successfully!\n\t\tPress any key to continue." << endl;
                 cin.ignore(1000, '\n');
                 cin.get();
