@@ -12,11 +12,11 @@ RestaurantDatabase::RestaurantDatabase()
 
 }
 
-RestaurantDatabase::RestaurantDatabase(BST<string>* uniqueBSTDatabase, BST<string>* secondaryBSTDatabase, HashTable* hashTable)
+RestaurantDatabase::RestaurantDatabase(BST<string>* uniqueBST, BST<string>* secondaryBST, HashTable* table)
 {
-    this->uniqueBSTDatabase = uniqueBSTDatabase;
-    this->secondaryBSTDatabase = secondaryBSTDatabase;
-    this->hashTable = hashTable;
+    uniqueBSTDatabase = uniqueBST;
+    secondaryBSTDatabase = secondaryBST;
+    hashTable = table;
     databaseFile = "database.txt";
 }
 

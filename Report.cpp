@@ -15,11 +15,11 @@ Report::Report()
 
 }
 
-Report::Report(BST<string>* uniqueBSTDatabase, BST<string>* secondaryBSTDatabase, HashTable* hashTable)
+Report::Report(BST<string>* uniqueBST, BST<string>* secondaryBST, HashTable* table)
 {
-    this->uniqueBSTDatabase = uniqueBSTDatabase;
-    this->secondaryBSTDatabase = secondaryBSTDatabase;
-    this->hashTable = hashTable;
+    uniqueBSTDatabase = uniqueBST;
+    secondaryBSTDatabase = secondaryBST;
+    hashTable = table;
 }
 
     /* SEARCH */

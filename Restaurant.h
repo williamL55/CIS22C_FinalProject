@@ -1,7 +1,7 @@
 #ifndef _RESTAURANT_H_
 #define _RESTAURANT_H_
 
-#include <string>
+//#include <string>
 #include <iomanip>
 #include <ostream>
 
@@ -20,6 +20,7 @@ class Restaurant
      double phoneNumber;
      double rating;
      double cost;
+     ///kkk
  public:
      //default constructor
      Restaurant();

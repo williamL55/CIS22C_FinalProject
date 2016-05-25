@@ -22,7 +22,7 @@ MainMenu::MainMenu()
     //create a pointer to the hash table
     hashTable = new HashTable();
 
-    //create a restaurantDatabase object to call the database functions
+    //create a pointer to the restaurantDatabase object to call the database functions
     restaurantDatabase = new RestaurantDatabase(uniqueBSTDatabase, secondaryBSTDatabase, hashTable);
 
     //this report call to the constructor will create a report object to be used by the main menu object
