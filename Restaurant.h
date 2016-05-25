@@ -1,7 +1,7 @@
 #ifndef _RESTAURANT_H_
 #define _RESTAURANT_H_
 
-#include <string>
+//#include <string>
 #include <iomanip>
 #include <ostream>
 
