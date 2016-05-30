@@ -43,7 +43,7 @@ public:
     //Searches for a restaurant in the table using the key entered by the user
     //returns the index under which the restaurant is stored
     //returns -1 if the restaurant is not found
-    int findRestaurant(Restaurant rest);
+    int findRestaurant(string key);
 
     //need a way to get table size for looping
     int getTableSize();
