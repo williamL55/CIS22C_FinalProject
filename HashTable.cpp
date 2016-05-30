@@ -149,23 +149,23 @@ void HashTable::printTableToFile(ofstream &fout)
     }
 }
 
-//int HashTable::findAuthor(string title)
-//{
-//    int index = hash(title);
-//    Nodeptr temp = Table[index];
-//    while(temp)
-//    {
-//        if(temp->title == title)
-//        {
-//             cout << "The author of " << title << " is " << temp->author;
-//             return index;
-//        }
-//        else
-//            temp = temp->next;
-//    }
-//    cout << "The title is not stored in the database." << endl;
-//    return -1;
-//}
+int HashTable::findRestaurant(string key)
+{
+    int index = hash(key);
+    Nodeptr temp = Table[index];
+    while(temp)
+    {
+        if(temp->rest.getName() == key)
+        {
+             cout << temp->rest;
+             return index;
+        }
+        else
+            temp = temp->next;
+    }
+    cout << "\nThe restaurant is not in the database." << endl;
+    return -1;
+}
 
 //void HashTable::printBucket(int index)
 //{
@@ -243,5 +243,4 @@ int HashTable::getTableSize()
 {
     return TABLE_SIZE;
 }
-
 
