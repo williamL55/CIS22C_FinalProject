@@ -31,7 +31,7 @@ private:
     void insert_name_value(Nodeptr root, Restaurant rest);
     void insert_cuisine_value(Nodeptr root, Restaurant rest);
     void inOrderPrint(Nodeptr root);
-    void containsValue(Nodeptr root, bstdata value);
+    bool containsValue(Nodeptr root, bstdata value);
     Nodeptr remove(Nodeptr root, bstdata value);
     void deleteTree(Nodeptr root);
     int getHeight(Nodeptr root);
@@ -90,10 +90,11 @@ void BST<bstdata>::insertName(Restaurant rest)
 template <class bstdata>
 void BST<bstdata>::insert_name_value(Nodeptr root, Restaurant rest)
 {
-    if(rest.getName() == root->rest.getName() && rest.getPhoneNumber() == root->rest.getPhoneNumber())
+    if(rest.getName() == root->rest.getName())
     {
+        if(rest.getPhoneNumber() == root->rest.getPhoneNumber())
             return;
-        if(rest.getPhoneNumber() < root->rest.getPhoneNumber())
+        else if(rest.getPhoneNumber() < root->rest.getPhoneNumber())
         {
         	if(root->left == NULL)
         		root->left = new Node(rest);
@@ -198,32 +199,34 @@ void BST<bstdata>::inOrderPrint()
 }
 
 template <class bstdata>
-void BST<bstdata>::containsValue(Nodeptr root, bstdata value)
+bool BST<bstdata>::containsValue(Nodeptr root, bstdata value)
 {
-    string temp = root->rest.getCuisine();
-    for (unsigned int i =0; i < root->rest.getCuisine().length(); i++)
-        temp[i] = tolower(temp[i]);
-    if(temp.find(value) != std::string::npos)
+    if(root->data == value)
+        return true;
+    else if(value < root->data)
     {
-        cout << "\n------------------------------------" << endl << endl;
-        cout << root->rest;
+        if(!root->left)
+            return false;
+        else
+            return containsValue(root->left, value);
     }
-    if(root->left)
-        containsValue(root->left, value);
-    if(root->right)
-        containsValue(root->right, value);
+    else if(value > root->data)
+    {
+        if(!root->right)
+            return false;
+        else
+            return containsValue(root->right, value);
+    }
+    return false;
 }
 
 template <class bstdata>
 bool BST<bstdata>::search(bstdata value)
 {
-    if(root->rest.getCuisine() == value)
-        cout << root->rest;
-    if(root)
-    {
-        containsValue(root, value);
+    if(root->data == value)
         return true;
-    }
+    else if(root)
+        return containsValue(root, value);
     else return false;
 }
 

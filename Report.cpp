@@ -76,15 +76,13 @@ void Report::searchByName()
     string tempRestaurantName;
 
     system(CLEAR);
-    cin.clear();
-    cin.ignore(1000, '\n');
     cout << "Enter the name of the restaurant to search for: ";
-    getline(cin, tempRestaurantName);
+    cin >> tempRestaurantName;
 
     try
     {
-        hashTable->findRestaurant(tempRestaurantName);
-        cout << "\n\n\t\tPress any key to continue." << endl;
+        cout << "Press any key to continue." << endl;
+        cin.ignore(1000, '\n');
         cin.get();
     }
     catch(...)
@@ -98,22 +96,6 @@ void Report::searchByName()
 
 void Report::searchByCuisine()
 {
-    string tempCuisine;
-
-    system(CLEAR);
-    cin.clear();
-    cin.ignore(1000, '\n');
-
-    cout << "Enter the cuisine you would like to search for: ";
-    getline(cin, tempCuisine);
-
-    if(secondaryBSTDatabase->search(tempCuisine))
-       cout << "\n------------------------------------" << endl << endl;
-    else
-        cout << "The cuisine could not be found." << endl;
-
-    cout << "Press any key to continue.";
-    cin.get();
 
 }
 
