@@ -135,7 +135,7 @@ void HashTable::printBucket(int index)
         int i = 1;
         while(temp)
         {
-            cout << "Restaurant number: " << i << endl << temp->rest;
+            cout << "Restaurant number: " << i << endl << temp->rest << endl;
             temp = temp->next;
             i++;
         }
