@@ -173,7 +173,7 @@ void HashTable::printBucket(int index)
         int i = 1;
         while(temp)
         {
-            cout << i << endl << temp->rest;
+            cout << "Restaurant number: " << i << endl << temp->rest;
             temp = temp->next;
             i++;
         }
@@ -185,9 +185,19 @@ void HashTable::printBucket(int index)
 Restaurant HashTable::getRestaurant(int num, int index)
 {
     Nodeptr temp = Table[index];
-    for(int i = 1; i < num; i ++)
+    for(int i = 1; i < num && temp; i++)
     {
-        temp = temp->next;
+        if(!temp->next)
+        {
+            cout << "\nThe restaurant doesn't exist.";
+            cout << "\n\n\n\t\tPress any key to continue." << endl;
+            cin.ignore(1000, '\n');
+            cin.get();
+            Restaurant r;
+            return r;
+        }
+        else
+            temp = temp->next;
     }
     return temp->rest;
 }

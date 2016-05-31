@@ -80,10 +80,8 @@ void Report::searchByName()
     cout << "Enter the name of the restaurant to search for: ";
     getline(cin, tempRestaurantName);
 
-    if(uniqueBSTDatabase->searchName(tempRestaurantName))
-       cout << "\n------------------------------------" << endl << endl;
-    else
-        cout << "The name could not be found." << endl;
+    uniqueBSTDatabase->searchPrintName(tempRestaurantName);
+
 
     cout << "\n\n\t\tPress any key to continue." << endl;
     cin.get();
@@ -102,10 +100,8 @@ void Report::searchByCuisine()
     cout << "Enter the cuisine you would like to search for: ";
     getline(cin, tempCuisine);
 
-    if(secondaryBSTDatabase->searchCuisine(tempCuisine))
-       cout << "\n------------------------------------" << endl << endl;
-    else
-        cout << "The cuisine could not be found." << endl;
+    secondaryBSTDatabase->searchPrintCuisine(tempCuisine);
+
 
     cout << "Press any key to continue.";
     cin.get();
