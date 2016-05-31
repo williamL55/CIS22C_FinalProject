@@ -36,7 +36,6 @@ private:
     Nodeptr removeName(Nodeptr root, Restaurant r);
     Nodeptr removeCuisine(Nodeptr root, Restaurant r);
     void deleteTree(Nodeptr root);
-    int getHeight(Nodeptr root);
     Restaurant findMin(Nodeptr root);
 
 public:
@@ -51,8 +50,6 @@ public:
     bool searchPrintName(bstdata value);
     void removeName(Restaurant r);
     void removeCuisine(Restaurant r);
-    bool isEmpty();
-    int getHeight();
 };
 
 template <class bstdata>
