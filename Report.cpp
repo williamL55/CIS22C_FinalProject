@@ -82,11 +82,8 @@ void Report::searchByName()
 
     uniqueBSTDatabase->searchPrintName(tempRestaurantName);
 
-
     cout << "\n\n\t\tPress any key to continue." << endl;
     cin.get();
-
-
 }
 
 void Report::searchByCuisine()
@@ -102,7 +99,6 @@ void Report::searchByCuisine()
 
     secondaryBSTDatabase->searchPrintCuisine(tempCuisine);
 
-
     cout << "Press any key to continue.";
     cin.get();
 
@@ -117,7 +113,6 @@ void Report::listMainMenu()
     do
 	{
 	    system(CLEAR);
-
 
 		//show the mainMenu and get the choice
 		cout << "\t\tList\n\t\tMain Menu\n\n";
@@ -211,7 +206,6 @@ void Report::statisticsMainMenu()
 	{
 	    system(CLEAR);
 
-
 		//show the mainMenu and get the choice
 		cout << "\t\tStatistics\n\t\tMain Menu\n\n";
 		cout << "\t    1. List unsorted data\n";
@@ -261,6 +255,7 @@ void Report::restaurantsBestRating()
 {
 
 }
+
 void Report::affordableRestaurants()
 {
 

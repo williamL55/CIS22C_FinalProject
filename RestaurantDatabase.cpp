@@ -161,9 +161,7 @@ void RestaurantDatabase::removeRestaurantMenu()
             {
                 cout << "Please enter a valid restaurant number";
             }
-
         }
-
     }
     else
     {
@@ -185,7 +183,6 @@ void RestaurantDatabase::addRestaurantMenu()
 {
     bool done = false;
     bool restAdded = false;
-    //declare temp variables
     string name;
     string cuisine;
     string location;

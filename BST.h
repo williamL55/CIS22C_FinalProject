@@ -25,9 +25,6 @@ private:
 
     Nodeptr root;
 
-
-                /**Private helper functions*/
-
     void insert_name_value(Nodeptr root, Restaurant rest);
     void insert_cuisine_value(Nodeptr root, Restaurant rest);
     void inOrderPrint(Nodeptr root);
@@ -51,7 +48,6 @@ public:
     bool searchName(bstdata value);
     bool searchPrintCuisine(bstdata value);
     bool searchPrintName(bstdata value);
-    //void searchCuisine(string cuisine);
     void removeName(Restaurant r);
     void removeCuisine(Restaurant r);
     bool isEmpty();
@@ -91,9 +87,7 @@ void BST<bstdata>::insertName(Restaurant rest)
     }
     else
         insert_name_value(root, rest); //otherwise call the helper function, passing it the root
-
 }
-
 
 template <class bstdata>
 void BST<bstdata>::insert_name_value(Nodeptr root, Restaurant rest)
@@ -138,11 +132,9 @@ void BST<bstdata>::insertCuisine(Restaurant rest)
     if (root == NULL)
     {
         root = new Node(rest); //if the tree is empty insert the value at the root
-
     }
     else
         insert_cuisine_value(root, rest); //otherwise call the helper function, passing it the root
-
 }
 
 
@@ -258,14 +250,10 @@ bool BST<bstdata>::searchPrintName(bstdata value)
         cout << root->rest;
     if(root)
     {
-
         return containsNameValue(root, value);
     }
     else return false;
 }
-
-
-
 
 template <class bstdata>
 bool BST<bstdata>::searchName(bstdata value)
@@ -290,30 +278,6 @@ bool BST<bstdata>::containsName(Nodeptr root, bstdata value)
         return containsName(root->right, value);
     else return false;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 template <class bstdata>
 void BST<bstdata>::removeName(Restaurant r)
@@ -414,18 +378,11 @@ typename BST<bstdata>::Nodeptr BST<bstdata>::removeCuisine(Nodeptr root, Restaur
 }
 
 template <class bstdata>
-bool BST<bstdata>::isEmpty()
-{
-    return root == NULL;
-}
-
-template <class bstdata>
 Restaurant BST<bstdata>::findMin(Nodeptr root)
 {
     while(root->left)
         root = root->left;
     return root->rest;
 }
-
 
 #endif

@@ -45,8 +45,6 @@ public:
 
     void addRestaurant(Restaurant rest);
 
-
-
     //removes a restaurant from the database
     //searches for a restaurant by name by calling searchByName() from Report.h
     void removeRestaurant(Restaurant r);

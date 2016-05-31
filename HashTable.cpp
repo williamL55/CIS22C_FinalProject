@@ -68,21 +68,6 @@ int HashTable::hash(string key)
     return index;
 }
 
-//int HashTable::numItemsAtIndex(int index)
-//{
-//    Nodeptr temp = Table[index];
-//    int count = 0;
-//    if(temp->title == "")
-//        return count;
-//    else
-//        while(temp)
-//        {
-//            count++;
-//            temp = temp->next;
-//        }
-//    return count;
-//}
-
 void HashTable::printTable()
 {
     for(int i = 0; i < TABLE_SIZE; i++)

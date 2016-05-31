@@ -27,10 +27,6 @@ public:
     //removes the item with the given key
     void removeItem(Restaurant r);
 
-    //Helper function to printTable
-    //Counts the number of items in each bucket
-    int numItemsAtIndex(int index);
-
     //prints the first item of each bucket
     //includes the number of items stored at that bucket
     void printTable();
@@ -40,6 +36,8 @@ public:
     //Prints all items stored at a single bucket
     void printBucket(int index);
 
+    //returns a specific restaurantin a specific bucket
+    //for the remove function
     Restaurant getRestaurant(int num, int index);
 
     //Searches for a restaurant in the table using the key entered by the user
