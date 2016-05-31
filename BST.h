@@ -225,8 +225,9 @@ void BST<bstdata>::containsCuisineValue(Nodeptr root, bstdata value)
     }
     if(root->left)
         containsCuisineValue(root->left, value);
-    if(root->right)
+    else if(root->right)
         containsCuisineValue(root->right, value);
+    else cout << "\nThe cuisine was not found in the database";
 }
 
 template <class bstdata>

@@ -17,17 +17,28 @@ RestaurantDatabase::RestaurantDatabase(BST<string>* uniqueBST, BST<string>* seco
     uniqueBSTDatabase = uniqueBST;
     secondaryBSTDatabase = secondaryBST;
     hashTable = table;
-    databaseFile = "database.txt";
+    inputDatabaseFile = "input.txt";
+    outputDatabaseFile = "output.txt";
 }
 
-void RestaurantDatabase::setDatabaseFile(string file)
+void RestaurantDatabase::setInputDatabaseFile(string file)
 {
-    databaseFile = file;
+    inputDatabaseFile = file;
 }
 
-string RestaurantDatabase::getDatabaseFile()
+string RestaurantDatabase::getInputDatabaseFile()
 {
-    return databaseFile;
+    return inputDatabaseFile;
+}
+
+void RestaurantDatabase::setOutputDatabaseFile(string file)
+{
+    outputDatabaseFile = file;
+}
+
+string RestaurantDatabase::getOutputDatabaseFile()
+{
+    return outputDatabaseFile;
 }
 
 //run this when we need to write to a file
@@ -40,11 +51,11 @@ void RestaurantDatabase::writeFile()
     try
     {
         ofstream fout;
-        fout.open(getDatabaseFile().c_str());
+        fout.open(getOutputDatabaseFile().c_str());
 
         if(fout.fail())
         {
-            "Failed to open " + databaseFile + " for writing.\n";
+            "Failed to open " + outputDatabaseFile + " for writing.\n";
         }
         hashTable->printTableToFile(fout);
         fout.close();
@@ -61,11 +72,11 @@ void RestaurantDatabase::readFile()
     try
     {
         ifstream fin;
-        fin.open(databaseFile.c_str());
+        fin.open(inputDatabaseFile.c_str());
         // if unable to open database file, throw error
 		if (fin.fail())
 		{
-			throw "Failed to open " + databaseFile + " for reading.\n";
+			throw "Failed to open " + inputDatabaseFile + " for reading.\n";
 		}
 
 		//create temp variables to store data
@@ -146,7 +157,7 @@ void RestaurantDatabase::removeRestaurantMenu()
             int index = hashTable->hash(tempName);
             hashTable->printBucket(index);
 
-            cout << "Enter the number of the restaurant you wish to remove: ";
+            cout << "Enter the number of the restaurant you wish to remove or enter -1 to return to main menu: ";
             if(cin >> num)
             {
                 if(num > 0)
@@ -160,6 +171,10 @@ void RestaurantDatabase::removeRestaurantMenu()
                         cout << "\n\n\n\t\tPress any key to continue." << endl;
                         cin.get();
                     }
+                    done = true;
+                }
+                else if(num == -1)
+                {
                     done = true;
                 }
                 else
@@ -376,6 +391,7 @@ void RestaurantDatabase::addRestaurantMenu()
                 while (!done)
                 {
                     cout << "Would you like to enter another restaurant? ";
+                    cout << "(y/n): ";
                     cin >> response;
                     if (response == "y" || response == "Y")
                     {

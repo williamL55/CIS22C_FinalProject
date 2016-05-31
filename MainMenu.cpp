@@ -86,10 +86,7 @@ void MainMenu::showMainMenu()
 			//run writeFile();
 			restaurantDatabase->writeFile();
 			system(CLEAR);
-			cout << "\n\n\t   The restaurant database has been written to " << restaurantDatabase->getDatabaseFile() << "." << endl;
-			cout << "\t\t\t(Press return to continue)";
-			cin.ignore();
-			cin.get();
+			fileSaveMenu();
 		}
 		else if (choice == 7)
 		{
@@ -120,20 +117,20 @@ void MainMenu::fileLoadMenu()
 	string response;
 	while (!databaseFileDone)
 	{
-		cout << "Do you want to specify where the database will be saved/loaded? (Y/N) ";
+		cout << "Do you want to specify where the database will be loaded from? (Y/N) ";
 		cin >> response;
 		if (response == "y" || response == "Y")
 		{
-			cout << "\nWhere do you want to save/load the database from? ";
+			cout << "\nWhere do you want to load the database from? ";
 			cin >> response;
-			restaurantDatabase->setDatabaseFile(response);
+			restaurantDatabase->setInputDatabaseFile(response);
 
-			cout << "\nThe database will be saved/loaded to " << response << endl << endl;
+			cout << "\nThe database will be loaded from " << response << endl << endl;
 			databaseFileDone = true;
 		}
 		else if (response == "n" || response == "N")
 		{
-			cout << "\nDefault location will be used. (./database.txt)\n";
+			cout << "\nDefault location will be used. (./input.txt)\n";
 			databaseFileDone = true;
 		}
 		else
@@ -143,17 +140,54 @@ void MainMenu::fileLoadMenu()
 	}
 
     // if the database file already exists, read from existing file
-	ifstream ifile(restaurantDatabase->getDatabaseFile().c_str());
+	ifstream ifile(restaurantDatabase->getInputDatabaseFile().c_str());
 	if (ifile)
 	{
 		restaurantDatabase->readFile();
-		cout << "Existing database was read from " << restaurantDatabase->getDatabaseFile() << "." << endl;
+		cout << "Existing database was read from " << restaurantDatabase->getInputDatabaseFile() << "." << endl;
 	}
 	cout << "\n\n\t\t(Press return to continue)";
 	cin.ignore(1000, '\n');
     cin.clear();
 	cin.get();
 	ifile.close();
+}
+
+void MainMenu::fileSaveMenu()
+{
+    // asks the user if they want to use a specific database file, then sets the database file to what they chose
+	bool databaseFileDone = false;
+	string response;
+	while (!databaseFileDone)
+	{
+		cout << "Do you want to specify where the database will be saved? (Y/N) ";
+		cin >> response;
+		if (response == "y" || response == "Y")
+		{
+			cout << "\nWhere do you want to save the database to? ";
+			cin >> response;
+			restaurantDatabase->setOutputDatabaseFile(response);
+
+			cout << "\nThe database will be saved to " << response << endl << endl;
+			databaseFileDone = true;
+		}
+		else if (response == "n" || response == "N")
+		{
+			cout << "\nDefault location will be used. (./output.txt)\n";
+			databaseFileDone = true;
+		}
+		else
+		{
+			cout << "That is not a valid response.\n";
+		}
+	}
+
+	restaurantDatabase->writeFile();
+    cout << "\n\n\t   The restaurant database has been written to " << restaurantDatabase->getOutputDatabaseFile() << "." << endl;
+	cout << "\n\n\t\t(Press return to continue)";
+	cin.ignore(1000, '\n');
+    cin.clear();
+	cin.get();
 }
 
 //this is where our main will be
