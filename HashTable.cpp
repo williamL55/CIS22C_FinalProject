@@ -187,6 +187,7 @@ Restaurant HashTable::getRestaurant(int num, int index)
     Nodeptr temp = Table[index];
     for(int i = 1; i < num && temp; i++)
     {
+        //needed if num goes off the bucket edge
         if(!temp->next)
         {
             cout << "\nThe restaurant doesn't exist.";
