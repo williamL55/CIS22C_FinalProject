@@ -134,20 +134,22 @@ void RestaurantDatabase::removeRestaurantMenu()
     cin.ignore(1000, '\n');
     cout << "What is the name of the restaurant you would like to delete? ";
     getline(cin, tempName);
-    int index = hashTable->hash(tempName);
-    hashTable->printBucket(index);
+    if(uniqueBSTDatabase->searchName(tempName))
+    {
+        int index = hashTable->hash(tempName);
+        hashTable->printBucket(index);
 
 
-    //check valid input against numitemsinbucket
-    cout << "Enter the #: ";
-    cin >> num;
+        //check valid input against numitemsinbucket
+        cout << "Enter the #: ";
+        cin >> num;
 
 
-    Restaurant r = hashTable->getRestaurant(num, index);
-    cout << "Removing restaurant...";
+        Restaurant r = hashTable->getRestaurant(num, index);
+        cout << "Removing restaurant...";
 
-    removeRestaurant(r);
-
+        removeRestaurant(r);
+    }
     cin.ignore(1000, '\n');
     cout << "\n\n\n\t\tPress any key to continue." << endl;
     cin.get();

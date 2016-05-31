@@ -228,9 +228,9 @@ void BST<bstdata>::containsNameValue(Nodeptr root, bstdata value)
         cout << "\n------------------------------------" << endl << endl;
         cout << root->rest;
     }
-    if(root->left)
+    else if(root->left)
         containsNameValue(root->left, value);
-    if(root->right)
+    else if(root->right)
         containsNameValue(root->right, value);
 }
 
