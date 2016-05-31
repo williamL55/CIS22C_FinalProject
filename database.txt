@@ -22,6 +22,14 @@ Juice Bar
 2
 4.5
 4085644585
+Sprout Cafe
+Sandwiches
+168 University Ave Palo Alto, CA 94301
+1100
+2100
+2
+3.5
+6503237688
 Ten Ren Tea
 Coffee & Tea
 10881 N Wolfe Rd Cupertino, CA 95014
@@ -30,14 +38,14 @@ Coffee & Tea
 1
 4.0
 4088732038
-Philz Coffee
-Coffee & Tea
-20686 Stevens Creek Blvd Cupertino, CA 95014
-600
-1830
-1
-4.5
-4084469000
+Heidi's Pies
+Diner
+1941 S El Camino Real San Mateo, CA 94403
+0
+0
+2
+3.5
+6505740505
 Cuisinett
 French
 1105 San Carlos Ave San Carlos, CA 94070
@@ -46,6 +54,14 @@ French
 2
 4.5
 6504533390
+Philz Coffee
+Coffee & Tea
+20686 Stevens Creek Blvd Cupertino, CA 95014
+600
+1830
+1
+4.5
+4084469000
 Ale Arsenal
 Pubs
 971 Laurel St San Carlos, CA 94070
@@ -57,24 +73,8 @@ Pubs
 Le Boulanger
 Bakery
 622 Laurel St San Carlos, CA 94070
-0600
+600
 1800
 2
 2.5
 6508028810
-Sprout Cafe
-Sandwiches
-168 University Ave Palo Alto, CA 94301
-1100
-2100
-2
-3.5
-6503237688
-Heidi's Pies
-Diner
-1941 S El Camino Real San Mateo, CA 94403
-0
-0
-2
-3.5
-6505740505
