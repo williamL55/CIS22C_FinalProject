@@ -80,7 +80,8 @@ void Report::searchByName()
     cout << "Enter the name of the restaurant to search for: ";
     getline(cin, tempRestaurantName);
 
-    uniqueBSTDatabase->searchPrintName(tempRestaurantName);
+    //uniqueBSTDatabase->searchPrintName(tempRestaurantName);
+    hashTable->findRestaurant(tempRestaurantName);
 
     cout << "\n\n\t\tPress any key to continue." << endl;
     cin.get();

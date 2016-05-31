@@ -119,12 +119,14 @@ int HashTable::findRestaurant(string key)
     {
         if(temp->rest.getName() == key)
         {
+            cout << temp->rest;
             return index;
         }
         else
             temp = temp->next;
     }
-    return index;
+    cout << "\nThe restaurant is not in the database.";
+    return -1;
 }
 
 void HashTable::printBucket(int index)
