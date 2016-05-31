@@ -365,44 +365,6 @@ bool BST<bstdata>::isEmpty()
 }
 
 template <class bstdata>
-int BST<bstdata>::getHeight(Nodeptr root)
-{
-
-    int height = 0;
-    if(root)
-    {
-        if(root->left || root->right)
-        {
-            int leftHeight = 0;
-            int rightHeight = 0;
-            if(root->left)
-            {
-                leftHeight = getHeight(root->left);
-            }
-            if(root->right)
-            {
-                rightHeight = getHeight(root->right);
-            }
-            if(rightHeight < leftHeight)
-                height = leftHeight + 1;
-            else
-                height = rightHeight + 1;
-        }
-    }
-    return height;
-
-}
-
-template <class bstdata>
-int BST<bstdata>::getHeight()
-{
-    int height;
-    if(root)
-        height = getHeight(root);
-    return height;
-}
-
-template <class bstdata>
 Restaurant BST<bstdata>::findMin(Nodeptr root)
 {
     while(root->left)
