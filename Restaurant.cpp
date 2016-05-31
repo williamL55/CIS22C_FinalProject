@@ -115,6 +115,21 @@ ostream& operator<<(ostream& out, Restaurant& restaurant)
 	return out;
 }
 
+operator==(Restaurant rest1, Restaurant rest2)
+{
+    if(rest1.getName() == rest2.getName()
+       && rest1.getCuisine() == rest2.getCuisine()
+       && rest1.getLocation() == rest2.getLocation()
+       && rest1.getOpeningHour() == rest2.getOpeningHour()
+       && rest1.getClosingHour() == rest2.getClosingHour()
+       && rest1.getRating() == rest2.getRating()
+       && rest1.getCost() == rest2.getCost()
+       && rest1.getPhoneNumber() == rest2.getPhoneNumber()
+    )
+        return true;
+    else return false;
+}
+
 void Restaurant::setAll(string name, string cuisine, string location, int openingHour, int closingHour, double cost, double rating, double phoneNumber)
 {
     this-> name = name;

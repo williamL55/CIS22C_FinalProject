@@ -157,38 +157,46 @@ int HashTable::findRestaurant(string key)
     {
         if(temp->rest.getName() == key)
         {
-             cout << temp->rest;
-             return index;
+            cout << temp->rest;
+            return index;
         }
         else
             temp = temp->next;
     }
-    cout << "\nThe restaurant is not in the database." << endl;
-    return -1;
+    //Restaurant r;
+    return index;
 }
 
-//void HashTable::printBucket(int index)
-//{
-//    Nodeptr temp = Table[index];
-//    if(temp->title != "")
-//    {
-//        cout << "\n\nThe values stored at index " << index << " are:" << endl << endl;
-//        while(temp)
-//        {
-//            cout << "Title: " << temp->title << endl;
-//            cout << "Author: " << temp->author << endl;
-//            cout << fixed << setprecision(0);
-//            cout << "ISBN: " << temp->isbn << endl << endl;
-//            temp = temp->next;
-//        }
-//    }
-//    else
-//        cout << "The bucket at index "<< index << " is empty." << endl;
-//}
-
-void HashTable::removeItem(string key)
+void HashTable::printBucket(int index)
 {
-    int index = hash(key);
+    Nodeptr temp = Table[index];
+    if(temp)
+    {
+        int i = 1;
+        while(temp)
+        {
+            cout << i << endl << temp->rest;
+            temp = temp->next;
+            i++;
+        }
+    }
+    else
+        cout << "The bucket at index "<< index << " is empty." << endl;
+}
+
+Restaurant HashTable::getRestaurant(int num, int index)
+{
+    Nodeptr temp = Table[index];
+    for(int i = 1; i < num; i ++)
+    {
+        temp = temp->next;
+    }
+    return temp->rest;
+}
+
+void HashTable::removeItem(Restaurant r)
+{
+    int index = hash(r.getName());
     Nodeptr temp = Table[index];
 
 
@@ -198,29 +206,29 @@ void HashTable::removeItem(string key)
     }
     else if(temp && !temp->next)
     {
-        if(key == temp->rest.getName())
+        if(r == temp->rest)
         {
             delete temp;
             Table[index] = new Node();
         }
         else
-            cout << "Could not find " << key << endl;
+            cout << "Could not find " << r << endl;
 
     }
     else if(temp && temp->next)
     {
-        if(key == temp->rest.getName())
+        if(r == temp->rest)
         {
             Table[index] = temp->next;
             delete temp;
         }
         else
         {
-            while(temp->next->rest.getName() != key && temp->next)
+            while(!(temp->next->rest == r) && temp->next)
             {
                     temp = temp->next;
             }
-            if(temp->next->rest.getName() == key)
+            if(temp->next->rest == r)
             {
                 if(temp->next->next)
                 {
@@ -234,7 +242,7 @@ void HashTable::removeItem(string key)
                 }
             }
             else
-                cout << "Could not find " << key;
+                cout << "Could not find " << r;
         }
     }
 }

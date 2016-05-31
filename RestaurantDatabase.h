@@ -49,7 +49,7 @@ public:
 
     //removes a restaurant from the database
     //searches for a restaurant by name by calling searchByName() from Report.h
-    void removeRestaurant();
+    void removeRestaurant(Restaurant r);
 
     //menu for removing a restaurant
     void removeRestaurantMenu();

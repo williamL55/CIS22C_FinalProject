@@ -126,31 +126,38 @@ void RestaurantDatabase::addRestaurant(Restaurant rest)
 void RestaurantDatabase::removeRestaurantMenu()
 {
     system(CLEAR);
-    hashTable->printTable();
-    cout << "\n\n\n\t\tPress any key to continue." << endl;
+
+    string tempName;
+    int num;
+
+    cin.clear();
     cin.ignore(1000, '\n');
+    cout << "What is the name of the restaurant you would like to delete? ";
+    getline(cin, tempName);
+    int index = hashTable->hash(tempName);
+    hashTable->printBucket(index);
+
+
+    //check valid input against numitemsinbucket
+    cout << "Enter the #: ";
+    cin >> num;
+
+
+    Restaurant r = hashTable->getRestaurant(num, index);
+    cout << "Removing restaurant...";
+
+    removeRestaurant(r);
+
+    cin.ignore(1000, '\n');
+    cout << "\n\n\n\t\tPress any key to continue." << endl;
     cin.get();
 }
 
-void RestaurantDatabase::removeRestaurant()
+void RestaurantDatabase::removeRestaurant(Restaurant r)
 {
-    system(CLEAR);
-
-//first search for the restaurant to delete in the BST
-//then if it exists, delete from all 3 structures
-
-//simply present a list of all restaurants with a number
-//and use that number entered by the user to identify the restaurant to delete
-
-//uniqueBSTDatabase->remove()
-//secondaryBSTDatabase->remove()
-//hashTable->removeItem()
-
-
-    cout << "\n\t\tPress any key to continue." << endl;
-    cin.ignore(1000, '\n');
-    cin.get();
-    return;
+    hashTable->removeItem(r);
+    uniqueBSTDatabase->removeName(r);
+    secondaryBSTDatabase->removeCuisine(r);
 }
 
 void RestaurantDatabase::addRestaurantMenu()
