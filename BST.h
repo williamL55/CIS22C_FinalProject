@@ -28,6 +28,7 @@ private:
     void insert_name_value(Nodeptr root, Restaurant rest);
     void insert_cuisine_value(Nodeptr root, Restaurant rest);
     void inOrderPrint(Nodeptr root);
+    void preOrderPrint(Nodeptr root);
     void containsCuisineValue(Nodeptr root, bstdata value);
     bool containsNameValue(Nodeptr root, bstdata value);
     bool containsName(Nodeptr root, bstdata value);
@@ -45,6 +46,7 @@ public:
     void insertName(Restaurant rest);
     void insertCuisine(Restaurant rest);
     void inOrderPrint();
+    void preOrderPrint();
     bool searchName(bstdata value);
     bool searchPrintCuisine(bstdata value);
     bool searchPrintName(bstdata value);
@@ -195,6 +197,25 @@ void BST<bstdata>::inOrderPrint()
 {
     inOrderPrint(root);
     cout << endl;
+}
+
+template <class bstdata>
+void BST<bstdata>::preOrderPrint()
+{
+	preOrderPrint(root);
+	cout << "------------------------------------" << endl;
+}
+
+template <class bstdata>
+void BST<bstdata>::preOrderPrint(Nodeptr root)
+{
+	if(root)
+	{
+		cout << "------------------------------------" << endl;
+		cout << root->rest;
+		preOrderPrint(root->left);
+		preOrderPrint(root->right);
+	}
 }
 
 template <class bstdata>

@@ -27,10 +27,6 @@ public:
     //removes the item with the given key
     void removeItem(Restaurant r);
 
-    //prints the first item of each bucket
-    //includes the number of items stored at that bucket
-    void printTable();
-
     void printTableToFile(ofstream &fout);
 
     //Prints all items stored at a single bucket
