@@ -50,6 +50,7 @@ class Restaurant
      void setAll(string name, string cuisine, string location, int openingHour, int closingHour, double cost, double rating, double phoneNumber);
 
      friend ostream& operator<<(ostream& out, Restaurant& restaurant);
+     friend operator==(Restaurant r1, Restaurant r2);
 
 };
 

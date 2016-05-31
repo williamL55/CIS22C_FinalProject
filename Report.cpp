@@ -71,31 +71,36 @@ void Report::searchMainMenu()
 
 void Report::searchByName()
 {
-    //temp variable to hold the value to search for
-    //obviously case sensitive
     string tempRestaurantName;
 
     system(CLEAR);
-    cout << "Enter the name of the restaurant to search for: ";
-    cin >> tempRestaurantName;
+    cin.clear();
+    cin.ignore(1000, '\n');
 
-    try
-    {
-        cout << "Press any key to continue." << endl;
-        cin.ignore(1000, '\n');
-        cin.get();
-    }
-    catch(...)
-    {
-        cout << "The tree is empty." << endl;
-        cout << "Press a key to continue.";
-        cin.ignore(1000, '\n');
-        cin.get();
-    }
+    cout << "Enter the name of the restaurant to search for: ";
+    getline(cin, tempRestaurantName);
+
+    uniqueBSTDatabase->searchPrintName(tempRestaurantName);
+
+    cout << "\n\n\t\tPress any key to continue." << endl;
+    cin.get();
 }
 
 void Report::searchByCuisine()
 {
+    string tempCuisine;
+
+    system(CLEAR);
+    cin.clear();
+    cin.ignore(1000, '\n');
+
+    cout << "Enter the cuisine you would like to search for: ";
+    getline(cin, tempCuisine);
+
+    secondaryBSTDatabase->searchPrintCuisine(tempCuisine);
+
+    cout << "Press any key to continue.";
+    cin.get();
 
 }
 
@@ -108,7 +113,6 @@ void Report::listMainMenu()
     do
 	{
 	    system(CLEAR);
-
 
 		//show the mainMenu and get the choice
 		cout << "\t\tList\n\t\tMain Menu\n\n";
@@ -157,7 +161,7 @@ void Report::listUnsorted()
 {
     system(CLEAR);
     cout << "Listing unsorted restaurant database: " << endl;
-    hashTable->printTable();
+    uniqueBSTDatabase->preOrderPrint();
     cin.clear();
     cin.ignore(1000, '\n');
     cout << "\n\t    Press return to continue.";
@@ -201,7 +205,6 @@ void Report::statisticsMainMenu()
     do
 	{
 	    system(CLEAR);
-
 
 		//show the mainMenu and get the choice
 		cout << "\t\tStatistics\n\t\tMain Menu\n\n";
@@ -252,9 +255,9 @@ void Report::restaurantsBestRating()
 {
 
 }
+
 void Report::affordableRestaurants()
 {
 
 }
-
 

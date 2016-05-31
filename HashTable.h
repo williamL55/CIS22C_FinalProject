@@ -25,25 +25,21 @@ public:
     void addItem(Restaurant rest);
 
     //removes the item with the given key
-    void removeItem(string key);
-
-    //Helper function to printTable
-    //Counts the number of items in each bucket
-    int numItemsAtIndex(int index);
-
-    //prints the first item of each bucket
-    //includes the number of items stored at that bucket
-    void printTable();
+    void removeItem(Restaurant r);
 
     void printTableToFile(ofstream &fout);
 
     //Prints all items stored at a single bucket
     void printBucket(int index);
 
+    //returns a specific restaurantin a specific bucket
+    //for the remove function
+    Restaurant getRestaurant(int num, int index);
+
     //Searches for a restaurant in the table using the key entered by the user
     //returns the index under which the restaurant is stored
     //returns -1 if the restaurant is not found
-    int findRestaurant(Restaurant rest);
+    int findRestaurant(string key);
 
     //need a way to get table size for looping
     int getTableSize();
