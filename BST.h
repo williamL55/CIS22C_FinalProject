@@ -83,10 +83,7 @@ template <class bstdata>
 void BST<bstdata>::insertName(Restaurant rest)
 {
     if (root == NULL)
-    {
         root = new Node(rest); //if the tree is empty insert the value at the root
-
-    }
     else
         insert_name_value(root, rest); //otherwise call the helper function, passing it the root
 }
