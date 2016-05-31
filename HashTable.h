@@ -32,6 +32,8 @@ public:
     //Prints all items stored at a single bucket
     void printBucket(int index);
 
+    void printTable();
+
     //returns a specific restaurantin a specific bucket
     //for the remove function
     Restaurant getRestaurant(int num, int index);

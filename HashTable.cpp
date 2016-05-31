@@ -223,3 +223,25 @@ int HashTable::getTableSize()
     return TABLE_SIZE;
 }
 
+void HashTable::printTable()
+ {
+     for(int i = 0; i < TABLE_SIZE; i++)
+     {
+         if(Table[i]->rest.getName() != "default name")
+         {
+             cout << "BUCKET NUMBER: " << i;
+             cout << "\n------------------------------------" << endl << endl;
+             cout << Table[i]->rest << endl;
+             if(Table[i]->next)
+             {
+                 Nodeptr temp = Table[i];
+                 while(temp->next)
+                 {
+                     cout << temp->next->rest << endl;
+                     temp = temp->next;
+                 }
+             }
+         }
+     }
+     cout << "\n------------------------------------" << endl << endl;
+ }
