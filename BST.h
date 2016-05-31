@@ -42,7 +42,6 @@ private:
 public:
     BST();
     ~BST();
-    bool is_empty();
     void insertName(Restaurant rest);
     void insertCuisine(Restaurant rest);
     void inOrderPrint();
