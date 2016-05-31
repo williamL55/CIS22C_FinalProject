@@ -115,7 +115,7 @@ ostream& operator<<(ostream& out, Restaurant& restaurant)
 	return out;
 }
 
-operator==(Restaurant rest1, Restaurant rest2)
+bool operator==(Restaurant rest1, Restaurant rest2)
 {
     if(rest1.getName() == rest2.getName()
        && rest1.getCuisine() == rest2.getCuisine()
