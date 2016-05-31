@@ -16,8 +16,11 @@ private:
     //contains a pointer to the hash table
     HashTable* hashTable;
 
-    //used for holding the name of the database file
-    string databaseFile;
+    //used for holding the name of the input database file
+    string inputDatabaseFile;
+
+    //used for holding the name of the output database file
+    string outputDatabaseFile;
 
 public:
     RestaurantDatabase();
@@ -33,11 +36,17 @@ public:
     //reads a file and creates the data structures from it
     void readFile();
 
-    //sets the database file name to what the user inputs
-    void setDatabaseFile(string file);
+    //sets the input database file name to what the user inputs
+    void setInputDatabaseFile(string file);
 
-    //gets the current database file name
-    string getDatabaseFile();
+    //gets the current input database file name
+    string getInputDatabaseFile();
+
+    //sets the output database file name to what the user inputs
+    void setOutputDatabaseFile(string file);
+
+    //gets the current output database file name
+    string getOutputDatabaseFile();
 
     //adds a restaurant to the database
     //need to add all restaurant members here in the function call

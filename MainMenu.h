@@ -31,6 +31,9 @@ public:
 
     //shows menu asking for input file location
     void fileLoadMenu();
+
+    //shows menu asking for output file location
+    void fileSaveMenu();
 };
 
 #endif // MAINMENU_H
