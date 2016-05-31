@@ -31,8 +31,8 @@ private:
     void insert_name_value(Nodeptr root, Restaurant rest);
     void insert_cuisine_value(Nodeptr root, Restaurant rest);
     void inOrderPrint(Nodeptr root);
-    void containsValue(Nodeptr root, bstdata value);
-    bool containsCuisine(Nodeptr root, string cuisine);
+    void containsCuisineValue(Nodeptr root, bstdata value);
+    void containsNameValue(Nodeptr root, bstdata value);
     void printCuisine(Nodeptr root, string cuisine);
     Nodeptr removeName(Nodeptr root, Restaurant r);
     Nodeptr removeCuisine(Nodeptr root, Restaurant r);
@@ -47,8 +47,9 @@ public:
     void insertName(Restaurant rest);
     void insertCuisine(Restaurant rest);
     void inOrderPrint();
-    bool search(bstdata value);
-    void searchCuisine(string cuisine);
+    bool searchCuisine(bstdata value);
+    bool searchName(bstdata value);
+    //void searchCuisine(string cuisine);
     void removeName(Restaurant r);
     void removeCuisine(Restaurant r);
     bool isEmpty();
@@ -203,7 +204,7 @@ void BST<bstdata>::inOrderPrint()
 }
 
 template <class bstdata>
-void BST<bstdata>::containsValue(Nodeptr root, bstdata value)
+void BST<bstdata>::containsCuisineValue(Nodeptr root, bstdata value)
 {
     string temp = root->rest.getCuisine();
     for (unsigned int i =0; i < root->rest.getCuisine().length(); i++)
@@ -214,19 +215,46 @@ void BST<bstdata>::containsValue(Nodeptr root, bstdata value)
         cout << root->rest;
     }
     if(root->left)
-        containsValue(root->left, value);
+        containsCuisineValue(root->left, value);
     if(root->right)
-        containsValue(root->right, value);
+        containsCuisineValue(root->right, value);
 }
 
 template <class bstdata>
-bool BST<bstdata>::search(bstdata value)
+void BST<bstdata>::containsNameValue(Nodeptr root, bstdata value)
+{
+    if(root->rest.getName() == value)
+    {
+        cout << "\n------------------------------------" << endl << endl;
+        cout << root->rest;
+    }
+    if(root->left)
+        containsNameValue(root->left, value);
+    if(root->right)
+        containsNameValue(root->right, value);
+}
+
+template <class bstdata>
+bool BST<bstdata>::searchCuisine(bstdata value)
 {
     if(root->rest.getCuisine() == value)
         cout << root->rest;
     if(root)
     {
-        containsValue(root, value);
+        containsCuisineValue(root, value);
+        return true;
+    }
+    else return false;
+}
+
+template <class bstdata>
+bool BST<bstdata>::searchName(bstdata value)
+{
+    if(root->rest.getName() == value)
+        cout << root->rest;
+    if(root)
+    {
+        containsNameValue(root, value);
         return true;
     }
     else return false;
@@ -328,53 +356,6 @@ typename BST<bstdata>::Nodeptr BST<bstdata>::removeCuisine(Nodeptr root, Restaur
         }
     }
     return root;
-}
-
-template <class bstdata>
-void BST<bstdata>::searchCuisine(string cuisine)
-{
-	if(containsCuisine(root, cuisine))
-		printCuisine(root, cuisine);
-	else
-		cout << "searchCuisine(): No such cuisine in the database." << endl;
-}
-
-template <class bstdata>
-bool BST<bstdata>::containsCuisine(Nodeptr root, string cuisine)
-{
-	if(root->data.getCuisine() == cuisine)
-		return true;
-    else if(cuisine < root->data.getCuisine())
-    {
-        if(!root->left)
-            return false;
-        else
-            return containsCuisine(root->left, cuisine);
-    }
-    else
-    {
-        if(!root->right)
-            return false;
-        else
-            return containsCuisine(root->right, cuisine);
-    }
-    return false;
-}
-
-template <class bstdata>
-void BST<bstdata>::printCuisine(Nodeptr root, string cuisine)
-{
-	if(root)
-	{
-		printCuisine(root->left, cuisine);
-		if(root->data.getCuisine() == cuisine)
-		{
-			cout << "------------------------------------" << endl;
-			cout << root->data;
-		}
-		printCuisine(root->right, cuisine);
-
-	}
 }
 
 template <class bstdata>

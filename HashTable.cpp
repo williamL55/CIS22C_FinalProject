@@ -157,13 +157,11 @@ int HashTable::findRestaurant(string key)
     {
         if(temp->rest.getName() == key)
         {
-            cout << temp->rest;
             return index;
         }
         else
             temp = temp->next;
     }
-    //Restaurant r;
     return index;
 }
 

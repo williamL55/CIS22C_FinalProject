@@ -71,29 +71,24 @@ void Report::searchMainMenu()
 
 void Report::searchByName()
 {
-    //temp variable to hold the value to search for
-    //obviously case sensitive
     string tempRestaurantName;
 
     system(CLEAR);
     cin.clear();
     cin.ignore(1000, '\n');
+
     cout << "Enter the name of the restaurant to search for: ";
     getline(cin, tempRestaurantName);
 
-    try
-    {
-        hashTable->findRestaurant(tempRestaurantName);
-        cout << "\n\n\t\tPress any key to continue." << endl;
-        cin.get();
-    }
-    catch(...)
-    {
-        cout << "The tree is empty." << endl;
-        cout << "Press a key to continue.";
-        cin.ignore(1000, '\n');
-        cin.get();
-    }
+    if(uniqueBSTDatabase->searchName(tempRestaurantName))
+       cout << "\n------------------------------------" << endl << endl;
+    else
+        cout << "The name could not be found." << endl;
+
+    cout << "\n\n\t\tPress any key to continue." << endl;
+    cin.get();
+
+
 }
 
 void Report::searchByCuisine()
@@ -107,7 +102,7 @@ void Report::searchByCuisine()
     cout << "Enter the cuisine you would like to search for: ";
     getline(cin, tempCuisine);
 
-    if(secondaryBSTDatabase->search(tempCuisine))
+    if(secondaryBSTDatabase->searchCuisine(tempCuisine))
        cout << "\n------------------------------------" << endl << endl;
     else
         cout << "The cuisine could not be found." << endl;
