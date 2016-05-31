@@ -94,38 +94,39 @@ void BST<bstdata>::insertName(Restaurant rest)
 template <class bstdata>
 void BST<bstdata>::insert_name_value(Nodeptr root, Restaurant rest)
 {
-    if(rest.getName() == root->rest.getName() && rest.getPhoneNumber() == root->rest.getPhoneNumber())
-    {
-            return;
-        if(rest.getPhoneNumber() < root->rest.getPhoneNumber())
-        {
-        	if(root->left == NULL)
-        		root->left = new Node(rest);
-        	else
-        		insert_name_value(root->left, rest);
-        }
-        else
-        {
-        	if(root->right == NULL)
-        		root->right = new Node(rest);
-        	else
-        		insert_name_value(root->right, rest);
-        }
-    }
-    else if(rest.getName() < root->rest.getName())
-    {
-        if(root->left == NULL)
-            root->left = new Node(rest);
-        else
-            insert_name_value(root->left, rest);
-    }
-    else
-    {
-        if(root->right == NULL)
-            root->right = new Node(rest);
-        else
-            insert_name_value(root->right, rest);
-    }
+	if(rest.getName() == root->rest.getName())
+	{
+		if(rest.getPhoneNumber() == root->rest.getPhoneNumber())
+			return;
+		else if(rest.getPhoneNumber() < root->rest.getPhoneNumber())
+		{
+			if(root->left == NULL)
+				root->left = new Node(rest);
+			else
+				insert_name_value(root->left, rest);
+		}
+		else
+		{
+			if(root->right == NULL)
+				root->right = new Node(rest);
+			else
+				insert_name_value(root->right, rest);
+		}
+	}
+	else if(rest.getName() < root->rest.getName())
+	{
+		if(root->left == NULL)
+			root->left = new Node(rest);
+		else
+			insert_name_value(root->left, rest);
+	}
+	else
+	{
+		if(root->right == NULL)
+			root->right = new Node(rest);
+		else
+			insert_name_value(root->right, rest);
+	}
 }
 
 template <class bstdata>
@@ -143,40 +144,40 @@ void BST<bstdata>::insertCuisine(Restaurant rest)
 template <class bstdata>
 void BST<bstdata>::insert_cuisine_value(Nodeptr root, Restaurant rest)
 {
-    if(rest.getCuisine() == root->rest.getCuisine())
-    {
-        if(rest.getPhoneNumber() == root->rest.getPhoneNumber())
-            return;
-        else if(rest.getPhoneNumber() < root->rest.getPhoneNumber())
-        {
-        	if(root->left == NULL)
-        		root->left = new Node(rest);
-        	else
-        		insert_cuisine_value(root->left, rest);
-        }
-        else
-        {
-        	if(root->right == NULL)
-        		root->right = new Node(rest);
-        	else
-        		insert_cuisine_value(root->right, rest);
-        }
+	if(rest.getCuisine() == root->rest.getCuisine())
+	{
+		if(rest.getPhoneNumber() == root->rest.getPhoneNumber())
+			return;
+		else if(rest.getPhoneNumber() < root->rest.getPhoneNumber())
+		{
+			if(root->left == NULL)
+				root->left = new Node(rest);
+			else
+				insert_cuisine_value(root->left, rest);
+		}
+		else
+		{
+			if(root->right == NULL)
+				root->right = new Node(rest);
+			else
+				insert_cuisine_value(root->right, rest);
+		}
 
-    }
-    else if(rest.getCuisine() < root->rest.getCuisine())
-    {
-        if(root->left == NULL)
-            root->left = new Node(rest);
-        else
-            insert_cuisine_value(root->left, rest);
-    }
-    else
-    {
-        if(root->right == NULL)
-            root->right = new Node(rest);
-        else
-            insert_cuisine_value(root->right, rest);
-    }
+	}
+	else if(rest.getCuisine() < root->rest.getCuisine())
+	{
+		if(root->left == NULL)
+			root->left = new Node(rest);
+		else
+			insert_cuisine_value(root->left, rest);
+	}
+	else
+	{
+		if(root->right == NULL)
+			root->right = new Node(rest);
+		else
+			insert_cuisine_value(root->right, rest);
+	}
 }
 
 template <class bstdata>
