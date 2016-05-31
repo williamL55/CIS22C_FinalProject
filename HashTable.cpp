@@ -64,7 +64,7 @@ int HashTable::hash(string key)
     keyLength = key.length();
     for(int i = 0; i < keyLength; i++)
         sum += (int) key[i]; //summing the ASCII values for each character in the string
-    index = sum % TABLE_SIZE; //dividing the summed ASCII values by 35 && storing remainder as my index
+    index = sum % TABLE_SIZE; //dividing the summed ASCII values by 60 && storing remainder as my index
     return index;
 }
 
