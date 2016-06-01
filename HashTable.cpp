@@ -31,17 +31,7 @@ void HashTable::addItem(Restaurant rest)
 
     //check for duplicate restaurant
     //dont add the restaurant if all parameters are equal
-    if
-    (
-       Table[index]->rest.getName() == rest.getName()
-       && Table[index]->rest.getCuisine() == rest.getCuisine()
-       && Table[index]->rest.getLocation() == rest.getLocation()
-       && Table[index]->rest.getOpeningHour() == rest.getOpeningHour()
-       && Table[index]->rest.getClosingHour() == rest.getClosingHour()
-       && Table[index]->rest.getPhoneNumber() == rest.getPhoneNumber()
-       && Table[index]->rest.getRating() == rest.getRating()
-       && Table[index]->rest.getCost() == rest.getCost()
-    )
+    if(Table[index]->rest == rest)
     {
         return;
     }
