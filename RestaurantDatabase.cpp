@@ -418,6 +418,7 @@ void RestaurantDatabase::addRestaurantMenu()
             {
                 system(CLEAR);
                 cout << "Would you like to try adding the restaurant again? ";
+                cout << "(y/n): ";
                 cin >> response;
                 while (!done)
                 {
