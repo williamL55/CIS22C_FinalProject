@@ -79,36 +79,25 @@ void RestaurantDatabase::readFile()
 		}
 
 		//create temp variables to store data
-		string name, cuisine, location;
-		int openingHour, closingHour;
-		double cost, rating, phoneNumber;
+		//string name, cuisine, location;
+		//int openingHour, closingHour;
+		//double cost, rating, phoneNumber;
 
 		//read the file in a for loop, inputting a complete restaurant object
 		//to all 3 databases by calling addRestaurant
 		int i = 0;
 		while(!fin.eof())
         {
+            //declare a temp object to add
+            Restaurant rest;
+
             //read in all contents
-            getline(fin, name);
-            getline(fin, cuisine);
-            getline(fin, location);
-            fin >> openingHour;
-            fin.ignore(1000, '\n');
-            fin >> closingHour;
-            fin.ignore(1000, '\n');
-            fin >> cost;
-            fin.ignore(1000, '\n');
-            fin >> rating;
-            fin.ignore(1000, '\n');
-            fin >> phoneNumber;
-            fin.ignore(1000, '\n');
+            fin >> rest;
 
             //add the restaurant if it is not a default object
             //must check if name is an empty line here
             //otherwise it will add an invalid restaurant
-            Restaurant rest;
-            rest.setAll(name, cuisine, location, openingHour, closingHour, cost, rating, phoneNumber);
-            if(name != "default name" && name != "")
+            if(rest.getName() != "default name" && rest.getName() != "")
                 addRestaurant(rest);
 
             //increment iterator
