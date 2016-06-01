@@ -87,8 +87,7 @@ void RestaurantDatabase::readFile()
 		//read the file in a for loop, inputting a complete restaurant object
 		//to all 3 databases by calling addRestaurant
 		int i = 0;
-		int tSize = hashTable->getTableSize();
-		while(i < tSize && !fin.eof())
+		while(!fin.eof())
         {
             //read in all contents
             getline(fin, name);
