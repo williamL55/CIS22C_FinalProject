@@ -3,7 +3,8 @@
 
 #include "Restaurant.h"
 #include <iostream>
-#include <cstdlib>//needed for system(CLEAR)
+#include <cstdlib>
+#include <fstream>
 
 class HashTable
 {

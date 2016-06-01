@@ -75,14 +75,34 @@ void HashTable::printTableToFile(ofstream &fout)
             //cant use operator overload here because the overload
             //prints extra chars
             //ex Name: and Cuisine:
-            fout << Table[i]->rest;
+            fout << fixed << setprecision(0);
+            fout << Table[i]->rest.getName() << endl;
+            fout << Table[i]->rest.getCuisine() << endl;
+            fout << Table[i]->rest.getLocation() << endl;
+            fout << Table[i]->rest.getOpeningHour() << endl;
+            fout << Table[i]->rest.getClosingHour() << endl;
+            fout << Table[i]->rest.getCost() << endl;
+            fout << fixed << setprecision(1);
+            fout << Table[i]->rest.getRating() << endl;
+            fout << fixed << setprecision(0);
+            fout << Table[i]->rest.getPhoneNumber() << endl;
             if(Table[i]->next)
             {
                 Nodeptr temp = Table[i];
                 while(temp->next)
                 {
                     temp = temp->next;
-                    fout << temp->rest;
+                    fout << fixed << setprecision(0);
+                    fout << temp->rest.getName() << endl;
+                    fout << temp->rest.getCuisine() << endl;
+                    fout << temp->rest.getLocation() << endl;
+                    fout << temp->rest.getOpeningHour() << endl;
+                    fout << temp->rest.getClosingHour() << endl;
+                    fout << temp->rest.getCost() << endl;
+                    fout << fixed << setprecision(1);
+                    fout << temp->rest.getRating() << endl;
+                    fout << fixed << setprecision(0);
+                    fout << temp->rest.getPhoneNumber() << endl;
                 }
             }
         }
