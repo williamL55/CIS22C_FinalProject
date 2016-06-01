@@ -2,10 +2,7 @@
 #define _BST_H_
 
 #include <iostream>
-#include <fstream>
 #include "Restaurant.h"
-
-using namespace std;
 
 template <class bstdata>
 class BST

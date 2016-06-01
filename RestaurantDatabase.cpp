@@ -1,5 +1,4 @@
 #include "RestaurantDatabase.h"
-#include <fstream>
 
 #ifdef _WIN32
 #define CLEAR "cls"
