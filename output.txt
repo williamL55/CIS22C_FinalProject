@@ -1,0 +1,79 @@
+Name: Boudin SF
+Cuisine: Bakery
+Location: 20682 Stevens Creek Blvd Cupertino, CA 95014
+Opening Hour: 0800
+Closing Hour: 2100
+Rating: 4.0
+Cost Consideration: 1
+Phone Number: 4086388006
+Name: T-swirl Crepe
+Cuisine: Desserts
+Location: 19650 Stevens Creek Blvd Cupertino, CA 95014
+Opening Hour: 1100
+Closing Hour: 2200
+Rating: 3.5
+Cost Consideration: 1
+Phone Number: 4088984419
+Name: Vitality Bowls
+Cuisine: Juice Bar
+Location: 19700 Vallco Pkwy Ste 160 Cupertino, CA 95014
+Opening Hour: 0800
+Closing Hour: 2000
+Rating: 4.5
+Cost Consideration: 2
+Phone Number: 4085644585
+Name: Sprout Cafe
+Cuisine: Sandwiches
+Location: 168 University Ave Palo Alto, CA 94301
+Opening Hour: 1100
+Closing Hour: 2100
+Rating: 3.5
+Cost Consideration: 2
+Phone Number: 6503237688
+Name: Ten Ren Tea
+Cuisine: Coffee & Tea
+Location: 10881 N Wolfe Rd Cupertino, CA 95014
+Opening Hour: 1030
+Closing Hour: 2100
+Rating: 4.0
+Cost Consideration: 1
+Phone Number: 4088732038
+Name: Heidi's Pies
+Cuisine: Diner
+Location: 1941 S El Camino Real San Mateo, CA 94403
+Hours: Restaurant is always open.
+Rating: 3.5
+Cost Consideration: 2
+Phone Number: 6505740505
+Name: Cuisinett
+Cuisine: French
+Location: 1105 San Carlos Ave San Carlos, CA 94070
+Opening Hour: 1100
+Closing Hour: 2100
+Rating: 4.5
+Cost Consideration: 2
+Phone Number: 6504533390
+Name: Philz Coffee
+Cuisine: Coffee & Tea
+Location: 20686 Stevens Creek Blvd Cupertino, CA 95014
+Opening Hour: 0600
+Closing Hour: 1830
+Rating: 4.5
+Cost Consideration: 1
+Phone Number: 4084469000
+Name: Ale Arsenal
+Cuisine: Pubs
+Location: 971 Laurel St San Carlos, CA 94070
+Opening Hour: 1600
+Closing Hour: 2300
+Rating: 4.5
+Cost Consideration: 2
+Phone Number: 6505942337
+Name: Le Boulanger
+Cuisine: Bakery
+Location: 622 Laurel St San Carlos, CA 94070
+Opening Hour: 0600
+Closing Hour: 1800
+Rating: 2.5
+Cost Consideration: 2
+Phone Number: 6508028810
