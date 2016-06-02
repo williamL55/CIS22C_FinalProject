@@ -158,7 +158,7 @@ void Report::listUnsorted()
     system(CLEAR);
     cout << "Listing unsorted restaurant database: " << endl;
 
-    //will change this back later to use preOrderPrint to fisplay unsorted info
+    //will change this back later to use preOrderPrint to display unsorted info
     //uniqueBSTDatabase->preOrderPrint();
     hashTable->printTable();
 
