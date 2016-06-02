@@ -27,7 +27,6 @@ private:
     void inOrderPrint(Nodeptr root);
     void preOrderPrint(Nodeptr root);
     void containsCuisineValue(Nodeptr root, bstdata value);
-    void containsNameValue(Nodeptr root, bstdata value);
     bool containsName(Nodeptr root, bstdata value);
     void printCuisine(Nodeptr root, string cuisine);
     Nodeptr removeName(Nodeptr root, Restaurant r);
@@ -44,7 +43,6 @@ public:
     void preOrderPrint();
     bool searchName(bstdata value);
     bool searchPrintCuisine(bstdata value);
-    void searchPrintName(bstdata value);
     void removeName(Restaurant r);
     void removeCuisine(Restaurant r);
 };

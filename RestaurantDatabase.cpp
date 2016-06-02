@@ -149,6 +149,7 @@ void RestaurantDatabase::removeRestaurantMenu()
             {
                 if(num > 0)
                 {
+                    //get the restaurant that the user specifies
                     Restaurant r = hashTable->getRestaurant(num, index);
                     if(r.getName() != "default name")
                     {
@@ -439,15 +440,3 @@ void RestaurantDatabase::addRestaurantMenu()
         }
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
