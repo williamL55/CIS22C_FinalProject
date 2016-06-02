@@ -1,14 +1,10 @@
 #include "Report.h"
-#include <cstdlib>
-#include <iostream>
 
 #ifdef _WIN32
 #define CLEAR "cls"
 #else
 #define CLEAR "clear"
 #endif // _WIN32
-
-using namespace std;
 
 Report::Report()
 {
@@ -80,7 +76,6 @@ void Report::searchByName()
     cout << "Enter the name of the restaurant to search for: ";
     getline(cin, tempRestaurantName);
 
-    //uniqueBSTDatabase->searchPrintName(tempRestaurantName);
     hashTable->findRestaurant(tempRestaurantName);
 
     cout << "\n\n\t\tPress any key to continue." << endl;
@@ -162,8 +157,11 @@ void Report::listUnsorted()
 {
     system(CLEAR);
     cout << "Listing unsorted restaurant database: " << endl;
+
+    //will change this back later to use preOrderPrint to fisplay unsorted info
     //uniqueBSTDatabase->preOrderPrint();
     hashTable->printTable();
+
     cin.clear();
     cin.ignore(1000, '\n');
     cout << "\n\t    Press return to continue.";

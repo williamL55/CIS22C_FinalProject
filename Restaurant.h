@@ -1,9 +1,9 @@
 #ifndef _RESTAURANT_H_
 #define _RESTAURANT_H_
 
-//#include <string>
 #include <iomanip>
 #include <ostream>
+#include <istream>
 
 using namespace std;
 
@@ -50,6 +50,7 @@ class Restaurant
      void setAll(string name, string cuisine, string location, int openingHour, int closingHour, double cost, double rating, double phoneNumber);
 
      friend ostream& operator<<(ostream& out, Restaurant& restaurant);
+     friend istream& operator>>(istream& in, Restaurant& restaurant);
      friend bool operator==(Restaurant r1, Restaurant r2);
 
 };

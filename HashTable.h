@@ -1,6 +1,6 @@
-
 #ifndef _HASHTABLE_H_
 #define _HASHTABLE_H_
+
 #include "Restaurant.h"
 #include <iostream>
 #include <cstdlib>
@@ -27,6 +27,7 @@ public:
     //removes the item with the given key
     void removeItem(Restaurant r);
 
+    //outputs the current hash table to a file
     void printTableToFile(ofstream &fout);
 
     //Prints all items stored at a single bucket

@@ -130,6 +130,24 @@ bool operator==(Restaurant rest1, Restaurant rest2)
     else return false;
 }
 
+istream& operator>>(istream& in, Restaurant& restaurant)
+{
+        getline(in, restaurant.name);
+        getline(in, restaurant.cuisine);
+        getline(in, restaurant.location);
+        in >> restaurant.openingHour;
+        in.ignore(1000, '\n');
+        in >> restaurant.closingHour;
+        in.ignore(1000, '\n');
+        in >> restaurant.cost;
+        in.ignore(1000, '\n');
+        in >> restaurant.rating;
+        in.ignore(1000, '\n');
+        in >> restaurant.phoneNumber;
+        in.ignore(1000, '\n');
+        return in;
+}
+
 void Restaurant::setAll(string name, string cuisine, string location, int openingHour, int closingHour, double cost, double rating, double phoneNumber)
 {
     this-> name = name;

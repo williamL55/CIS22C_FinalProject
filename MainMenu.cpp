@@ -1,15 +1,10 @@
 #include "MainMenu.h"
-#include "RestaurantDatabase.h"
-#include <cstdlib>
-#include <iostream>
 
 #ifdef _WIN32
 #define CLEAR "cls"
 #else
 #define CLEAR "clear"
 #endif // _WIN32
-
-using namespace std;
 
 MainMenu::MainMenu()
 {
@@ -84,7 +79,6 @@ void MainMenu::showMainMenu()
 		else if (choice == 6)
 		{
 			//run writeFile();
-			restaurantDatabase->writeFile();
 			system(CLEAR);
 			fileSaveMenu();
 		}
