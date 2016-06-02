@@ -79,7 +79,6 @@ void MainMenu::showMainMenu()
 		else if (choice == 6)
 		{
 			//run writeFile();
-			restaurantDatabase->writeFile();
 			system(CLEAR);
 			fileSaveMenu();
 		}

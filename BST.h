@@ -228,28 +228,6 @@ void BST<bstdata>::containsCuisineValue(Nodeptr root, bstdata value)
 }
 
 template <class bstdata>
-void BST<bstdata>::containsNameValue(Nodeptr root, bstdata value)
-{
-    if(root->rest.getName() == value)
-    {
-        cout << "\n------------------------------------" << endl << endl;
-        cout << root->rest;
-    }
-    else if (value < root->rest.getName())
-    {
-        if(root->left)
-            containsNameValue(root->left, value);
-    }
-    else if(value > root->rest.getName())
-    {
-        if(root->right)
-            containsNameValue(root->right, value);
-    }
-    else
-        cout << "The restaurant is not in the database.";
-}
-
-template <class bstdata>
 bool BST<bstdata>::searchPrintCuisine(bstdata value)
 {
     if(root->rest.getCuisine() == value)
@@ -260,17 +238,6 @@ bool BST<bstdata>::searchPrintCuisine(bstdata value)
         return true;
     }
     else return false;
-}
-
-template <class bstdata>
-void BST<bstdata>::searchPrintName(bstdata value)
-{
-    if(root->rest.getName() == value)
-        cout << root->rest;
-    if(root)
-    {
-        containsNameValue(root, value);
-    }
 }
 
 template <class bstdata>
