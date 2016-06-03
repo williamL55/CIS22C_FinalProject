@@ -31,6 +31,7 @@ http://deanzacollegecis.jenniferparrish.net/cis22c/course-project
 - [ ] Structure Charts
 - [x] UML
 - [ ] Provide relevant test cases for the final presentation
+- [ ] Change list unsorted from table to BST in function call
 
 Remember to do your peer evaluations on time. Check the schedule on her website.
 Please make sure for every cin statement there is a check for if the input is valid. It will make debugging much easier later on.
