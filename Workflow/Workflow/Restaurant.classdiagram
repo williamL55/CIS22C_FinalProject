@@ -1,9 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="6bcc7134-5e75-49dd-aa2d-ef4b6f77ed2e" name="Restaurant" linkedPackageId="b8fe986b-e8d6-4349-853c-a5bfa2b1c4ac" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="6bcc7134-5e75-49dd-aa2d-ef4b6f77ed2e" name="Restaurant" linkedPackageId="b8fe986b-e8d6-4349-853c-a5bfa2b1c4ac" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="cf35872c-cdb8-4dd2-9242-fe007c2fe077" name="BST" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="c6f26c02-6179-4610-8e54-0bb219881abc" />
+        <targetEnds>
+          <association Id="67108cef-6011-4d99-81e8-c22de84c8009" isDerived="false" sourceEndRoleName="BST" targetEndRoleName="List" isLeaf="false" isAbstract="false">
+            <classMoniker Id="73e1d90f-8fc1-4f67-a2c6-670906480553" LastKnownName="List" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5d001c9c-47e7-4c85-9324-d48f13887a67" name="BST" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6a63aded-d0b4-4ef9-9fd5-48ee7fefb7c1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="666b81f1-d75d-4b48-b86f-0209a8f09f6d" name="List" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4b95d0e1-dac0-4bd1-91d8-00585946747b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3d00c8ec-c062-4de5-8dc5-b91d4c92b000" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="01706d18-3503-4013-86bf-c02d1e298ed7" name="Node" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="ba382400-9c36-43da-83a7-46e551ffdac1" />
@@ -378,9 +396,6 @@
           <operation Id="cf58499f-b7f4-4a32-a8eb-ec14a9ee6bdf" name="setPhoneNumber" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="508fa074-5bca-4d6f-802e-9ab4d9b6591f" />
           </operation>
-          <operation Id="8c55d219-9db3-48a8-803e-fb04836734be" name="operator&lt;&lt;" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="3bb5eb64-b4ac-4777-8b17-ae6ad5882da5" />
-          </operation>
           <operation Id="a9686a08-012b-4697-99ce-b6b9f78952db" name="friend operator&lt;&lt;" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="f3af1aae-8be8-4552-afc4-b0d0eef739e9" />
           </operation>
@@ -430,6 +445,11 @@
             <elementDefinition Id="0c88e641-f6c7-4c4e-ae3c-73a4a4b4d4c6" />
           </operation>
         </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="73e1d90f-8fc1-4f67-a2c6-670906480553" name="List" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="579017a5-1411-49f6-bf6d-17435705c2db" />
       </class>
     </logicalClassDesignerModelHasTypes>
   </packagedElements>

@@ -409,8 +409,6 @@ void BST<bstdata>::buildCuisineList()
         cout << setw(20) << left << cuisine.get_cursor() << setw(2) << right << count << endl;
         cuisine.move_cursor();
     }
-
-
 }
 
 template <class bstdata>
