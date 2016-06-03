@@ -93,7 +93,7 @@ void Report::searchByCuisine()
     cout << "Enter the cuisine you would like to search for: ";
     getline(cin, tempCuisine);
 
-    secondaryBSTDatabase->searchPrintCuisine(tempCuisine);
+    secondaryBSTDatabase->searchCuisine(tempCuisine);
 
     cout << "Press any key to continue.";
     cin.get();
@@ -219,6 +219,7 @@ void Report::statisticsMainMenu()
 		if (choice == 1)
 		{
 			//run restaurantsPerCuisine;
+			restaurantsPerCuisine();
 		}
 		else if (choice == 2)
 		{
@@ -248,7 +249,11 @@ void Report::statisticsMainMenu()
 
 void Report::restaurantsPerCuisine()
 {
-
+    system(CLEAR);
+    secondaryBSTDatabase->buildCuisineList();
+    cin.ignore(1000, '\n');
+    cout << "\n\t    Press return to continue.";
+    cin.get();
 }
 
 void Report::restaurantsBestRating()
