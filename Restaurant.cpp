@@ -94,11 +94,11 @@ void Restaurant::setPhoneNumber(double phoneNumber)
 
 ostream& operator<<(ostream& out, Restaurant& restaurant)
 {
-	out << fixed << setprecision(1);			// makes doubles round to one digit
-	out << "Name: " << restaurant.getName() << endl;
-	out << "Cuisine: " << restaurant.getCuisine() << endl;
-	out << "Location: " << restaurant.getLocation() << endl;
-	if(restaurant.getOpeningHour() == 0 &&  restaurant.getClosingHour() == 0)
+    out << fixed << setprecision(1);			// makes doubles round to one digit
+    out << "Name: " << restaurant.getName() << endl;
+    out << "Cuisine: " << restaurant.getCuisine() << endl;
+    out << "Location: " << restaurant.getLocation() << endl;
+    if(restaurant.getOpeningHour() == 0 &&  restaurant.getClosingHour() == 0)
         out << "Hours: Restaurant is always open." <<  endl;
     else
     {
@@ -108,44 +108,44 @@ ostream& operator<<(ostream& out, Restaurant& restaurant)
         out << fixed << setprecision(0) << setfill('0') << setw(4) << restaurant.getClosingHour() << endl;
     }
     out << fixed << setprecision(1);
-	out << "Rating: " << restaurant.getRating() << endl;
-	out << fixed << setprecision(0);
-	out << "Cost Consideration: " << restaurant.getCost() << endl;
-	out << "Phone Number: " << restaurant.getPhoneNumber() << endl;
-	return out;
+    out << "Rating: " << restaurant.getRating() << endl;
+    out << fixed << setprecision(0);
+    out << "Cost Consideration: " << restaurant.getCost() << endl;
+    out << "Phone Number: " << restaurant.getPhoneNumber() << endl;
+    return out;
 }
 
 bool operator==(Restaurant rest1, Restaurant rest2)
 {
     if(rest1.getName() == rest2.getName()
-       && rest1.getCuisine() == rest2.getCuisine()
-       && rest1.getLocation() == rest2.getLocation()
-       && rest1.getOpeningHour() == rest2.getOpeningHour()
-       && rest1.getClosingHour() == rest2.getClosingHour()
-       && rest1.getRating() == rest2.getRating()
-       && rest1.getCost() == rest2.getCost()
-       && rest1.getPhoneNumber() == rest2.getPhoneNumber()
-    )
+            && rest1.getCuisine() == rest2.getCuisine()
+            && rest1.getLocation() == rest2.getLocation()
+            && rest1.getOpeningHour() == rest2.getOpeningHour()
+            && rest1.getClosingHour() == rest2.getClosingHour()
+            && rest1.getRating() == rest2.getRating()
+            && rest1.getCost() == rest2.getCost()
+            && rest1.getPhoneNumber() == rest2.getPhoneNumber()
+      )
         return true;
     else return false;
 }
 
 istream& operator>>(istream& in, Restaurant& restaurant)
 {
-        getline(in, restaurant.name);
-        getline(in, restaurant.cuisine);
-        getline(in, restaurant.location);
-        in >> restaurant.openingHour;
-        in.ignore(1000, '\n');
-        in >> restaurant.closingHour;
-        in.ignore(1000, '\n');
-        in >> restaurant.cost;
-        in.ignore(1000, '\n');
-        in >> restaurant.rating;
-        in.ignore(1000, '\n');
-        in >> restaurant.phoneNumber;
-        in.ignore(1000, '\n');
-        return in;
+    getline(in, restaurant.name);
+    getline(in, restaurant.cuisine);
+    getline(in, restaurant.location);
+    in >> restaurant.openingHour;
+    in.ignore(1000, '\n');
+    in >> restaurant.closingHour;
+    in.ignore(1000, '\n');
+    in >> restaurant.cost;
+    in.ignore(1000, '\n');
+    in >> restaurant.rating;
+    in.ignore(1000, '\n');
+    in >> restaurant.phoneNumber;
+    in.ignore(1000, '\n');
+    return in;
 }
 
 void Restaurant::setAll(string name, string cuisine, string location, int openingHour, int closingHour, double cost, double rating, double phoneNumber)

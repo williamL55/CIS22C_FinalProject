@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="b67139b9-b474-4416-9853-d7f22a226ee5"
   name="Workflow" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -25,6 +25,47 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="3d00c8ec-c062-4de5-8dc5-b91d4c92b000"
+            isDerived="false"
+            sourceEndRoleName="BST"
+            targetEndRoleName="List"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="579017a5-1411-49f6-bf6d-17435705c2db"
+              LastKnownName="List"
+              LastKnownLocation="Workflow.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6a63aded-d0b4-4ef9-9fd5-48ee7fefb7c1"
+                  name="BST"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4b95d0e1-dac0-4bd1-91d8-00585946747b"
+                  name="List"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="ba382400-9c36-43da-83a7-46e551ffdac1"
@@ -1024,14 +1065,6 @@
             concurrency="Sequential"
             isQuery="false" />
           <operation
-            Id="3bb5eb64-b4ac-4777-8b17-ae6ad5882da5"
-            name="operator&lt;&lt;"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false" />
-          <operation
             Id="f3af1aae-8be8-4552-afc4-b0d0eef739e9"
             name="friend operator&lt;&lt;"
             isLeaf="false"
@@ -1188,6 +1221,14 @@
       <undefinedType
         Id="df75fa4d-fb89-4759-a035-c5b86b15e67b"
         name="BST&lt;string&gt;*" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="579017a5-1411-49f6-bf6d-17435705c2db"
+        name="List"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

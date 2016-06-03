@@ -9,50 +9,49 @@ using namespace std;
 
 class Restaurant
 {
- private:
-     //list attributes for each restaurant here
-     //ex. name, cuisine, location, etc
-     string name;
-     string cuisine;
-     string location;
-     int openingHour;
-     int closingHour;
-     double phoneNumber;
-     double rating;
-     double cost;
-     ///kkk
- public:
-     //default constructor
-     Restaurant();
+private:
+    string name;
+    string cuisine;
+    string location;
+    int openingHour;
+    int closingHour;
+    double phoneNumber;
+    double rating;
+    double cost;
+public:
+    Restaurant();
 
-     /* getters */
+    /* getters */
 
-     string getName();
-     string getCuisine();
-     string getLocation();
-     int getOpeningHour();
-     int getClosingHour();
-     double getPhoneNumber();
-     double getRating();
-     double getCost();
+    string getName();
+    string getCuisine();
+    string getLocation();
+    int getOpeningHour();
+    int getClosingHour();
+    double getPhoneNumber();
+    double getRating();
+    double getCost();
 
-     /* setters */
+    /* setters */
 
-     void setName(string name);
-     void setCuisine(string cuisine);
-     void setLocation(string location);
-     void setOpeningHour(int openingHour);
-     void setClosingHour(int closingHour);
-     void setRating(double rating);
-     void setCost(double cost);
-     void setPhoneNumber(double phoneNumber);
+    void setName(string name);
+    void setCuisine(string cuisine);
+    void setLocation(string location);
+    void setOpeningHour(int openingHour);
+    void setClosingHour(int closingHour);
+    void setRating(double rating);
+    void setCost(double cost);
+    void setPhoneNumber(double phoneNumber);
+    void setAll(string name, string cuisine, string location, int openingHour, int closingHour, double cost, double rating, double phoneNumber);
 
-     void setAll(string name, string cuisine, string location, int openingHour, int closingHour, double cost, double rating, double phoneNumber);
+    //for outputting a restaurant
+    friend ostream& operator<<(ostream& out, Restaurant& restaurant);
 
-     friend ostream& operator<<(ostream& out, Restaurant& restaurant);
-     friend istream& operator>>(istream& in, Restaurant& restaurant);
-     friend bool operator==(Restaurant r1, Restaurant r2);
+    //for getting a restaurant from a file
+    friend istream& operator>>(istream& in, Restaurant& restaurant);
 
+    //for checking if two restaurants are equal
+    friend bool operator==(Restaurant r1, Restaurant r2);
 };
 
- #endif // _RESTAURANT_H
+#endif // _RESTAURANT_H

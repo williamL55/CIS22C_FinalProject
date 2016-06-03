@@ -1,11 +1,6 @@
 #ifndef _REPORT_H_
 #define _REPORT_H_
 
-/*
-    This class will be for our reporting
-    This includes the Search, List, and Statistics portions mentioned in the Menu Requirements
-*/
-
 #include "BST.h"
 #include "HashTable.h"
 #include <string>
