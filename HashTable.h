@@ -53,7 +53,7 @@ private:
     {
         Restaurant rest;
         Node* next;
-        Node(): rest(), next(NULL){}
+        Node(): rest(), next(NULL) {}
         Node(Restaurant newRest): rest(newRest), next(NULL) {}
     };
 

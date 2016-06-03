@@ -73,20 +73,20 @@ void RestaurantDatabase::readFile()
         ifstream fin;
         fin.open(inputDatabaseFile.c_str());
         // if unable to open database file, throw error
-		if (fin.fail())
-		{
-			throw "Failed to open " + inputDatabaseFile + " for reading.\n";
-		}
+        if (fin.fail())
+        {
+            throw "Failed to open " + inputDatabaseFile + " for reading.\n";
+        }
 
-		//create temp variables to store data
-		//string name, cuisine, location;
-		//int openingHour, closingHour;
-		//double cost, rating, phoneNumber;
+        //create temp variables to store data
+        //string name, cuisine, location;
+        //int openingHour, closingHour;
+        //double cost, rating, phoneNumber;
 
-		//read the file in a for loop, inputting a complete restaurant object
-		//to all 3 databases by calling addRestaurant
-		int i = 0;
-		while(!fin.eof())
+        //read the file in a for loop, inputting a complete restaurant object
+        //to all 3 databases by calling addRestaurant
+        int i = 0;
+        while(!fin.eof())
         {
             //declare a temp object to add
             Restaurant rest;
@@ -216,7 +216,7 @@ void RestaurantDatabase::addRestaurantMenu()
     system(CLEAR);
 
     while (!restAdded)
-	{
+    {
         //get info for the restaurant
         cin.clear();
         cin.ignore(1000, '\n');
@@ -438,5 +438,5 @@ void RestaurantDatabase::addRestaurantMenu()
                 cout << "Invalid response.\n\n";
             }
         }
-	}
+    }
 }

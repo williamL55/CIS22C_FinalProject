@@ -11,12 +11,12 @@ class BST
 private:
     struct Node
     {
-            Node* left;
-            Node* right;
-            Restaurant rest;
+        Node* left;
+        Node* right;
+        Restaurant rest;
 
-            Node(): left(NULL), right(NULL), rest(){}
-            Node(Restaurant newRest): left(NULL), right(NULL), rest(newRest){}
+        Node(): left(NULL), right(NULL), rest() {}
+        Node(Restaurant newRest): left(NULL), right(NULL), rest(newRest) {}
     };
     typedef struct Node* Nodeptr;
 
@@ -86,39 +86,39 @@ void BST<bstdata>::insertName(Restaurant rest)
 template <class bstdata>
 void BST<bstdata>::insert_name_value(Nodeptr root, Restaurant rest)
 {
-	if(rest.getName() == root->rest.getName())
-	{
-		if(rest.getPhoneNumber() == root->rest.getPhoneNumber())
-			return;
-		else if(rest.getPhoneNumber() < root->rest.getPhoneNumber())
-		{
-			if(root->left == NULL)
-				root->left = new Node(rest);
-			else
-				insert_name_value(root->left, rest);
-		}
-		else
-		{
-			if(root->right == NULL)
-				root->right = new Node(rest);
-			else
-				insert_name_value(root->right, rest);
-		}
-	}
-	else if(rest.getName() < root->rest.getName())
-	{
-		if(root->left == NULL)
-			root->left = new Node(rest);
-		else
-			insert_name_value(root->left, rest);
-	}
-	else
-	{
-		if(root->right == NULL)
-			root->right = new Node(rest);
-		else
-			insert_name_value(root->right, rest);
-	}
+    if(rest.getName() == root->rest.getName())
+    {
+        if(rest.getPhoneNumber() == root->rest.getPhoneNumber())
+            return;
+        else if(rest.getPhoneNumber() < root->rest.getPhoneNumber())
+        {
+            if(root->left == NULL)
+                root->left = new Node(rest);
+            else
+                insert_name_value(root->left, rest);
+        }
+        else
+        {
+            if(root->right == NULL)
+                root->right = new Node(rest);
+            else
+                insert_name_value(root->right, rest);
+        }
+    }
+    else if(rest.getName() < root->rest.getName())
+    {
+        if(root->left == NULL)
+            root->left = new Node(rest);
+        else
+            insert_name_value(root->left, rest);
+    }
+    else
+    {
+        if(root->right == NULL)
+            root->right = new Node(rest);
+        else
+            insert_name_value(root->right, rest);
+    }
 }
 
 template <class bstdata>
@@ -136,40 +136,40 @@ void BST<bstdata>::insertCuisine(Restaurant rest)
 template <class bstdata>
 void BST<bstdata>::insert_cuisine_value(Nodeptr root, Restaurant rest)
 {
-	if(rest.getCuisine() == root->rest.getCuisine())
-	{
-		if(rest.getPhoneNumber() == root->rest.getPhoneNumber())
-			return;
-		else if(rest.getPhoneNumber() < root->rest.getPhoneNumber())
-		{
-			if(root->left == NULL)
-				root->left = new Node(rest);
-			else
-				insert_cuisine_value(root->left, rest);
-		}
-		else
-		{
-			if(root->right == NULL)
-				root->right = new Node(rest);
-			else
-				insert_cuisine_value(root->right, rest);
-		}
+    if(rest.getCuisine() == root->rest.getCuisine())
+    {
+        if(rest.getPhoneNumber() == root->rest.getPhoneNumber())
+            return;
+        else if(rest.getPhoneNumber() < root->rest.getPhoneNumber())
+        {
+            if(root->left == NULL)
+                root->left = new Node(rest);
+            else
+                insert_cuisine_value(root->left, rest);
+        }
+        else
+        {
+            if(root->right == NULL)
+                root->right = new Node(rest);
+            else
+                insert_cuisine_value(root->right, rest);
+        }
 
-	}
-	else if(rest.getCuisine() < root->rest.getCuisine())
-	{
-		if(root->left == NULL)
-			root->left = new Node(rest);
-		else
-			insert_cuisine_value(root->left, rest);
-	}
-	else
-	{
-		if(root->right == NULL)
-			root->right = new Node(rest);
-		else
-			insert_cuisine_value(root->right, rest);
-	}
+    }
+    else if(rest.getCuisine() < root->rest.getCuisine())
+    {
+        if(root->left == NULL)
+            root->left = new Node(rest);
+        else
+            insert_cuisine_value(root->left, rest);
+    }
+    else
+    {
+        if(root->right == NULL)
+            root->right = new Node(rest);
+        else
+            insert_cuisine_value(root->right, rest);
+    }
 }
 
 template <class bstdata>
@@ -195,20 +195,20 @@ void BST<bstdata>::inOrderPrint()
 template <class bstdata>
 void BST<bstdata>::preOrderPrint()
 {
-	preOrderPrint(root);
-	cout << "------------------------------------" << endl;
+    preOrderPrint(root);
+    cout << "------------------------------------" << endl;
 }
 
 template <class bstdata>
 void BST<bstdata>::preOrderPrint(Nodeptr root)
 {
-	if(root)
-	{
-		cout << "------------------------------------" << endl;
-		cout << root->rest;
-		preOrderPrint(root->left);
-		preOrderPrint(root->right);
-	}
+    if(root)
+    {
+        cout << "------------------------------------" << endl;
+        cout << root->rest;
+        preOrderPrint(root->left);
+        preOrderPrint(root->right);
+    }
 }
 
 template <class bstdata>
@@ -224,8 +224,8 @@ bool BST<bstdata>::containsCuisineValue(Nodeptr root, bstdata value)
             cout << "\n------------------------------------" << endl << endl;
             cout << root->rest;
         }
-            containsCuisineValue(root->left, value);
-            containsCuisineValue(root->right, value);
+        containsCuisineValue(root->left, value);
+        containsCuisineValue(root->right, value);
         return true;
     }
     else return false;
@@ -304,13 +304,13 @@ typename BST<bstdata>::Nodeptr BST<bstdata>::removeName(Nodeptr root, Restaurant
         root->left = removeName(root->left, r);
     else if (r.getName() > root->rest.getName())
         root->right = removeName(root->right, r);
-	else if(r.getPhoneNumber() < root->rest.getPhoneNumber())
-		root->left = removeName(root->left, r);
-	else if(r.getPhoneNumber() > root->rest.getPhoneNumber())
-		root->right = removeName(root->right, r);
+    else if(r.getPhoneNumber() < root->rest.getPhoneNumber())
+        root->left = removeName(root->left, r);
+    else if(r.getPhoneNumber() > root->rest.getPhoneNumber())
+        root->right = removeName(root->right, r);
     else
     {
-    	if (!root->left && !root->right)
+        if (!root->left && !root->right)
         {
             Nodeptr temp = root;
             root = root->left;
@@ -340,26 +340,26 @@ typename BST<bstdata>::Nodeptr BST<bstdata>::removeName(Nodeptr root, Restaurant
 template <class bstdata>
 void BST<bstdata>::removeCuisine(Restaurant r)
 {
-	if(root)
-		root = removeCuisine(root, r);
+    if(root)
+        root = removeCuisine(root, r);
 }
 
 template <class bstdata>
 typename BST<bstdata>::Nodeptr BST<bstdata>::removeCuisine(Nodeptr root, Restaurant r)
 {
-	if(!root)
-		return root;
+    if(!root)
+        return root;
     else if (r.getCuisine() < root->rest.getCuisine())
         root->left = removeCuisine(root->left, r);
     else if (r.getCuisine() > root->rest.getCuisine())
         root->right = removeCuisine(root->right, r);
-	else if(r.getPhoneNumber() < root->rest.getPhoneNumber())
-		root->left = removeCuisine(root->left, r);
-	else if(r.getPhoneNumber() > root->rest.getPhoneNumber())
-		root->right = removeName(root->right, r);
+    else if(r.getPhoneNumber() < root->rest.getPhoneNumber())
+        root->left = removeCuisine(root->left, r);
+    else if(r.getPhoneNumber() > root->rest.getPhoneNumber())
+        root->right = removeName(root->right, r);
     else
     {
-    	if (!root->left && !root->right)
+        if (!root->left && !root->right)
         {
             Nodeptr temp = root;
             root = root->left;
@@ -409,7 +409,6 @@ void BST<bstdata>::buildCuisineList()
         cout << cuisine.get_cursor() << ": " << count << endl;
         cuisine.move_cursor();
     }
-
 }
 
 template <class bstdata>
@@ -418,7 +417,7 @@ void BST<bstdata>::buildCuisineList(Nodeptr root, List<string> &cuisine)
     if(root)
     {
         if(cuisine.linear_search(root->rest.getCuisine()) == -1)
-                cuisine.insert_tail(root->rest.getCuisine());
+            cuisine.insert_tail(root->rest.getCuisine());
         buildCuisineList(root->left, cuisine);
         buildCuisineList(root->right, cuisine);
     }
@@ -438,7 +437,7 @@ void BST<bstdata>::numPerCuisine(string value, Nodeptr root, int &numCuisine)
     if(root)
     {
         if(root->rest.getCuisine() == value)
-        numCuisine++;
+            numCuisine++;
         numPerCuisine(value, root->left, numCuisine);
         numPerCuisine(value, root->right, numCuisine);
     }
