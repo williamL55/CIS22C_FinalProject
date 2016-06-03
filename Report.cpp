@@ -225,10 +225,12 @@ void Report::statisticsMainMenu()
         else if (choice == 2)
         {
             //run restaurantsBestRating();
+            restaurantsBestRating();
         }
         else if (choice == 3)
         {
             //run affordableRestaurants();
+            affordableRestaurants();
         }
         else if (choice == 4)
         {
@@ -260,11 +262,15 @@ void Report::restaurantsPerCuisine()
 
 void Report::restaurantsBestRating()
 {
-
+    cin.ignore(1000, '\n');
+    cout << "\n\t    Press return to continue.";
+    cin.get();
 }
 
 void Report::affordableRestaurants()
 {
-
+    cin.ignore(1000, '\n');
+    cout << "\n\t    Press return to continue.";
+    cin.get();
 }
 

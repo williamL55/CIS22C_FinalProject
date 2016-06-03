@@ -37,6 +37,7 @@ void MainMenu::showMainMenu()
     {
         system(CLEAR);
 
+
         //show the mainMenu and get the choice
         cout << "\t\tRestaurants\n\t\tMain Menu\n\n";
         cout << "\t    1. Add a restaurant to the database\n";
