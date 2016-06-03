@@ -197,7 +197,6 @@ void Report::listSortedByCuisine()
     return;
 }
 
-
 /* STATISTICS */
 
 void Report::statisticsMainMenu()
@@ -210,9 +209,9 @@ void Report::statisticsMainMenu()
 
         //show the mainMenu and get the choice
         cout << "\t\tStatistics\n\t\tMain Menu\n\n";
-        cout << "\t    1. List unsorted data\n";
-        cout << "\t    2. List data sorted by name\n";
-        cout << "\t    3. List data sorted by cuisine\n";
+        cout << "\t    1. Show number of restaurants per cuisine\n";
+        cout << "\t    2. Show restaurants with acceptable rating\n";
+        cout << "\t    3. Show affordable restaurants\n";
         cout << "\t    4. Return to main menu\n";
         cout << "\n\t     Enter your choice: ";
 
@@ -220,12 +219,12 @@ void Report::statisticsMainMenu()
 
         if (choice == 1)
         {
-            //run restaurantsPerCuisine;
+            //run restaurantsPerCuisine();
             restaurantsPerCuisine();
         }
         else if (choice == 2)
         {
-            //run restaurantsBestRating;
+            //run restaurantsBestRating();
         }
         else if (choice == 3)
         {
