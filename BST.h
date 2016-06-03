@@ -401,14 +401,16 @@ void BST<bstdata>::buildCuisineList()
     if(root)
         cuisine.insert_tail(root->rest.getCuisine());
     buildCuisineList(root, cuisine);
-    if(!cuisine.off_end())
-        cuisine.start_cursor();
+    if(cuisine.start_cursor())
+        cout << "Cuisine\t\t  Quantity" << endl << endl;
     while(!cuisine.off_end())
     {
         int count =  calCuisine(cuisine.get_cursor());
-        cout << cuisine.get_cursor() << ": " << count << endl;
+        cout << setw(20) << left << cuisine.get_cursor() << setw(2) << right << count << endl;
         cuisine.move_cursor();
     }
+
+
 }
 
 template <class bstdata>

@@ -73,7 +73,7 @@ public:
 
     /**Manipulation Procedures*/
 
-    void start_cursor();
+    bool start_cursor();
     //Moves the iterator to point to the first element in the list
     //If the list is empty, the iterator remains NULL
     //Postcondition: cursor either points to NULL or the first element
@@ -200,13 +200,18 @@ listitem List<listitem>::get_tail()
 }
 
 template <class listitem>
-void List<listitem>::start_cursor()
+bool List<listitem>::start_cursor()
 {
     if(length == 0)
     {
-        cout << "start_cursor(): The list is empty.\n";
+        cout << "\n\n\tThere are no restaurants in the database." << endl;
+        return false;
     }
-    else cursor = head;
+    else
+    {
+        cursor = head;
+        return true;
+    }
 }
 
 template <class listitem>
@@ -214,7 +219,6 @@ listitem List<listitem>::get_cursor()
 {
     return cursor->data;
 }
-
 
 template <class listitem>
 void List<listitem>::move_cursor()
