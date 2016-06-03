@@ -18,12 +18,9 @@ private:
             Node(): left(NULL), right(NULL), rest(){}
             Node(Restaurant newRest): left(NULL), right(NULL), rest(newRest){}
     };
-
     typedef struct Node* Nodeptr;
 
     Nodeptr root;
-
-
 
     void insert_name_value(Nodeptr root, Restaurant rest);
     void insert_cuisine_value(Nodeptr root, Restaurant rest);
@@ -401,9 +398,11 @@ template <class bstdata>
 void BST<bstdata>::buildCuisineList()
 {
     List<string> cuisine;
-    cuisine.insert_tail(root->rest.getCuisine());
+    if(root)
+        cuisine.insert_tail(root->rest.getCuisine());
     buildCuisineList(root, cuisine);
-    cuisine.start_cursor();
+    if(!cuisine.off_end())
+        cuisine.start_cursor();
     while(!cuisine.off_end())
     {
         int count =  calCuisine(cuisine.get_cursor());
