@@ -1,24 +1,6 @@
 #ifndef LIST_H_
 #define LIST_H_
 
-/**
-
-* Corey Russ
-
-* CIS 22C
-
-* List.h
-
-*/
-
-
-#include <cstddef>
-#include <cstdlib>
-#include <iostream>
-#include <list>
-
-using namespace std;
-
 template <class listitem>
 class List
 {
@@ -440,99 +422,6 @@ void List<listitem>::delete_cursor()
             length--;
     }
     else cout << "Cannot delete the item. The next item does not exist!" << endl;
-
-}
-
-// == operater overload
-template <class listitem>
-bool List<listitem>::operator==(const List& list)
-{
-    if(length != list.length)
-        return false;//return of they are different lengths
-    Nodeptr temp1 = head;
-    Nodeptr temp2 = list.head;
-    while(temp1 != NULL)
-    {
-        if(temp1->data !=temp2->data)
-            return false;
-        temp1 = temp1->next;
-        temp2 = temp2->next;
-    }
-    return true;//lists are the same
-}
-
-template <class listitem>
-void List<listitem>::reverse(Nodeptr node)
-{
-    if (length == 0)
-    {
-        cout << "reverse(): The list is empty.";
-        return;
-    }
-    else
-    {
-        cout << node->data << " ";
-        if(node->previous != NULL)
-            reverse(node->previous);
-    }
-}
-
-template <class listitem>
-void List<listitem>::printReverse()
-{
-    if (length != 0)
-    {
-        Nodeptr N = tail;
-        reverse(N);
-        cout << endl;
-    }
-    else
-    {
-        return;
-    }
-}
-
-template <class listitem>
-int List<listitem>::getIndex()
-{
-    if(!(off_end()))
-    {
-        Nodeptr tempCursor = cursor;
-        cursor = head;
-        int count = 1;
-
-        while(cursor->next != NULL && cursor->next != tempCursor->next)
-        {
-            count++;
-            cursor = cursor->next;
-        }
-        cursor = tempCursor;
-        return count;
-    }
-    else
-    {
-        cout << "getIndex(): Cursor is off end";
-        exit(-1);
-    }
-}
-
-template <class listitem>
-void List<listitem>::scrollToIndex(int index)
-{
-    if(length == 0) return;
-    if(index > length)
-    {
-        cout << "scrollToIndex(): Cannot move cursor to that index. Cursor will be off end.";
-        exit(-1);
-    }
-    else
-    {
-        cursor = head;
-        for(int i = 1; i < index; i++)
-        {
-            cursor = cursor->next;
-        }
-    }
 }
 
 template <class listitem>
@@ -563,43 +452,6 @@ int List<listitem>::linear_search(listitem value)
         }
         cursor = tempCursor;
         return -1;
-    }
-}
-
-template <class listitem>
-int List<listitem>::binary_search(int low, int high, listitem value)
-{
-    Nodeptr tempCursor = cursor;
-    if (high < low)
-    {
-        cursor = tempCursor;
-        return -1;
-    }
-    if (length == 0)
-    {
-        cursor = tempCursor;
-        return -1;
-    }
-
-    int mid = low + (high-low)/2;
-    scrollToIndex(mid);
-
-    //value is at mid
-    if (cursor->data == value)
-    {
-        return mid;
-    }
-    //value is higher than mid
-    else if(cursor->data < value)
-    {
-        cursor = tempCursor;
-        return binary_search(mid+1, high, value);
-    }
-    //value is lower than mid
-    else
-    {
-        cursor = tempCursor;
-        return binary_search(low, mid-1, value);
     }
 }
 

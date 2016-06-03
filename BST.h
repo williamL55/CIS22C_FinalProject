@@ -23,7 +23,7 @@ private:
 
     Nodeptr root;
 
-    List<string> cuisine;
+
 
     void insert_name_value(Nodeptr root, Restaurant rest);
     void insert_cuisine_value(Nodeptr root, Restaurant rest);
@@ -35,9 +35,9 @@ private:
     Nodeptr removeCuisine(Nodeptr root, Restaurant r);
     void deleteTree(Nodeptr root);
     Restaurant findMin(Nodeptr root);
-    void buildCuisineList(Nodeptr root);
-        void printCuisine(Nodeptr root, bstdata value);
-        int calCuisine(string cuisine);
+    void buildCuisineList(Nodeptr root, List<string> &cuisine);
+    void printCuisine(Nodeptr root, bstdata value);
+    int calCuisine(string cuisine);
     void numPerCuisine(string value, Nodeptr root, int &numCuisine);
 
 public:
@@ -240,7 +240,7 @@ void BST<bstdata>::printCuisine(Nodeptr root, bstdata value)
     if(root)
     {
         printCuisine(root->left, value);
-        if(root->rest.getCuisine() == value)// && temp.find(value) != std::string::npos)
+        if(root->rest.getCuisine() == value)
         {
             cout << root->rest;
         }
@@ -400,8 +400,9 @@ Restaurant BST<bstdata>::findMin(Nodeptr root)
 template <class bstdata>
 void BST<bstdata>::buildCuisineList()
 {
+    List<string> cuisine;
     cuisine.insert_tail(root->rest.getCuisine());
-    buildCuisineList(root);
+    buildCuisineList(root, cuisine);
     cuisine.start_cursor();
     while(!cuisine.off_end())
     {
@@ -413,14 +414,14 @@ void BST<bstdata>::buildCuisineList()
 }
 
 template <class bstdata>
-void BST<bstdata>::buildCuisineList(Nodeptr root)
+void BST<bstdata>::buildCuisineList(Nodeptr root, List<string> &cuisine)
 {
     if(root)
     {
         if(cuisine.linear_search(root->rest.getCuisine()) == -1)
                 cuisine.insert_tail(root->rest.getCuisine());
-        buildCuisineList(root->left);
-        buildCuisineList(root->right);
+        buildCuisineList(root->left, cuisine);
+        buildCuisineList(root->right, cuisine);
     }
 }
 
@@ -443,6 +444,5 @@ void BST<bstdata>::numPerCuisine(string value, Nodeptr root, int &numCuisine)
         numPerCuisine(value, root->right, numCuisine);
     }
 }
-
 
 #endif
